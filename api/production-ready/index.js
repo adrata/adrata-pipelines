@@ -10,6 +10,8 @@
 
 // Use the working lightning-fast structure but with real pipeline calls
 const { CorePipeline } = require('../../pipelines/core-pipeline.js');
+const { AdvancedPipeline } = require('../../pipelines/advanced-pipeline.js');
+const { PowerhousePipeline } = require('../../pipelines/powerhouse-pipeline.js');
 
 // Production configuration - maximum speed + real data
 const PRODUCTION_CONFIG = {
@@ -33,14 +35,21 @@ module.exports = async (req, res) => {
     if (req.method === 'GET') {
         return res.status(200).json({
             pipeline: 'production-ready',
-            description: 'MAXIMUM SPEED + 100% REAL DATA',
+            description: 'MAXIMUM SPEED + 100% REAL DATA - ALL 3 PIPELINES',
+            supportedTypes: ['core', 'advanced', 'powerhouse'],
             features: [
                 'ALL companies in parallel (no batching)',
                 '100% real pipeline data (no synthetic)',
                 'Real API calls: CoreSignal, ZeroBounce, Prospeo, Lusha',
                 'Supports 1233+ concurrent companies',
-                'Target: 15-30 seconds for any number of companies'
+                'Target: 15-30 seconds for any number of companies',
+                'SBI Methodology integration for Powerhouse'
             ],
+            modules: {
+                core: 'ALL 8 modules with REAL APIs',
+                advanced: 'ALL 12+ modules with REAL APIs',
+                powerhouse: 'ALL 16+ modules with REAL APIs + SBI METHODOLOGY'
+            },
             config: PRODUCTION_CONFIG,
             timestamp: new Date().toISOString()
         });
@@ -67,12 +76,32 @@ module.exports = async (req, res) => {
 
             const startTime = Date.now();
 
-            // Create real pipeline instance
-            const pipelineInstance = new CorePipeline({
+            // Create real pipeline instance based on pipeline type
+            let pipelineInstance;
+            const realApiConfig = {
                 ...process.env,
                 USE_REAL_APIS_ONLY: true,
-                NO_SYNTHETIC_DATA: true
-            });
+                NO_SYNTHETIC_DATA: true,
+                SBI_METHODOLOGY: require('../../config/sbi-methodology.js'),
+                USE_SBI_INTELLIGENCE: pipeline.toLowerCase() === 'powerhouse'
+            };
+
+            switch (pipeline.toLowerCase()) {
+                case 'core':
+                    pipelineInstance = new CorePipeline(realApiConfig);
+                    console.log('✅ Core Pipeline: ALL 8 modules with REAL APIs');
+                    break;
+                case 'advanced':
+                    pipelineInstance = new AdvancedPipeline(realApiConfig);
+                    console.log('✅ Advanced Pipeline: ALL 12+ modules with REAL APIs');
+                    break;
+                case 'powerhouse':
+                    pipelineInstance = new PowerhousePipeline(realApiConfig);
+                    console.log('✅ Powerhouse Pipeline: ALL 16+ modules with REAL APIs + SBI METHODOLOGY');
+                    break;
+                default:
+                    throw new Error(`Invalid pipeline type: ${pipeline}`);
+            }
 
             console.log('✅ Real Pipeline Instance Created');
 
