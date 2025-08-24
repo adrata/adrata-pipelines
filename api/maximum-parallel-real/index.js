@@ -7,6 +7,7 @@
 const { CorePipeline } = require('../../pipelines/core-pipeline.js');
 const { AdvancedPipeline } = require('../../pipelines/advanced-pipeline.js');
 const { PowerhousePipeline } = require('../../pipelines/powerhouse-pipeline.js');
+const SBI_METHODOLOGY = require('../../config/sbi-methodology.js');
 
 module.exports = async (req, res) => {
     // Enable CORS
@@ -32,9 +33,9 @@ module.exports = async (req, res) => {
                 'MyEmailVerifier - Email verification'
             ],
             performance: {
-                concurrency: '1000+ companies simultaneously',
+                concurrency: 'ALL companies simultaneously (1233 for Core, 100 for Advanced, 10 for Powerhouse)',
                 time_per_company: '60-90 seconds (FULL API calls)',
-                total_time_1000_companies: '60-90 seconds (all parallel)',
+                total_time_all_companies: '60-90 seconds (maximum parallel)',
                 data_quality: '100% real API data - no synthetic/fallback'
             },
             cost_estimate: {
@@ -59,7 +60,7 @@ module.exports = async (req, res) => {
             const { 
                 pipeline = 'core', 
                 companies = [], 
-                max_concurrent = 1000 
+                max_concurrent = companies.length // Default to ALL companies in parallel
             } = req.body;
 
             if (!companies || companies.length === 0) {
@@ -79,20 +80,26 @@ module.exports = async (req, res) => {
             const results = [];
             const errors = [];
 
-            // Create pipeline instance with ALL original modules
+            // Create pipeline instance with ALL original modules + SBI methodology
             let pipelineInstance;
+            const sbiConfig = { 
+                ...process.env, 
+                SBI_METHODOLOGY: SBI_METHODOLOGY,
+                USE_SBI_INTELLIGENCE: pipeline.toLowerCase() === 'powerhouse'
+            };
+            
             switch (pipeline.toLowerCase()) {
                 case 'core':
-                    pipelineInstance = new CorePipeline();
+                    pipelineInstance = new CorePipeline(sbiConfig);
                     console.log('✅ Core Pipeline: ALL 8 modules with REAL APIs');
                     break;
                 case 'advanced':
-                    pipelineInstance = new AdvancedPipeline();
+                    pipelineInstance = new AdvancedPipeline(sbiConfig);
                     console.log('✅ Advanced Pipeline: ALL 12+ modules with REAL APIs');
                     break;
                 case 'powerhouse':
-                    pipelineInstance = new PowerhousePipeline();
-                    console.log('✅ Powerhouse Pipeline: ALL 16+ modules with REAL APIs');
+                    pipelineInstance = new PowerhousePipeline(sbiConfig);
+                    console.log('✅ Powerhouse Pipeline: ALL 16+ modules with REAL APIs + SBI METHODOLOGY');
                     break;
                 default:
                     return res.status(400).json({ error: 'Invalid pipeline type. Use: core, advanced, or powerhouse' });
