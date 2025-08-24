@@ -397,6 +397,9 @@ class PowerhousePipeline {
             result.processingTime = Date.now() - startTime;
             this.results.push(result);
         }
+        
+        // Return the result for API usage
+        return result;
     }
 
     /**
