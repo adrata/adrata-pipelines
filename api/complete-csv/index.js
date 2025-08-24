@@ -9,12 +9,9 @@
  * Uses your full sophisticated architecture with proper CSV formatting
  */
 
-const { CompanyResolver } = require('../../modules/CompanyResolver.js');
-const { ExecutiveResearch } = require('../../modules/ExecutiveResearch.js');
-const { ExecutiveContactIntelligence } = require('../../modules/ExecutiveContactIntelligence.js');
-const { ContactValidator } = require('../../modules/ContactValidator.js');
-const { PEOwnershipAnalysis } = require('../../modules/PEOwnershipAnalysis.js');
-const { ExecutiveTransitionDetector } = require('../../modules/ExecutiveTransitionDetector.js');
+const { CorePipeline } = require('../../pipelines/core-pipeline.js');
+const { AdvancedPipeline } = require('../../pipelines/advanced-pipeline.js');
+const { PowerhousePipeline } = require('../../pipelines/powerhouse-pipeline.js');
 
 // Timeout wrapper
 function withTimeout(promise, timeoutMs, operation) {
@@ -147,12 +144,74 @@ function generatePowerhouseData(cfoName, croName, companyName, companyInfo) {
     };
 }
 
-// Process company with full pipeline
-async function processCompanyComplete(company, index, total, pipelineType = 'core') {
+// Process company with REAL PIPELINE (100% REAL APIs)
+async function processCompanyWithRealPipeline(company, index, total, pipelineType = 'core') {
     const startTime = Date.now();
     const companyId = company.companyName || company.domain || `company-${index}`;
     
-    console.log(`🔄 [${index + 1}/${total}] ${pipelineType.toUpperCase()}: ${companyId}`);
+    console.log(`🔄 [${index + 1}/${total}] ${pipelineType.toUpperCase()} REAL PIPELINE: ${companyId}`);
+    
+    try {
+        // Use ORIGINAL PIPELINE with REAL APIs
+        let pipelineInstance;
+        const realApiConfig = {
+            ...process.env,
+            USE_REAL_APIS_ONLY: true,
+            NO_SYNTHETIC_DATA: true
+        };
+        
+        switch (pipelineType.toLowerCase()) {
+            case 'core':
+                pipelineInstance = new CorePipeline(realApiConfig);
+                break;
+            case 'advanced':
+                pipelineInstance = new AdvancedPipeline(realApiConfig);
+                break;
+            case 'powerhouse':
+                pipelineInstance = new PowerhousePipeline(realApiConfig);
+                break;
+            default:
+                throw new Error(`Invalid pipeline type: ${pipelineType}`);
+        }
+        
+        const companyData = {
+            website: company.domain || company.website,
+            companyName: company.companyName,
+            accountOwner: company.accountOwner || 'Dan Mirolli',
+            isTop1000: company.isTop1000 || false
+        };
+        
+        // Call REAL pipeline with ALL modules and REAL APIs
+        const result = await pipelineInstance.processCompany(companyData, index + 1);
+        
+        if (!result) {
+            throw new Error('No result from real pipeline');
+        }
+        
+        const processingTime = Date.now() - startTime;
+        console.log(`✅ [${index + 1}/${total}] REAL PIPELINE SUCCESS (${processingTime}ms): ${companyId}`);
+        console.log(`   📧 Real Email: ${result.cfo?.email || result.cro?.email ? 'YES' : 'NO'}`);
+        
+        // Return the real result with metadata
+        return {
+            ...result,
+            processingTime,
+            dataSource: 'REAL_PIPELINE_APIs',
+            syntheticData: false
+        };
+        
+    } catch (error) {
+        const processingTime = Date.now() - startTime;
+        console.error(`❌ [${index + 1}/${total}] REAL PIPELINE ERROR (${processingTime}ms): ${companyId}:`, error.message);
+        
+        return {
+            website: company.domain || company.website,
+            companyName: company.companyName,
+            error: error.message,
+            processingTime,
+            dataSource: 'REAL_PIPELINE_ERROR'
+        };
+    }
     
     const config = {
         PERPLEXITY_API_KEY: process.env.PERPLEXITY_API_KEY?.trim(),
@@ -390,7 +449,7 @@ module.exports = async (req, res) => {
         for (let i = 0; i < companies.length; i += maxConcurrent) {
             const batch = companies.slice(i, i + maxConcurrent);
             const batchPromises = batch.map((company, batchIndex) => 
-                processCompanyComplete(company, i + batchIndex, companies.length, pipelineType)
+                processCompanyWithRealPipeline(company, i + batchIndex, companies.length, pipelineType)
             );
             
             const batchResults = await Promise.allSettled(batchPromises);
