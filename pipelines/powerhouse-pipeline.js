@@ -1561,23 +1561,26 @@ ${this.generateKeyInsights(metrics)}
             // Generate buyer group using Universal AI
             const buyerGroupAnalysis = await this.buyerGroupAI.determineBuyerGroup(companyContext);
             
-            if (buyerGroupAnalysis.success) {
-                console.log(`   ✅ Generated ${buyerGroupAnalysis.buyerGroup.roles.length} buyer group roles`);
-                console.log(`   📊 Decision makers: ${buyerGroupAnalysis.buyerGroup.roles.filter(r => r.influence === 'Decision Maker').length}`);
-                console.log(`   🎯 Champions: ${buyerGroupAnalysis.buyerGroup.roles.filter(r => r.influence === 'Champion').length}`);
+            if (buyerGroupAnalysis && buyerGroupAnalysis.buyerGroup) {
+                console.log(`   ✅ Generated buyer group analysis for ${result.companyName}`);
+                console.log(`   🎯 Confidence: ${buyerGroupAnalysis.confidence}%`);
                 
                 return {
                     success: true,
+                    companyName: buyerGroupAnalysis.companyName,
+                    context: buyerGroupAnalysis.context,
                     buyerGroup: buyerGroupAnalysis.buyerGroup,
-                    salesStrategy: buyerGroupAnalysis.salesStrategy,
+                    searchCriteria: buyerGroupAnalysis.searchCriteria,
+                    confidence: buyerGroupAnalysis.confidence,
+                    reasoning: buyerGroupAnalysis.reasoning,
                     companyContext: companyContext,
                     generatedAt: new Date().toISOString()
                 };
             } else {
-                console.log(`   ⚠️ Buyer group analysis failed: ${buyerGroupAnalysis.error}`);
+                console.log(`   ⚠️ Buyer group analysis failed or returned null`);
                 return {
                     success: false,
-                    error: buyerGroupAnalysis.error,
+                    error: 'Buyer group analysis failed or returned null',
                     companyContext: companyContext
                 };
             }
