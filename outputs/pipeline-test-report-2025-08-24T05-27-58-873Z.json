@@ -1,0 +1,135 @@
+{
+  "timestamp": "2025-08-24T05:27:58.873Z",
+  "testConfig": {
+    "MAX_COMPANIES": 3,
+    "TIMEOUT": 60000,
+    "VALIDATE_FORMAT": true
+  },
+  "testCompanies": [
+    {
+      "Website": "www.cielotalent.com",
+      "Top 1000": "1",
+      "Account Owner": "Andrew Urteaga"
+    },
+    {
+      "Website": "www.optimizely.com",
+      "Top 1000": "1",
+      "Account Owner": "Andrew Urteaga"
+    },
+    {
+      "Website": "www.highradius.com",
+      "Top 1000": "1",
+      "Account Owner": "Andrew Urteaga"
+    }
+  ],
+  "results": {
+    "core": [],
+    "advanced": [],
+    "powerhouse": []
+  },
+  "errors": [
+    {
+      "pipeline": "core",
+      "company": "www.cielotalent.com",
+      "error": "Cannot read properties of undefined (reading 'companyName')"
+    },
+    {
+      "pipeline": "core",
+      "company": "www.optimizely.com",
+      "error": "Cannot read properties of undefined (reading 'companyName')"
+    },
+    {
+      "pipeline": "core",
+      "company": "www.highradius.com",
+      "error": "Cannot read properties of undefined (reading 'companyName')"
+    },
+    {
+      "pipeline": "advanced",
+      "company": "www.cielotalent.com",
+      "error": "Cannot read properties of undefined (reading 'companyName')"
+    },
+    {
+      "pipeline": "advanced",
+      "company": "www.optimizely.com",
+      "error": "Cannot read properties of undefined (reading 'companyName')"
+    },
+    {
+      "pipeline": "advanced",
+      "company": "www.highradius.com",
+      "error": "Cannot read properties of undefined (reading 'companyName')"
+    },
+    {
+      "pipeline": "powerhouse",
+      "company": "www.cielotalent.com",
+      "error": "Cannot read properties of undefined (reading 'companyName')"
+    },
+    {
+      "pipeline": "powerhouse",
+      "company": "www.optimizely.com",
+      "error": "Cannot read properties of undefined (reading 'companyName')"
+    },
+    {
+      "pipeline": "powerhouse",
+      "company": "www.highradius.com",
+      "error": "Cannot read properties of undefined (reading 'companyName')"
+    }
+  ],
+  "summary": {
+    "success": false,
+    "totalTests": 9,
+    "successfulTests": 0,
+    "failedTests": 9,
+    "results": {
+      "core": [],
+      "advanced": [],
+      "powerhouse": []
+    },
+    "errors": [
+      {
+        "pipeline": "core",
+        "company": "www.cielotalent.com",
+        "error": "Cannot read properties of undefined (reading 'companyName')"
+      },
+      {
+        "pipeline": "core",
+        "company": "www.optimizely.com",
+        "error": "Cannot read properties of undefined (reading 'companyName')"
+      },
+      {
+        "pipeline": "core",
+        "company": "www.highradius.com",
+        "error": "Cannot read properties of undefined (reading 'companyName')"
+      },
+      {
+        "pipeline": "advanced",
+        "company": "www.cielotalent.com",
+        "error": "Cannot read properties of undefined (reading 'companyName')"
+      },
+      {
+        "pipeline": "advanced",
+        "company": "www.optimizely.com",
+        "error": "Cannot read properties of undefined (reading 'companyName')"
+      },
+      {
+        "pipeline": "advanced",
+        "company": "www.highradius.com",
+        "error": "Cannot read properties of undefined (reading 'companyName')"
+      },
+      {
+        "pipeline": "powerhouse",
+        "company": "www.cielotalent.com",
+        "error": "Cannot read properties of undefined (reading 'companyName')"
+      },
+      {
+        "pipeline": "powerhouse",
+        "company": "www.optimizely.com",
+        "error": "Cannot read properties of undefined (reading 'companyName')"
+      },
+      {
+        "pipeline": "powerhouse",
+        "company": "www.highradius.com",
+        "error": "Cannot read properties of undefined (reading 'companyName')"
+      }
+    ]
+  }
+}

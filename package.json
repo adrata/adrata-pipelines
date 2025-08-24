@@ -1,0 +1,42 @@
+{
+  "name": "adrata-pipeline-system",
+  "version": "1.0.0",
+  "description": "Adrata's serverless pipeline intelligence system",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node pipeline-validation-system.js",
+    "core": "node production-pipeline-runner.js core",
+    "advanced": "node production-pipeline-runner.js advanced", 
+    "powerhouse": "node production-pipeline-runner.js powerhouse",
+    "ultra-fast": "node test-ultra-fast-5-companies.js",
+    "speed-test": "node test-ultra-fast-5-companies.js",
+    "validate": "node pipeline-validation-system.js",
+    "dev": "nodemon index.js",
+    "logs": "ls -la logs/",
+    "outputs": "ls -la outputs/",
+    "clean": "rm -rf logs/* outputs/*"
+  },
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "node-fetch": "^2.6.7",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "keywords": [
+    "pipeline",
+    "intelligence", 
+    "sales",
+    "data-enrichment",
+    "buyer-groups",
+    "executive-research"
+  ],
+  "author": "Adrata",
+  "license": "PROPRIETARY"
+}
