@@ -442,8 +442,8 @@ module.exports = async (req, res) => {
         
         console.log(`📊 CSV: Processing ${companies.length} companies (${pipelineType} pipeline)`);
         
-        // Process companies with controlled parallelism
-        const maxConcurrent = Math.min(3, companies.length); // Conservative for stability
+        // Process companies with MAXIMUM parallelism
+        const maxConcurrent = companies.length; // ALL companies in parallel for maximum speed
         const results = [];
         
         for (let i = 0; i < companies.length; i += maxConcurrent) {
@@ -467,10 +467,7 @@ module.exports = async (req, res) => {
                 }
             }
             
-            // Brief pause between batches
-            if (i + maxConcurrent < companies.length) {
-                await new Promise(resolve => setTimeout(resolve, 2000));
-            }
+            // No delays - maximum speed processing
         }
         
         const totalTime = Date.now() - startTime;
