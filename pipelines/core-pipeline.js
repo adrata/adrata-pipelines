@@ -453,10 +453,17 @@ class CorePipeline {
             
             let contactIntelligence = null;
             try {
+                console.log(`🔍 DEBUG: About to call enhanceExecutiveIntelligence for ${result.companyName}`);
                 contactIntelligence = await this.executiveContactIntelligence.enhanceExecutiveIntelligence(result);
                 console.log(`🔍 DEBUG: Contact intelligence result: ${!!contactIntelligence}`);
                 if (contactIntelligence) {
                     console.log(`🔍 DEBUG: Contact intelligence keys: ${Object.keys(contactIntelligence).join(', ')}`);
+                    console.log(`🔍 DEBUG: Executive contacts: ${!!contactIntelligence.executiveContacts}`);
+                    if (contactIntelligence.executiveContacts) {
+                        console.log(`🔍 DEBUG: Executive contacts structure: ${JSON.stringify(Object.keys(contactIntelligence.executiveContacts))}`);
+                    }
+                } else {
+                    console.log(`🔍 DEBUG: Contact intelligence returned null/undefined`);
                 }
             } catch (error) {
                 console.log(`❌ Contact intelligence failed: ${error.message}`);
