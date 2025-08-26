@@ -765,6 +765,19 @@ module.exports = async (req, res) => {
             console.log(`   • Real Emails: ${realEmailsFound}/${pipelineResult.results.length}`);
             console.log(`   • Real Phones: ${realPhonesFound}/${pipelineResult.results.length}`);
 
+            // Generate CSV data
+            const csvHeaders = Object.keys(csvResults[0] || {});
+            const csvRows = csvResults.map(row => 
+                csvHeaders.map(header => `"${(row[header] || '').toString().replace(/"/g, '""')}"`)
+            );
+            
+            const csvContent = [csvHeaders, ...csvRows]
+                .map(row => row.join(','))
+                .join('\n');
+            
+            const timestamp = new Date().toISOString().split('T')[0];
+            const csvFilename = `${pipeline}-pipeline-${timestamp}.csv`;
+
             return res.status(200).json({
                 success: true,
                 pipeline: pipeline.toUpperCase(),
@@ -772,6 +785,8 @@ module.exports = async (req, res) => {
                 results: csvResults,
                 rawResults: pipelineResult.results,
                 errors: pipelineResult.errors,
+                csvData: csvContent,
+                csvFilename: csvFilename,
                 stats: {
                     ...pipelineResult.stats,
                     total_duration_seconds: totalDuration,
