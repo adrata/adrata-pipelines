@@ -61,10 +61,35 @@ class CorePipeline {
             AGGRESSIVE_CACHING: true
         };
 
-        this.companyResolver = new CompanyResolver(config);
-        this.researcher = new ExecutiveResearch(config);
-        this.executiveContactIntelligence = new ExecutiveContactIntelligence(config);
-        this.contactValidator = new ContactValidator(config);
+        console.log('🔧 Initializing CorePipeline modules...');
+        
+        try {
+            this.companyResolver = new CompanyResolver(config);
+            console.log('✅ CompanyResolver initialized');
+        } catch (error) {
+            console.log(`❌ CompanyResolver initialization failed: ${error.message}`);
+        }
+        
+        try {
+            this.researcher = new ExecutiveResearch(config);
+            console.log('✅ ExecutiveResearch initialized');
+        } catch (error) {
+            console.log(`❌ ExecutiveResearch initialization failed: ${error.message}`);
+        }
+        
+        try {
+            this.executiveContactIntelligence = new ExecutiveContactIntelligence(config);
+            console.log('✅ ExecutiveContactIntelligence initialized');
+        } catch (error) {
+            console.log(`❌ ExecutiveContactIntelligence initialization failed: ${error.message}`);
+        }
+        
+        try {
+            this.contactValidator = new ContactValidator(config);
+            console.log('✅ ContactValidator initialized');
+        } catch (error) {
+            console.log(`❌ ContactValidator initialization failed: ${error.message}`);
+        }
         this.validationEngine = new ValidationEngine(config);
         this.peIntelligence = new PEOwnershipAnalysis(config);
         this.apiCostOptimizer = new ApiCostOptimizer(config);
