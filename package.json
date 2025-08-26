@@ -4,10 +4,11 @@
   "description": "Adrata's serverless pipeline intelligence system",
   "main": "index.js",
   "scripts": {
+    "build": "echo 'No build step required for API-only deployment'",
     "start": "node index.js",
     "test": "node pipeline-validation-system.js",
     "core": "node production-pipeline-runner.js core",
-    "advanced": "node production-pipeline-runner.js advanced", 
+    "advanced": "node production-pipeline-runner.js advanced",
     "powerhouse": "node production-pipeline-runner.js powerhouse",
     "ultra-fast": "node test-ultra-fast-5-companies.js",
     "speed-test": "node test-ultra-fast-5-companies.js",
@@ -20,8 +21,9 @@
   "dependencies": {
     "csv-parser": "^3.0.0",
     "csv-writer": "^1.6.0",
-    "node-fetch": "^2.6.7",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "json2csv": "^6.0.0-alpha.2",
+    "node-fetch": "^2.6.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
@@ -31,7 +33,7 @@
   },
   "keywords": [
     "pipeline",
-    "intelligence", 
+    "intelligence",
     "sales",
     "data-enrichment",
     "buyer-groups",

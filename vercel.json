@@ -7,14 +7,9 @@
       "memory": 1024
     }
   },
-  "env": {
-    "NODE_ENV": "production"
-  },
-  "build": {
-    "env": {
-      "NODE_ENV": "production"
-    }
-  },
+  "buildCommand": "echo 'No build needed for API-only deployment'",
+  "outputDirectory": ".",
+  "installCommand": "npm install",
   "headers": [
     {
       "source": "/api/(.*)",
