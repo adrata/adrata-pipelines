@@ -777,6 +777,8 @@ module.exports = async (req, res) => {
             
             const timestamp = new Date().toISOString().split('T')[0];
             const csvFilename = `${pipeline}-pipeline-${timestamp}.csv`;
+            
+            console.log(`📄 CSV Generation: ${csvHeaders.length} headers, ${csvRows.length} rows, ${csvContent.length} characters`);
 
             return res.status(200).json({
                 success: true,
