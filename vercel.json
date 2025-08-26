@@ -1,12 +1,18 @@
 {
   "version": 2,
-  "regions": ["iad1", "sfo1", "dub1"],
-  "buildCommand": "echo 'No build required for serverless functions'",
-  "outputDirectory": ".",
+  "name": "adrata-pipeline-vercel-optimized",
   "functions": {
-    "api/**/*.js": {
+    "api/vercel-optimized/index.js": {
       "maxDuration": 300,
-      "memory": 3008
+      "memory": 1024
+    }
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
     }
   },
   "headers": [
@@ -19,7 +25,7 @@
         },
         {
           "key": "Access-Control-Allow-Methods",
-          "value": "GET, POST, PUT, DELETE, OPTIONS"
+          "value": "GET, POST, OPTIONS"
         },
         {
           "key": "Access-Control-Allow-Headers",
