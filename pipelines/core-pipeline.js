@@ -355,6 +355,7 @@ class CorePipeline {
             // STEP 1: Company Resolution (Essential for validation)
             console.log('Resolving company identity...');
             const companyResolution = await this.companyResolver.resolveCompany(company.website);
+            // Lock company identity from resolver; avoid downstream overrides on redirects
             result.companyName = companyResolution.companyName || this.extractCompanyName(company.website);
             
             // Store essential company info for validation and CSV output
@@ -373,7 +374,8 @@ class CorePipeline {
                 parentCompany: companyResolution.acquisitionInfo?.parentCompany || companyResolution.parentCompany || '',
                 acquisitionDate: companyResolution.acquisitionInfo?.acquisitionDate || '',
                 acquisitionType: companyResolution.acquisitionInfo?.acquisitionType || '',
-                confidence: companyResolution.acquisitionInfo?.confidence || 0
+                confidence: companyResolution.acquisitionInfo?.confidence || 0,
+                targetingOverride: companyResolution.acquisitionInfo?.targetingOverride || undefined
             };
 
             // Set company status based on corporate structure
@@ -393,6 +395,11 @@ class CorePipeline {
                     companyResolution,
                     result.corporateStructure
                 );
+                // Respect resolver targeting override when provided
+                if (result.corporateStructure.targetingOverride && operationalAssessment?.executiveTargeting) {
+                    operationalAssessment.executiveTargeting.strategy = result.corporateStructure.targetingOverride;
+                    operationalAssessment.reasoning = (operationalAssessment.reasoning || '') + ' | resolver_targeting_override';
+                }
                 
                 // Store operational assessment in result
                 result.operationalStatus = operationalAssessment.operationalStatus;
@@ -525,8 +532,10 @@ class CorePipeline {
             } else {
                 console.log('Researching CFO and CRO...');
                 const research = await this.researcher.researchExecutives({
+                    companyName: result.companyName,
                     name: result.companyName,
-                    website: company.website,
+                    // Use canonical URL to avoid redirect-induced misidentification (e.g., Investis Digital -> idx.inc)
+                    website: companyResolution.canonicalUrl || company.website,
                     companyResolution: companyResolution
                 });
                 
