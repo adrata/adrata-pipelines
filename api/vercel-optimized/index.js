@@ -15,18 +15,18 @@ const { PowerhousePipeline } = require('../../pipelines/powerhouse-pipeline.js')
 
 // VERCEL-OPTIMIZED CONFIGURATION
 const VERCEL_CONFIG = {
-    // Batch sizes optimized for executive search processing time
-    CORE_BATCH_SIZE: 15,           // Core pipeline: 15 companies per batch (2min each = 4.5min total)
-    ADVANCED_BATCH_SIZE: 12,       // Advanced pipeline: 12 companies per batch
-    POWERHOUSE_BATCH_SIZE: 8,      // Powerhouse pipeline: 8 companies per batch
+    // Batch sizes based on working CloudCaddie implementation
+    CORE_BATCH_SIZE: 5,            // Core pipeline: 5 companies per batch (proven to work)
+    ADVANCED_BATCH_SIZE: 5,        // Advanced pipeline: 5 companies per batch
+    POWERHOUSE_BATCH_SIZE: 3,      // Powerhouse pipeline: 3 companies per batch
     
     // Timeouts optimized for executive search reality
     BATCH_TIMEOUT: 280000,         // 4.5 minutes per batch (under 5min Vercel limit)
     COMPANY_TIMEOUT: 120000,       // 2 minutes per company (4-layer executive search needs time)
     
-    // Rate limiting to prevent API quota exhaustion
+    // Rate limiting based on working CloudCaddie implementation
     BATCH_DELAY: 5000,             // 5 seconds between batches
-    API_DELAY: 1000,               // 1 second between API calls
+    API_DELAY: 2000,               // 2 seconds between API calls (proven to work)
     
     // Memory management
     MEMORY_CLEANUP_INTERVAL: 10,   // Cleanup every 10 companies
@@ -148,32 +148,39 @@ class APIHealthChecker {
         const startTime = Date.now();
         if (!this.config.CORESIGNAL_API_KEY) throw new Error('Missing CORESIGNAL_API_KEY');
         
-        // Use v2 API endpoint that matches the pipeline modules
-        const response = await fetch('https://api.coresignal.com/cdapi/v2/employee_multi_source/search/es_dsl', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'apikey': this.config.CORESIGNAL_API_KEY
-            },
-            body: JSON.stringify({
-                query: {
-                    bool: {
-                        must: [
-                            { term: { "company.name.keyword": "Adobe" } },
-                            { terms: { "title": ["CFO", "Chief Financial Officer"] } }
-                        ]
-                    }
+        // Simple API validation using the same pattern as working implementation
+        try {
+            // Use the same authentication pattern that was working
+            const response = await fetch('https://api.coresignal.com/cdapi/v2/employee_multi_source/search/es_dsl', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'apikey': this.config.CORESIGNAL_API_KEY  // Use 'apikey' header, not Authorization
                 },
-                size: 1
-            })
-        });
-        
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        
-        return {
-            responseTime: Date.now() - startTime,
-            details: 'Employee search API accessible'
-        };
+                body: JSON.stringify({
+                    query: {
+                        bool: {
+                            must: [
+                                { term: { "company.name.keyword": "Test" } }
+                            ]
+                        }
+                    },
+                    size: 1
+                })
+            });
+            
+            // Accept both success and expected error responses
+            if (response.ok || response.status === 400 || response.status === 422) {
+                return {
+                    responseTime: Date.now() - startTime,
+                    details: 'CoreSignal API accessible (using working auth pattern)'
+                };
+            }
+            
+            throw new Error(`HTTP ${response.status}`);
+        } catch (error) {
+            throw new Error(`CoreSignal API check failed: ${error.message}`);
+        }
     }
     
     async checkLusha() {
@@ -218,29 +225,50 @@ class APIHealthChecker {
         const startTime = Date.now();
         if (!this.config.PROSPEO_API_KEY) throw new Error('Missing PROSPEO_API_KEY');
         
-        // Test the email-finder endpoint that the pipeline actually uses
-        const response = await fetch('https://api.prospeo.io/email-finder', {
-            method: 'POST',
-            headers: {
-                'X-KEY': this.config.PROSPEO_API_KEY,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                first_name: 'Test',
-                last_name: 'User',
-                company_domain: 'example.com'
-            })
-        });
-        
-        // Prospeo returns 400 for invalid requests, which is expected for test data
-        if (!response.ok && response.status !== 400) {
-            throw new Error(`HTTP ${response.status}`);
+        try {
+            // Simple API validation - check credits/account status
+            const response = await fetch('https://api.prospeo.io/account', {
+                method: 'GET',
+                headers: {
+                    'X-KEY': this.config.PROSPEO_API_KEY,
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                const data = await response.json();
+                return {
+                    responseTime: Date.now() - startTime,
+                    details: `Prospeo API accessible - Credits: ${data.credits || 'Unknown'}`
+                };
+            }
+            
+            // If account endpoint fails, try email-finder with test data
+            const testResponse = await fetch('https://api.prospeo.io/email-finder', {
+                method: 'POST',
+                headers: {
+                    'X-KEY': this.config.PROSPEO_API_KEY,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    first_name: 'Test',
+                    last_name: 'User',
+                    company_domain: 'example.com'
+                })
+            });
+            
+            // Accept 400 as valid (expected for test data)
+            if (testResponse.ok || testResponse.status === 400) {
+                return {
+                    responseTime: Date.now() - startTime,
+                    details: 'Prospeo email-finder API accessible'
+                };
+            }
+            
+            throw new Error(`HTTP ${testResponse.status}`);
+        } catch (error) {
+            throw new Error(`Prospeo API check failed: ${error.message}`);
         }
-        
-        return {
-            responseTime: Date.now() - startTime,
-            details: 'Email finder API accessible'
-        };
     }
     
     async checkOpenAI() {
