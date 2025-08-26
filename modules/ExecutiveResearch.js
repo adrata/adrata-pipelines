@@ -444,9 +444,36 @@ Provide ONLY a JSON response:
                                 {
                                     bool: {
                                         should: [
+                                            // Tier 1: Primary CFO roles
                                             { match: { "title": "Chief Financial Officer" } },
                                             { match: { "title": "CFO" } },
-                                            { match: { "title": "Finance" } }
+                                            { match: { "title": "Chief Accounting Officer" } },
+                                            { match: { "title": "CAO" } },
+                                            // Tier 2: VP Finance roles
+                                            { match: { "title": "VP Finance" } },
+                                            { match: { "title": "Vice President Finance" } },
+                                            { match: { "title": "Finance Director" } },
+                                            { match: { "title": "Head of Finance" } },
+                                            // Tier 3: Controller roles
+                                            { match: { "title": "Controller" } },
+                                            { match: { "title": "Corporate Controller" } },
+                                            { match: { "title": "Senior Controller" } },
+                                            // Tier 4: Finance management
+                                            { match: { "title": "Finance Manager" } },
+                                            { match: { "title": "Accounting Manager" } },
+                                            { match: { "title": "Financial Planning Manager" } },
+                                            // Tier 5: Treasury and budget
+                                            { match: { "title": "Treasurer" } },
+                                            { match: { "title": "Budget Manager" } },
+                                            // Industry-specific variations
+                                            { match: { "title": "Director of Finance" } },
+                                            { match: { "title": "Director of Accounting" } },
+                                            { match: { "title": "Head of FP&A" } },
+                                            { match: { "title": "Finance Operations Director" } },
+                                            // General finance terms
+                                            { match: { "title": "Finance" } },
+                                            { match: { "title": "Financial" } },
+                                            { match: { "title": "Accounting" } }
                                         ]
                                     }
                                 }
@@ -496,8 +523,16 @@ Provide ONLY a JSON response:
                                         should: [
                                             { match: { "title": "Chief Revenue Officer" } },
                                             { match: { "title": "CRO" } },
+                                            { match: { "title": "Chief Sales Officer" } },
+                                            { match: { "title": "CSO" } },
+                                            { match: { "title": "VP Sales" } },
+                                            { match: { "title": "Vice President Sales" } },
+                                            { match: { "title": "VP Revenue" } },
+                                            { match: { "title": "Vice President Revenue" } },
                                             { match: { "title": "Revenue" } },
-                                            { match: { "title": "Sales" } }
+                                            { match: { "title": "Sales" } },
+                                            { match: { "title": "Chief Customer Officer" } },
+                                            { match: { "title": "CCO" } }
                                         ]
                                     }
                                 }

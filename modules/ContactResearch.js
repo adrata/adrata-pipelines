@@ -297,14 +297,44 @@ Only return contacts with high confidence from verifiable sources. Do not use so
 
             const response = await this.callPerplexityAPI(prompt, 'ai_contact_research');
             if (response.emails) {
-                results.contacts.emails = response.emails.map(email => ({
+                // CRITICAL: Filter out generic emails
+                const filteredEmails = response.emails.filter(emailData => {
+                    const email = emailData.email.toLowerCase();
+                    const isGeneric = [
+                        'pr@', 'info@', 'contact@', 'support@', 'sales@', 'marketing@',
+                        'admin@', 'office@', 'hello@', 'team@', 'general@', 'inquiries@'
+                    ].some(generic => email.startsWith(generic));
+                    
+                    if (isGeneric) {
+                        console.log(`   ❌ Rejected generic email: ${emailData.email}`);
+                        return false;
+                    }
+                    return true;
+                });
+                
+                results.contacts.emails = filteredEmails.map(email => ({
                     ...email,
                     source: 'ai_research',
                     discoveryMethod: 'multi_source_research'
                 }));
             }
             if (response.phones) {
-                results.contacts.phones = response.phones.map(phone => ({
+                // CRITICAL: Filter out generic phone numbers
+                const filteredPhones = response.phones.filter(phoneData => {
+                    const phone = phoneData.number;
+                    const isGeneric = [
+                        '+1-800-', '+1-888-', '+1-877-', '+1-866-', '+1-855-',
+                        '1-800-', '1-888-', '1-877-', '1-866-', '1-855-'
+                    ].some(generic => phone.startsWith(generic));
+                    
+                    if (isGeneric) {
+                        console.log(`   ❌ Rejected generic phone: ${phoneData.number}`);
+                        return false;
+                    }
+                    return true;
+                });
+                
+                results.contacts.phones = filteredPhones.map(phone => ({
                     ...phone,
                     source: 'ai_research',
                     discoveryMethod: 'multi_source_research'

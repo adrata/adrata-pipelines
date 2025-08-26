@@ -320,7 +320,7 @@ class ExecutiveContactIntelligence {
             // STEP 3: Combine and cross-validate data from both sources
             console.log(`   🔍 STEP 3: Cross-validating data between Lusha and CoreSignal...`);
             const combinedData = this.combineExecutiveData(lushaData, coreSignalData, executiveName, role);
-            const emailValidation = this.crossValidateEmails(coreSignalData, lushaPhoneData, domain, firstName, lastName);
+            const emailValidation = this.crossValidateEmails(coreSignalData, lushaData, domain, firstName, lastName);
             
             // STEP 6: Combine data sources for optimal result
             const combinedResult = {
@@ -330,29 +330,24 @@ class ExecutiveContactIntelligence {
                 email: emailValidation.email,
                 emailValidation: emailValidation,
                 // Use Lusha phone data (more comprehensive)
-                phone: lushaPhoneData?.phone || null,
-                phoneNumbers: lushaPhoneData?.phoneNumbers || [],
+                phone: lushaData?.phone || null,
+                phoneNumbers: lushaData?.phoneNumbers || [],
                 // Use CoreSignal title (more accurate) > Lusha title > role
-                title: coreSignalData?.title || lushaPhoneData?.title || role,
-                company: companyData?.name || companyName,
+                title: coreSignalData?.title || lushaData?.title || role,
+                company: companyName,
                 // CoreSignal LinkedIn is more reliable
-                linkedinUrl: coreSignalData?.linkedinUrl || lushaPhoneData?.linkedinUrl || this.generateLinkedInURL(firstName, lastName),
+                linkedinUrl: coreSignalData?.linkedinUrl || lushaData?.linkedinUrl || this.generateLinkedInURL(firstName, lastName),
                 // Calculate confidence based on data sources + email validation
-                confidence: this.calculateCombinedConfidence(coreSignalData, lushaPhoneData, emailValidation),
-                source: this.generateCombinedSource(coreSignalData, lushaPhoneData),
+                confidence: this.calculateCombinedConfidence(coreSignalData, lushaData, emailValidation),
+                source: this.generateCombinedSource(coreSignalData, lushaData),
                 // Combine company data
-                companyData: companyData ? {
-                    employees: companyData.employees,
-                    revenue: companyData.revenueRange,
-                    industry: companyData.subIndustry,
-                    location: companyData.location?.city + ', ' + companyData.location?.state
-                } : null,
+                companyData: null,
                 // Track data sources for validation
                 dataSources: {
                     coreSignal: !!coreSignalData,
-                    lusha: !!lushaPhoneData,
+                    lusha: !!lushaData,
                     hasVerifiedEmail: !!coreSignalData?.email,
-                    hasVerifiedPhone: !!(lushaPhoneData?.phoneNumbers?.length > 0)
+                    hasVerifiedPhone: !!(lushaData?.phoneNumbers?.length > 0)
                 }
             };
             
@@ -539,8 +534,15 @@ Focus on publicly available, professional contact information only.`;
     }
 
     generateLinkedInURL(firstName, lastName) {
+        // WARNING: This is a fallback only - LinkedIn URLs are highly variable
+        // Real LinkedIn URLs often include numbers, middle names, or different patterns
+        // This should only be used when no actual LinkedIn URL is found from APIs
         const cleanFirst = firstName.toLowerCase().replace(/[^a-z]/g, '');
         const cleanLast = lastName.toLowerCase().replace(/[^a-z]/g, '');
+        
+        console.log(`   ⚠️ WARNING: Generated LinkedIn URL (may not be accurate): ${cleanFirst}-${cleanLast}`);
+        console.log(`   🔍 Recommendation: Verify this URL manually or use LinkedIn API`);
+        
         return `https://www.linkedin.com/in/${cleanFirst}-${cleanLast}`;
     }
 
@@ -1063,7 +1065,7 @@ Provide ONLY a JSON response:
     /**
      * 🎯 CALCULATE COMBINED CONFIDENCE
      */
-    calculateCombinedConfidence(coreSignalData, lushaPhoneData, emailValidation = null) {
+    calculateCombinedConfidence(coreSignalData, lushaData, emailValidation = null) {
         let confidence = 50; // Base confidence
 
         if (coreSignalData) {
@@ -1076,9 +1078,9 @@ Provide ONLY a JSON response:
             }
         }
 
-        if (lushaPhoneData) {
+        if (lushaData) {
             confidence += 15; // Lusha data adds confidence
-            if (lushaPhoneData.phoneNumbers && lushaPhoneData.phoneNumbers.length > 0) {
+            if (lushaData.phoneNumbers && lushaData.phoneNumbers.length > 0) {
                 confidence += 15; // Phone numbers add more confidence
             }
         }
@@ -1103,14 +1105,14 @@ Provide ONLY a JSON response:
     /**
      * 📊 GENERATE COMBINED SOURCE
      */
-    generateCombinedSource(coreSignalData, lushaPhoneData) {
+    generateCombinedSource(coreSignalData, lushaData) {
         const sources = [];
         
         if (coreSignalData) {
             sources.push('CoreSignal API');
         }
         
-        if (lushaPhoneData) {
+        if (lushaData) {
             sources.push('Lusha API');
         }
         
@@ -1134,8 +1136,15 @@ Provide ONLY a JSON response:
      * 🔗 GENERATE LINKEDIN URL
      */
     generateLinkedInURL(firstName, lastName) {
+        // WARNING: This is a fallback only - LinkedIn URLs are highly variable
+        // Real LinkedIn URLs often include numbers, middle names, or different patterns
+        // This should only be used when no actual LinkedIn URL is found from APIs
         const cleanFirst = firstName.toLowerCase().replace(/[^a-z]/g, '');
         const cleanLast = lastName.toLowerCase().replace(/[^a-z]/g, '');
+        
+        console.log(`   ⚠️ WARNING: Generated LinkedIn URL (may not be accurate): ${cleanFirst}-${cleanLast}`);
+        console.log(`   🔍 Recommendation: Verify this URL manually or use LinkedIn API`);
+        
         return `https://www.linkedin.com/in/${cleanFirst}-${cleanLast}`;
     }
 

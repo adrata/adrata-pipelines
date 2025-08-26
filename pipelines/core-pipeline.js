@@ -673,8 +673,9 @@ class CorePipeline {
             
             // Find CRO contact data with enhanced matching
             const croContact = executives.find(exec => 
-                ['CRO', 'CSO', 'VP Sales', 'VP Revenue', 'Chief Revenue Officer', 'Chief Sales Officer'].includes(exec.role) || 
-                (exec.name && result.cro?.name && exec.name.toLowerCase().includes(result.cro.name.toLowerCase()))
+                ['CRO', 'CSO', 'VP Sales', 'VP Revenue', 'Chief Revenue Officer', 'Chief Sales Officer', 'Chief Customer Officer', 'CCO', 'Vice President Sales', 'Vice President Revenue'].includes(exec.role) || 
+                (exec.name && result.cro?.name && exec.name.toLowerCase().includes(result.cro.name.toLowerCase())) ||
+                (exec.title && ['revenue', 'sales', 'customer'].some(term => exec.title.toLowerCase().includes(term)))
             );
 
             if (croContact && result.cro) {

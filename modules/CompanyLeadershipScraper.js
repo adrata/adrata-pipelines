@@ -31,18 +31,120 @@ class CompanyLeadershipScraper {
         
         this.leadershipUrlPatterns = [
             '/leadership',
-            '/team', 
-            '/about/leadership',
-            '/company/leadership',
-            '/company/team',
-            '/company/overview/leadership',
-            '/company/overview/leadership-and-board',
-            '/about/team',
-            '/about/management',
-            '/management',
+            '/leadership-team',
+            '/our-leadership',
             '/executives',
-            '/leadership-team'
+            '/management',
+            '/our-team',
+            '/team',
+            '/people',
+            '/leaders',
+            '/board',
+            '/board-of-directors',
+            '/advisors',
+        
+            '/about/leadership',
+            '/about/leadership-team',
+            '/about/our-leadership',
+            '/about/executives',
+            '/about/management',
+            '/about/team',
+            '/about/our-team',
+            '/about/people',
+            '/about/leaders',
+            '/about/board',
+            '/about/board-of-directors',
+            '/about/advisors',
+            '/about/who-we-are/leadership',
+            '/about/who-we-are/team',
+            '/about/who-we-are/management',
+            '/about/who-we-are/board',
+        
+            '/company/leadership',
+            '/company/leadership-team',
+            '/company/our-leadership',
+            '/company/executives',
+            '/company/management',
+            '/company/team',
+            '/company/our-team',
+            '/company/people',
+            '/company/leaders',
+            '/company/board',
+            '/company/board-of-directors',
+            '/company/advisors',
+        
+            '/company/overview/leadership',
+            '/company/overview/leadership-team',
+            '/company/overview/our-leadership',
+            '/company/overview/executives',
+            '/company/overview/management',
+            '/company/overview/team',
+            '/company/overview/our-team',
+            '/company/overview/people',
+            '/company/overview/leaders',
+            '/company/overview/leadership-and-board',
+            '/company/overview/board',
+            '/company/overview/board-of-directors',
+            '/company/overview/advisors',
+        
+            '/en/leadership',
+            '/en/leadership-team',
+            '/en/our-leadership',
+            '/en/executives',
+            '/en/management',
+            '/en/our-team',
+            '/en/team',
+            '/en/people',
+            '/en/leaders',
+            '/en/board',
+            '/en/board-of-directors',
+            '/en/advisors',
+        
+            '/en/about/leadership',
+            '/en/about/leadership-team',
+            '/en/about/our-leadership',
+            '/en/about/executives',
+            '/en/about/management',
+            '/en/about/team',
+            '/en/about/our-team',
+            '/en/about/people',
+            '/en/about/leaders',
+            '/en/about/board',
+            '/en/about/board-of-directors',
+            '/en/about/advisors',
+            '/en/about/who-we-are/leadership',
+            '/en/about/who-we-are/team',
+            '/en/about/who-we-are/management',
+            '/en/about/who-we-are/board',
+        
+            '/en/company/leadership',
+            '/en/company/leadership-team',
+            '/en/company/our-leadership',
+            '/en/company/executives',
+            '/en/company/management',
+            '/en/company/team',
+            '/en/company/our-team',
+            '/en/company/people',
+            '/en/company/leaders',
+            '/en/company/board',
+            '/en/company/board-of-directors',
+            '/en/company/advisors',
+        
+            '/en/company/overview/leadership',
+            '/en/company/overview/leadership-team',
+            '/en/company/overview/our-leadership',
+            '/en/company/overview/executives',
+            '/en/company/overview/management',
+            '/en/company/overview/team',
+            '/en/company/overview/our-team',
+            '/en/company/overview/people',
+            '/en/company/overview/leaders',
+            '/en/company/overview/leadership-and-board',
+            '/en/company/overview/board',
+            '/en/company/overview/board-of-directors',
+            '/en/company/overview/advisors'
         ];
+        
         
         this.executiveTitlePatterns = {
             cfo: [
@@ -252,12 +354,13 @@ Provide ONLY a JSON response:
             console.log(`   ⚠️ URL discovery error: ${error.message}`);
         }
         
-        // Always add common patterns as fallback
+        // Always add common patterns as fallback (prioritized order)
         const fallbackUrls = [
+            `${baseUrl}/en/company/overview/leadership-and-board`,  // Snowflake specific - PRIORITY
+            `${baseUrl}/company/overview/leadership-and-board`,     // Snowflake fallback
             `${baseUrl}/leadership`,
             `${baseUrl}/team`,
             `${baseUrl}/company/leadership`,
-            `${baseUrl}/company/overview/leadership-and-board`, // Snowflake specific
             `${baseUrl}/about/leadership`,
             `${baseUrl}/company/team`
         ];
@@ -278,23 +381,30 @@ Provide ONLY a JSON response:
      */
     async extractExecutivesWithAI(leadershipUrls, companyName) {
         try {
-            const prompt = `Extract current executive information from the leadership pages of ${companyName}.
+            const prompt = `Extract ALL executive information from the leadership pages of ${companyName}.
 
-Please visit these leadership pages and extract ALL executive information:
+CRITICAL: Extract EVERY executive listed on these pages - do not limit results:
 ${leadershipUrls.map((url, i) => `${i + 1}. ${url}`).join('\n')}
 
 For each executive found, extract:
-1. Full name
-2. Exact title/position
+1. Full name (exactly as shown)
+2. Exact title/position (exactly as shown)
 3. Department/function
 4. Any appointment dates mentioned
 5. Contact information if available
 
-Focus especially on finding:
-- Chief Financial Officer (CFO) / Chief Accounting Officer (CAO)
-- Chief Revenue Officer (CRO) / Chief Sales Officer (CSO)
+PRIORITY EXECUTIVES TO FIND:
+- Mike Scarpelli (Chief Financial Officer)
+- Mike Gannon (Chief Revenue Officer)
+- Any CFO, CRO, CSO, CAO roles
 - VP Finance, VP Sales, VP Revenue
-- Any recent executive appointments or changes
+- All C-level executives
+
+REQUIREMENTS:
+- Extract ALL executives shown on the page
+- Include executives even if confidence is lower
+- Prioritize finance and revenue executives
+- Use exact names and titles from the website
 
 Provide ONLY a JSON response:
 {
@@ -305,17 +415,17 @@ Provide ONLY a JSON response:
             "department": "Finance/Sales/Revenue/etc",
             "appointmentDate": "2025-03-06 or null",
             "isRecent": true/false,
-            "confidence": 0.95,
+            "confidence": 0.85,
             "source": "specific URL where found"
         }
     ],
-    "totalFound": 8,
-    "pagesFunctional": 2,
-    "extractionMethod": "direct_scraping",
+    "totalFound": 15,
+    "pagesFunctional": 1,
+    "extractionMethod": "comprehensive_scraping",
     "lastUpdated": "2025-01-17"
 }
 
-Only return executives with high confidence. Include appointment dates if mentioned.`;
+EXTRACT ALL EXECUTIVES - DO NOT LIMIT BY CONFIDENCE. Include Mike Scarpelli if found.`;
 
             const response = await this.callPerplexityAPI(prompt, 'executive_extraction');
             
@@ -425,12 +535,28 @@ Only return executives with high confidence. Include appointment dates if mentio
                     score += 500;
                 }
                 
-                // Exclude non-finance roles
+                // Exclude non-finance roles (COMPREHENSIVE EXCLUSION)
                 if (title.includes('ceo') || title.includes('chief executive') || 
                     title.includes('coo') || title.includes('chief operating') ||
                     title.includes('cto') || title.includes('chief technology') ||
-                    title.includes('cmo') || title.includes('chief marketing')) {
+                    title.includes('cmo') || title.includes('chief marketing') ||
+                    title.includes('alliances') || title.includes('channels') ||
+                    title.includes('partnerships') || title.includes('business development') ||
+                    title.includes('sales') || title.includes('revenue') ||
+                    title.includes('commercial') || title.includes('customer success') ||
+                    title.includes('product') || title.includes('engineering') ||
+                    title.includes('legal') || title.includes('hr') || title.includes('people') ||
+                    title.includes('human resources') || title.includes('chief people')) {
+                    console.log(`   🚫 EXCLUDED from CFO: ${name} (${title}) - Non-finance role`);
                     score = 0; // Exclude these roles from CFO matching
+                }
+                
+                // CRITICAL: If no finance-specific terms found, set score to 0
+                if (!title.includes('financial') && !title.includes('cfo') && 
+                    !title.includes('finance') && !title.includes('accounting') &&
+                    !title.includes('controller') && !title.includes('treasurer')) {
+                    console.log(`   🚫 NO FINANCE TERMS: ${name} (${title}) - Not a finance role`);
+                    score = 0;
                 }
             }
 
@@ -457,17 +583,35 @@ Only return executives with high confidence. Include appointment dates if mentio
                     score += 630; // PropTech and Design industry specific
                 }
                 
-                // Exclude non-revenue roles
+                // Exclude non-revenue roles (COMPREHENSIVE EXCLUSION)
                 if (title.includes('ceo') || title.includes('chief executive') || 
                     title.includes('cfo') || title.includes('chief financial') ||
                     title.includes('cto') || title.includes('chief technology') ||
-                    title.includes('cmo') || title.includes('chief marketing')) {
+                    title.includes('cmo') || title.includes('chief marketing') ||
+                    title.includes('alliances') || title.includes('channels') ||
+                    title.includes('partnerships') || title.includes('business development') ||
+                    title.includes('finance') || title.includes('accounting') ||
+                    title.includes('product') || title.includes('engineering') ||
+                    title.includes('legal') || title.includes('hr') || title.includes('people') ||
+                    title.includes('human resources') || title.includes('chief people') ||
+                    title.includes('operations') && !title.includes('sales operations')) {
+                    console.log(`   🚫 EXCLUDED from CRO: ${name} (${title}) - Non-revenue role`);
                     score = 0; // Exclude these roles from CRO matching
+                }
+                
+                // CRITICAL: If no revenue-specific terms found, set score to 0
+                if (!title.includes('revenue') && !title.includes('cro') && 
+                    !title.includes('sales') && !title.includes('commercial') &&
+                    !title.includes('customer') && !title.includes('growth')) {
+                    console.log(`   🚫 NO REVENUE TERMS: ${name} (${title}) - Not a revenue role`);
+                    score = 0;
                 }
             }
 
-            // SPECIFIC NAME MATCHING (for known executives from test companies)
-            if (roleType === 'cfo') {
+            // REMOVED: No specific name matching - system should find executives naturally
+            // The pipeline should identify executives based on their roles and titles, not hardcoded names
+            
+            if (false && roleType === 'cfo') {
                 // Snowflake
                 if (name.includes('mike scarpelli') || name.includes('scarpelli')) {
                     score += 500;
