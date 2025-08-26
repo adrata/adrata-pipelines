@@ -725,6 +725,17 @@ module.exports = async (req, res) => {
                 AGGRESSIVE_CACHING: false
             };
 
+            // Test module loading
+            console.log('🔧 Testing module loading...');
+            try {
+                const { ExecutiveContactIntelligence } = require("../modules/ExecutiveContactIntelligence");
+                const testModule = new ExecutiveContactIntelligence(config);
+                console.log('✅ ExecutiveContactIntelligence module loaded successfully');
+                console.log(`   Methods available: ${Object.keys(Object.getPrototypeOf(testModule)).join(', ')}`);
+            } catch (error) {
+                console.log(`❌ ExecutiveContactIntelligence module failed to load: ${error.message}`);
+            }
+            
             // Initialize batch processor
             const batchProcessor = new BatchProcessor(pipeline, config);
             
