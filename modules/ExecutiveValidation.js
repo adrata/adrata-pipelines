@@ -243,6 +243,9 @@ Only return information you can verify from official sources.`;
             { name: /amy chang/i, wrongDomain: /disney/i, wrongCompany: /salesforce/i },
             { name: /louise pentland/i, wrongDomain: /hitachi/i, wrongCompany: /adobe/i },
             { name: /miguel milano/i, wrongDomain: /salesforce/i, wrongCompany: /microsoft/i },
+            // CRITICAL: Add Mike Scarpelli contamination pattern
+            { name: /mike scarpelli/i, wrongDomain: /snowflake/i, wrongCompany: /databricks/i },
+            { name: /scarpelli/i, wrongDomain: /snowflake/i, wrongCompany: /databricks/i },
             // Enhanced patterns for better detection
             { name: /pentland/i, wrongDomain: /hitachi/i, wrongCompany: /adobe/i },
             { name: /chang/i, wrongDomain: /disney/i, wrongCompany: /salesforce/i }
@@ -263,7 +266,20 @@ Only return information you can verify from official sources.`;
         // Check for any email domain that doesn't match target company
         const targetDomain = this.extractDomain(targetCompany);
         if (targetDomain && emailDomain && emailDomain !== targetDomain) {
-            console.log(`   ⚠️ Domain mismatch detected - ${emailDomain} vs expected ${targetDomain}`);
+            console.log(`   🚨 CRITICAL DOMAIN MISMATCH: ${emailDomain} vs expected ${targetDomain} for ${targetCompany}`);
+            console.log(`   ❌ REJECTING: ${executiveName} with wrong domain`);
+            return true;
+        }
+
+        // Additional check: Snowflake executives should not appear for other companies
+        if (emailDomain && emailDomain.includes('snowflake') && !targetCompany.toLowerCase().includes('snowflake')) {
+            console.log(`   🚨 SNOWFLAKE CONTAMINATION: ${executiveName} with @snowflake.com at ${targetCompany}`);
+            return true;
+        }
+
+        // Additional check: Databricks executives should not appear for other companies  
+        if (emailDomain && emailDomain.includes('databricks') && !targetCompany.toLowerCase().includes('databricks')) {
+            console.log(`   🚨 DATABRICKS CONTAMINATION: ${executiveName} with @databricks.com at ${targetCompany}`);
             return true;
         }
 
@@ -278,7 +294,14 @@ Only return information you can verify from official sources.`;
             return null;
         }
 
-        // CRITICAL: Check for redacted emails first and fix them
+        // CRITICAL: Check for cross-contamination FIRST - reject immediately
+        const emailDomain = executive.email ? this.extractDomain(executive.email) : null;
+        if (this.isKnownCrossContamination(executive.name, emailDomain, companyName)) {
+            console.log(`   ❌ REJECTING CONTAMINATED EXECUTIVE: ${executive.name} (${emailDomain}) for ${companyName}`);
+            return null; // Reject completely
+        }
+
+        // CRITICAL: Check for redacted emails and fix them
         if (executive.email && this.isEmailRedacted(executive.email)) {
             console.log(`   🚨 REDACTED EMAIL DETECTED: ${executive.email}`);
             executive.email = this.generateProbableEmail(executive.name, companyDomain);

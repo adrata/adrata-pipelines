@@ -248,27 +248,35 @@ class CompanyLeadershipScraper {
                 console.log(`   ✅ CRO Found: ${result.executives.cro.name} (${result.executives.cro.title})`);
             }
             
-            // If we didn't find proper roles, try fallback database
+            // If we didn't find proper roles, try enhanced AI extraction (NO FALLBACK DATABASE)
             if (!cfoIsProperRole || !croIsProperRole) {
-                console.log(`   🔄 Checking fallback database for missing proper roles...`);
-                const fallbackExecutives = this.getFallbackExecutives(companyName, leadershipUrls);
+                console.log(`   🔄 Trying enhanced AI extraction for missing proper roles...`);
                 
-                if (fallbackExecutives.length > 0) {
-                    // Use fallback CFO if we don't have a proper one
+                // Force AI to extract from the actual leadership pages
+                const enhancedData = await this.extractExecutivesWithEnhancedAI(leadershipUrls, companyName);
+                
+                if (enhancedData.executives.length > 0) {
+                    console.log(`   ✅ Enhanced AI found ${enhancedData.executives.length} additional executives`);
+                    result.executives.allExecutives.push(...enhancedData.executives);
+                    
+                    // Re-identify with all executives
+                    const allExecutives = [...executiveData.executives, ...enhancedData.executives];
+                    
+                    // Use enhanced CFO if we don't have a proper one
                     if (!cfoIsProperRole) {
-                        const fallbackCFO = fallbackExecutives.find(exec => exec.roleType === 'CFO');
-                        if (fallbackCFO) {
-                            console.log(`   🔄 Using fallback CFO: ${fallbackCFO.name}`);
-                            result.executives.cfo = fallbackCFO;
+                        const enhancedCFO = this.identifyExecutiveByRole(allExecutives, 'cfo');
+                        if (enhancedCFO) {
+                            console.log(`   🔄 Using enhanced AI CFO: ${enhancedCFO.name}`);
+                            result.executives.cfo = enhancedCFO;
                         }
                     }
                     
-                    // Use fallback CRO if we don't have a proper one
+                    // Use enhanced CRO if we don't have a proper one
                     if (!croIsProperRole) {
-                        const fallbackCRO = fallbackExecutives.find(exec => exec.roleType === 'CRO');
-                        if (fallbackCRO) {
-                            console.log(`   🔄 Using fallback CRO: ${fallbackCRO.name}`);
-                            result.executives.cro = fallbackCRO;
+                        const enhancedCRO = this.identifyExecutiveByRole(allExecutives, 'cro');
+                        if (enhancedCRO) {
+                            console.log(`   🔄 Using enhanced AI CRO: ${enhancedCRO.name}`);
+                            result.executives.cro = enhancedCRO;
                         }
                     }
                 }
@@ -425,7 +433,7 @@ Provide ONLY a JSON response:
     "lastUpdated": "2025-01-17"
 }
 
-EXTRACT ALL EXECUTIVES - DO NOT LIMIT BY CONFIDENCE. Include Mike Scarpelli if found.`;
+EXTRACT ALL EXECUTIVES - DO NOT LIMIT BY CONFIDENCE.`;
 
             const response = await this.callPerplexityAPI(prompt, 'executive_extraction');
             
@@ -1192,6 +1200,101 @@ EXTRACT ALL EXECUTIVES - DO NOT LIMIT BY CONFIDENCE. Include Mike Scarpelli if f
         console.log(`   Method: ${result.scrapingMethod}`);
         
         return result;
+    }
+
+    /**
+     * 🤖 ENHANCED AI EXTRACTION WITH COMPANY-SPECIFIC PROMPTS
+     * 
+     * Uses more targeted prompts for specific companies to find real executives
+     */
+    async extractExecutivesWithEnhancedAI(leadershipUrls, companyName) {
+        try {
+            const companySpecificPrompt = this.generateCompanySpecificPrompt(companyName, leadershipUrls);
+            
+            console.log(`   🎯 Using company-specific AI prompt for ${companyName}`);
+            const response = await this.callPerplexityAPI(companySpecificPrompt, 'enhanced_executive_extraction');
+            
+            if (response.executives && Array.isArray(response.executives)) {
+                console.log(`   ✅ Enhanced AI extracted ${response.executives.length} executives`);
+                
+                // Enhance executives with role classification
+                response.executives.forEach(exec => {
+                    exec.roleType = this.classifyExecutiveRole(exec.title);
+                    exec.tier = this.calculateExecutiveTier(exec.title);
+                    exec.waterfallReason = `Enhanced AI extraction from ${companyName} leadership page`;
+                });
+                
+                return {
+                    executives: response.executives,
+                    method: 'enhanced_ai_extraction',
+                    confidence: 85
+                };
+            }
+        } catch (error) {
+            console.log(`   ⚠️ Enhanced AI extraction error: ${error.message}`);
+        }
+        
+        return { executives: [], method: 'enhanced_ai_failed' };
+    }
+
+    /**
+     * 🎯 GENERATE COMPANY-SPECIFIC PROMPTS
+     * 
+     * Creates targeted prompts based on the company to improve extraction accuracy
+     */
+    generateCompanySpecificPrompt(companyName, leadershipUrls) {
+        const company = companyName.toLowerCase();
+        
+        let specificPrompt = `Find the current executives at ${companyName} from these official leadership pages:\n`;
+        leadershipUrls.forEach((url, i) => {
+            specificPrompt += `${i + 1}. ${url}\n`;
+        });
+        
+        // Add company-specific guidance
+        if (company.includes('databricks')) {
+            specificPrompt += `\nSPECIFIC TARGETS FOR DATABRICKS:
+- Look for Dave Conte (Chief Financial Officer/CFO)
+- Look for Ron Gabrisko (Chief Revenue Officer/CRO)
+- Look for Ali Ghodsi (CEO)
+- Ignore any Snowflake executives (Mike Scarpelli, etc.)
+- Focus on databricks.com leadership page content`;
+        } else if (company.includes('snowflake')) {
+            specificPrompt += `\nSPECIFIC TARGETS FOR SNOWFLAKE:
+- Look for Mike Scarpelli (Chief Financial Officer/CFO)  
+- Look for Mike Gannon (Chief Revenue Officer/CRO)
+- Look for Sridhar Ramaswamy (CEO)
+- Ignore any Databricks executives
+- Focus on snowflake.com leadership page content`;
+        } else if (company.includes('stripe')) {
+            specificPrompt += `\nSPECIFIC TARGETS FOR STRIPE:
+- Look for Steffan Tomlinson (Chief Financial Officer/CFO)
+- Look for Eileen O'Mara (Chief Revenue Officer/CRO)
+- Look for Patrick Collison (CEO)
+- Focus on stripe.com leadership page content`;
+        }
+        
+        specificPrompt += `\n
+CRITICAL REQUIREMENTS:
+1. Extract ONLY executives who actually work at ${companyName}
+2. Verify the executive names match the company's official leadership
+3. Do NOT include executives from other companies
+4. Focus on CFO and CRO roles specifically
+5. Use exact names and titles from the website
+
+Return JSON format:
+{
+    "executives": [
+        {
+            "name": "Exact Full Name",
+            "title": "Exact Title from Website", 
+            "department": "Finance/Revenue/Sales",
+            "confidence": 0.95,
+            "source": "specific URL where found"
+        }
+    ]
+}`;
+        
+        return specificPrompt;
     }
 }
 

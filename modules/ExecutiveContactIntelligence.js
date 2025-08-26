@@ -1402,16 +1402,17 @@ Provide ONLY a JSON response:
     isEmailRedacted(email) {
         if (!email) return false;
         
-        // Common redaction patterns
+        // Common redaction patterns - ENHANCED FOR STRIPE
         const redactionPatterns = [
-            /\*+/,           // Asterisks: d****d@adobe.com
-            /x+/i,           // X's: dxxxxd@adobe.com  
-            /\.{3,}/,        // Dots: d...d@adobe.com
-            /-+/,            // Dashes: d----d@adobe.com
-            /_+/,            // Underscores: d____d@adobe.com
+            /\*{2,}/,        // Multiple asterisks: s******@stripe.com
+            /x{2,}/i,        // Multiple X's: sxxxxxxx@stripe.com  
+            /\.{3,}/,        // Multiple dots: s...@stripe.com
+            /-{2,}/,         // Multiple dashes: s----@stripe.com
+            /_{2,}/,         // Multiple underscores: s____@stripe.com
             /\[redacted\]/i, // [REDACTED]
             /\[hidden\]/i,   // [HIDDEN]
-            /\[private\]/i   // [PRIVATE]
+            /\[private\]/i,  // [PRIVATE]
+            /\[masked\]/i    // [MASKED]
         ];
         
         const isRedacted = redactionPatterns.some(pattern => pattern.test(email));
