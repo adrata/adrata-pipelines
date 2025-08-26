@@ -436,11 +436,58 @@ class CorePipeline {
             // STEP 3: Contact Intelligence (Email/Phone Discovery) - ONLY ON VALIDATED EXECUTIVES
             console.log('Discovering contact information...');
             console.log('🔍 DEBUG: Starting contact intelligence with detailed API logging...');
+            console.log(`🔍 DEBUG: CFO data being passed: ${result.cfo?.name} (${result.cfo?.confidence}% confidence)`);
+            console.log(`🔍 DEBUG: CRO data being passed: ${result.cro?.name} (${result.cro?.confidence}% confidence)`);
+            
+            // Ensure both CFO and CRO are properly structured for contact intelligence
+            if (result.cfo && result.cfo.name) {
+                console.log(`🔍 DEBUG: CFO ready for contact intelligence: ${result.cfo.name}`);
+            }
+            if (result.cro && result.cro.name) {
+                console.log(`🔍 DEBUG: CRO ready for contact intelligence: ${result.cro.name}`);
+            }
+            
             const contactIntelligence = await this.executiveContactIntelligence.enhanceExecutiveIntelligence(result);
             
             // Merge contact data with enhanced logging
             console.log('   📧 Merging contact intelligence data...');
             this.mergeContactData(result, contactIntelligence);
+            
+            // FALLBACK: If CRO is missing contact data, try direct API calls
+            if (result.cro && result.cro.name && (!result.cro.phone || !result.cro.linkedIn)) {
+                console.log(`🔧 FALLBACK: CRO missing contact data, trying direct API calls...`);
+                console.log(`   CRO: ${result.cro.name} - Phone: ${result.cro.phone || 'MISSING'} - LinkedIn: ${result.cro.linkedIn || 'MISSING'}`);
+                
+                try {
+                    // Try direct CoreSignal search for CRO
+                    const croContactData = await this.executiveContactIntelligence.searchLushaExecutive(
+                        result.cro.name,
+                        result.companyName,
+                        result.website,
+                        'CRO'
+                    );
+                    
+                    if (croContactData) {
+                        console.log(`✅ FALLBACK: Found CRO contact data via direct API call`);
+                        console.log(`   Phone: ${croContactData.phone || 'Not found'}`);
+                        console.log(`   LinkedIn: ${croContactData.linkedinUrl || 'Not found'}`);
+                        
+                        // Update CRO data with found contact information
+                        if (croContactData.phone && !result.cro.phone) {
+                            result.cro.phone = croContactData.phone;
+                            console.log(`   ✅ Updated CRO phone: ${result.cro.phone}`);
+                        }
+                        if (croContactData.linkedinUrl && !result.cro.linkedIn) {
+                            result.cro.linkedIn = croContactData.linkedinUrl;
+                            console.log(`   ✅ Updated CRO LinkedIn: ${result.cro.linkedIn}`);
+                        }
+                    } else {
+                        console.log(`❌ FALLBACK: No CRO contact data found via direct API call`);
+                    }
+                } catch (fallbackError) {
+                    console.log(`⚠️ FALLBACK: Direct API call failed: ${fallbackError.message}`);
+                }
+            }
             
             // Debug: Show what contact intelligence returned
             console.log(`   🔍 Contact Intelligence Summary:`);
