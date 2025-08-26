@@ -110,11 +110,13 @@ class ContactValidator {
             // Enrich CFO contacts
             if (cfoExecutive && cfoExecutive.name) {
                 console.log('\n💰 ENRICHING CFO CONTACTS');
+                console.log(`🔍 DEBUG: CFO Executive data: ${JSON.stringify(cfoExecutive)}`);
                 result.enrichedExecutives.cfo = await this.enrichExecutiveContacts(
                     cfoExecutive,
                     result.domain,
                     companyResolution
                 );
+                console.log(`🔍 DEBUG: CFO Enrichment result: ${JSON.stringify(result.enrichedExecutives.cfo)}`);
                 this.updateStats(result.enrichmentStats, result.enrichedExecutives.cfo);
             } else {
                 console.log('\n💰 CFO NOT FOUND IN RESEARCH - Searching CoreSignal executives...');
@@ -134,11 +136,13 @@ class ContactValidator {
             // Enrich CRO contacts
             if (croExecutive && croExecutive.name) {
                 console.log('\n📈 ENRICHING CRO CONTACTS');
+                console.log(`🔍 DEBUG: CRO Executive data: ${JSON.stringify(croExecutive)}`);
                 result.enrichedExecutives.cro = await this.enrichExecutiveContacts(
                     croExecutive,
                     result.domain,
                     companyResolution
                 );
+                console.log(`🔍 DEBUG: CRO Enrichment result: ${JSON.stringify(result.enrichedExecutives.cro)}`);
                 this.updateStats(result.enrichmentStats, result.enrichedExecutives.cro);
             } else {
                 console.log('\n📈 CRO NOT FOUND IN RESEARCH - Searching CoreSignal executives...');
