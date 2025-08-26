@@ -148,20 +148,32 @@ class APIHealthChecker {
         const startTime = Date.now();
         if (!this.config.CORESIGNAL_API_KEY) throw new Error('Missing CORESIGNAL_API_KEY');
         
-        // Simple API validation using the same pattern as working implementation
+        // Use the exact working pattern from ExecutiveResearch.js
         try {
-            // Use the same authentication pattern that was working
             const response = await fetch('https://api.coresignal.com/cdapi/v2/employee_multi_source/search/es_dsl', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'apikey': this.config.CORESIGNAL_API_KEY  // Use 'apikey' header, not Authorization
+                    'apikey': this.config.CORESIGNAL_API_KEY,
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                     query: {
                         bool: {
                             must: [
-                                { term: { "company.name.keyword": "Test" } }
+                                {
+                                    bool: {
+                                        should: [
+                                            { match: { "company_name": "Microsoft" } }
+                                        ]
+                                    }
+                                },
+                                {
+                                    bool: {
+                                        should: [
+                                            { match: { "title": "CEO" } }
+                                        ]
+                                    }
+                                }
                             ]
                         }
                     },
@@ -173,7 +185,7 @@ class APIHealthChecker {
             if (response.ok || response.status === 400 || response.status === 422) {
                 return {
                     responseTime: Date.now() - startTime,
-                    details: 'CoreSignal API accessible (using working auth pattern)'
+                    details: 'CoreSignal API accessible (using exact working pattern)'
                 };
             }
             
@@ -225,47 +237,30 @@ class APIHealthChecker {
         const startTime = Date.now();
         if (!this.config.PROSPEO_API_KEY) throw new Error('Missing PROSPEO_API_KEY');
         
+        // Use the exact working pattern from ContactValidator.js
         try {
-            // Simple API validation - check credits/account status
-            const response = await fetch('https://api.prospeo.io/account', {
-                method: 'GET',
-                headers: {
-                    'X-KEY': this.config.PROSPEO_API_KEY,
-                    'Content-Type': 'application/json'
-                }
-            });
-            
-            if (response.ok) {
-                const data = await response.json();
-                return {
-                    responseTime: Date.now() - startTime,
-                    details: `Prospeo API accessible - Credits: ${data.credits || 'Unknown'}`
-                };
-            }
-            
-            // If account endpoint fails, try email-finder with test data
-            const testResponse = await fetch('https://api.prospeo.io/email-finder', {
+            const response = await fetch('https://api.prospeo.io/email-finder', {
                 method: 'POST',
                 headers: {
-                    'X-KEY': this.config.PROSPEO_API_KEY,
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'X-KEY': this.config.PROSPEO_API_KEY
                 },
                 body: JSON.stringify({
                     first_name: 'Test',
                     last_name: 'User',
-                    company_domain: 'example.com'
+                    company: 'example.com'
                 })
             });
             
-            // Accept 400 as valid (expected for test data)
-            if (testResponse.ok || testResponse.status === 400) {
+            // Accept both success and expected error responses (400 is normal for test data)
+            if (response.ok || response.status === 400) {
                 return {
                     responseTime: Date.now() - startTime,
-                    details: 'Prospeo email-finder API accessible'
+                    details: 'Prospeo email-finder API accessible (using exact working pattern)'
                 };
             }
             
-            throw new Error(`HTTP ${testResponse.status}`);
+            throw new Error(`HTTP ${response.status}`);
         } catch (error) {
             throw new Error(`Prospeo API check failed: ${error.message}`);
         }
