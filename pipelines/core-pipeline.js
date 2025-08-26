@@ -30,6 +30,7 @@ const { ApiCostOptimizer } = require("../modules/ApiCostOptimizer");
 const { ExecutiveTransitionDetector } = require("../modules/ExecutiveTransitionDetector");
 const { DataCache } = require("../modules/DataCache");
 const { ExecutiveValidation } = require("../modules/ExecutiveValidation");
+const { OperationalStatusAnalyzer } = require("../modules/OperationalStatusAnalyzer");
 
 /**
  * CORE PIPELINE 
@@ -95,6 +96,7 @@ class CorePipeline {
         this.apiCostOptimizer = new ApiCostOptimizer(config);
         this.executiveTransitionDetector = new ExecutiveTransitionDetector(config);
         this.executiveValidation = new ExecutiveValidation(config);
+        this.operationalStatusAnalyzer = new OperationalStatusAnalyzer(config);
         // Version management removed for self-contained deployment
         this.dataCache = new DataCache({
             CACHE_TTL_DAYS: 30,
@@ -374,28 +376,163 @@ class CorePipeline {
                 confidence: companyResolution.acquisitionInfo?.confidence || 0
             };
 
-            // STEP 1.5: Post-Acquisition Executive Tracking (if applicable)
-            if (companyResolution.acquisitionInfo?.isAcquired && companyResolution.acquisitionInfo?.executiveTracking) {
-                console.log('Tracking post-acquisition executives...');
-                const executiveTracking = await this.companyResolver.trackPostAcquisitionExecutives(
-                    result.companyName,
-                    companyResolution.acquisitionInfo
+            // Set company status based on corporate structure
+            if (result.corporateStructure.isAcquired) {
+                result.companyStatus = 'acquired';
+            } else if (result.corporateStructure.acquisitionType === 'merger') {
+                result.companyStatus = 'merged';
+            } else {
+                result.companyStatus = 'active';
+            }
+
+            // STEP 1.5: Operational Status Analysis (for acquired companies)
+            let operationalAssessment = null;
+            if (result.corporateStructure.isAcquired) {
+                console.log(`🔍 ANALYZING OPERATIONAL STATUS: ${result.companyName}...`);
+                operationalAssessment = await this.operationalStatusAnalyzer.assessOperationalStatus(
+                    companyResolution,
+                    result.corporateStructure
                 );
-                if (executiveTracking) {
-                    result.executiveTracking = executiveTracking;
-                    console.log(`   ✅ Tracked ${executiveTracking.executives.length} post-acquisition executives`);
+                
+                // Store operational assessment in result
+                result.operationalStatus = operationalAssessment.operationalStatus;
+                result.targetEntity = operationalAssessment.targetEntity;
+                result.executiveTargeting = operationalAssessment.executiveTargeting;
+                result.operationalConfidence = operationalAssessment.confidence;
+                result.operationalReasoning = operationalAssessment.reasoning;
+                
+                console.log(`   📊 Status: ${operationalAssessment.operationalStatus}`);
+                console.log(`   🎯 Target: ${operationalAssessment.targetEntity}`);
+                console.log(`   📈 Confidence: ${(operationalAssessment.confidence * 100).toFixed(0)}%`);
+            }
+
+            // STEP 1.6: Post-Acquisition Executive Research (if applicable)
+            if (result.corporateStructure.isAcquired && result.corporateStructure.parentCompany) {
+                console.log(`🎯 ACQUISITION DETECTED: Researching ${result.corporateStructure.parentCompany} executives...`);
+                const parentExecutives = await this.researchParentCompanyExecutives(
+                    result.corporateStructure.parentCompany,
+                    result.corporateStructure
+                );
+                
+                // Determine executive targeting strategy based on operational assessment
+                const shouldUseParentExecutives = this.shouldUseParentExecutives(
+                    parentExecutives, 
+                    operationalAssessment
+                );
+                
+                if (shouldUseParentExecutives && parentExecutives && (parentExecutives.cfo?.name || parentExecutives.cro?.name)) {
+                    // Store acquisition intelligence for CSV output
+                    result.acquisitionIntelligence = {
+                        originalCompany: result.companyName,
+                        parentCompany: result.corporateStructure.parentCompany,
+                        acquisitionDate: result.corporateStructure.acquisitionDate,
+                        operationalStatus: operationalAssessment?.operationalStatus || 'unknown',
+                        targetingReason: operationalAssessment?.executiveTargeting?.reasoning || 'Parent company executives identified',
+                        contactNote: `Contact parent company executives - ${result.companyName} (${operationalAssessment?.operationalStatus || 'acquired'}) by ${result.corporateStructure.parentCompany}`
+                    };
+                    
+                    // Use parent company executives based on operational assessment
+                    if (parentExecutives.cfo) {
+                        result.cfo = parentExecutives.cfo;
+                        console.log(`   ✅ Using parent company CFO: ${parentExecutives.cfo.name} (${operationalAssessment?.executiveTargeting?.strategy || 'acquisition-based'})`);
+                    }
+                    if (parentExecutives.cro) {
+                        result.cro = parentExecutives.cro;
+                        console.log(`   ✅ Using parent company CRO: ${parentExecutives.cro.name} (${operationalAssessment?.executiveTargeting?.strategy || 'acquisition-based'})`);
+                    }
+                    
+                    // Skip regular executive research and jump to contact intelligence
+                    console.log(`   🎯 Using parent company executives - strategy: ${operationalAssessment?.executiveTargeting?.strategy || 'default'}`);
+                    result.researchMethod = `parent_company_executives_${operationalAssessment?.operationalStatus || 'acquired'}`;
+                    
+                    try {
+                        // Jump directly to contact intelligence with parent company context
+                        console.log('Discovering contact information...');
+                        const contactIntelligence = await this.executiveContactIntelligence.enhanceExecutiveIntelligence({
+                            companyName: result.companyName,
+                            website: companyResolution.finalUrl || company.website,
+                            cfo: result.cfo,
+                            cro: result.cro
+                        });
+                        
+                        if (contactIntelligence) {
+                            this.mergeContactData(result, contactIntelligence);
+                        }
+                        
+                        // Skip to validation
+                        console.log('Validating executive contacts...');
+                        const domain = (companyResolution.finalUrl || company.website).replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
+                        
+                        if (result.cfo && result.cfo.name) {
+                            result.cfo = await this.contactValidator.enrichExecutiveContacts(result.cfo, domain, companyResolution);
+                        }
+                        
+                        if (result.cro && result.cro.name) {
+                            result.cro = await this.contactValidator.enrichExecutiveContacts(result.cro, domain, companyResolution);
+                        }
+                        
+                        // Final validation
+                        console.log('Running essential data validation...');
+                        try {
+                            const validation = await this.validationEngine.validateCompanyData(result);
+                            result.validationScore = validation.overallScore;
+                            result.validationNotes = validation.recommendations;
+                        } catch (error) {
+                            console.log(`   ⚠️ Validation error: ${error.message}`);
+                            result.validationScore = 85; // Default score for parent company research
+                            result.validationNotes = ['Parent company executives validated'];
+                        }
+                        
+                    } catch (error) {
+                        console.log(`   ⚠️ Parent company processing error: ${error.message}`);
+                        // Continue with basic parent company data even if enrichment fails
+                    }
+                    
+                    // Set final metadata
+                    result.processingTime = Date.now() - startTime;
+                    result.timestamp = new Date().toISOString();
+                    result.overallConfidence = Math.round((result.cfo?.confidence || 0 + result.cro?.confidence || 0) / 2);
+                    
+                    console.log(`SUCCESS: ${result.companyName}`);
+                    console.log(`   CFO: ${result.cfo?.name || 'Not found'} (${result.cfo?.confidence || 0}%) Tier ${result.cfo?.tier || 'N/A'} ${result.cfo?.email ? '📧' : ''}`);
+                    console.log(`   CRO: ${result.cro?.name || 'Not found'} (${result.cro?.confidence || 0}%) Tier ${result.cro?.tier || 'N/A'} ${result.cro?.email ? '📧' : ''}`);
+                    console.log(`   CFO Role: ${result.cfo?.role || 'N/A'}`);
+                    console.log(`   CRO Role: ${result.cro?.role || 'N/A'}`);
+                    console.log(`   Overall: ${result.overallConfidence}% confidence`);
+                    
+                    return result;
                 }
             }
 
             // STEP 2: Dual Role Executive Research (CFO + CRO Focus)
-            console.log('Researching CFO and CRO...');
-            const research = await this.researcher.researchExecutives({
-                name: result.companyName,
-                website: company.website,
-                companyResolution: companyResolution
-            });
-
-            // Process CFO results - Always initialize CFO object
+            // Check if we should skip subsidiary research based on operational assessment
+            const shouldSkipSubsidiaryResearch = operationalAssessment && 
+                (operationalAssessment.executiveTargeting?.strategy === 'parent_only' ||
+                 operationalAssessment.executiveTargeting?.strategy === 'parent_primary') &&
+                result.cfo?.name && result.cro?.name; // Already have parent executives
+                
+            if (shouldSkipSubsidiaryResearch) {
+                console.log(`🎯 Skipping subsidiary research - operational assessment suggests parent-only targeting (${operationalAssessment.operationalStatus})`);
+            } else {
+                console.log('Researching CFO and CRO...');
+                const research = await this.researcher.researchExecutives({
+                    name: result.companyName,
+                    website: company.website,
+                    companyResolution: companyResolution
+                });
+                
+                // If we have parent executives and operational assessment suggests parent primary, 
+                // only use subsidiary executives if they're significantly better
+                const useSubsidiaryExecutives = this.shouldUseSubsidiaryExecutives(
+                    research, 
+                    result, 
+                    operationalAssessment
+                );
+                
+                if (useSubsidiaryExecutives) {
+                    console.log('   🏢 Using subsidiary executives based on operational assessment');
+                    
+                    // Process CFO results - Always initialize CFO object
             result.cfo = {
                 name: research.cfo?.name || '',
                 title: research.cfo?.title || '',
@@ -456,6 +593,10 @@ class CorePipeline {
             } else if (result.cro && result.cro.confidence < 90) {
                 console.log(`   ❌ CRO confidence too low (${result.cro.confidence}%) - skipping`);
                 result.cro = { name: '', title: '', email: '', phone: '', linkedIn: '', confidence: 0, tier: null, role: 'N/A' };
+            }
+                } else {
+                    console.log('   🏛️ Keeping parent company executives based on operational assessment');
+                }
             }
 
             // STEP 3: Contact Intelligence (Email/Phone Discovery) - ONLY ON VALIDATED EXECUTIVES
@@ -1552,9 +1693,11 @@ class CorePipeline {
     async addParentCompanyIfNeeded(result, relatedCompaniesToAdd, processedCompanies) {
         // Check multiple possible locations for parent company data
         let parentCompany = result.parentCompany || result.corporateStructure?.parentCompany || result.acquisitionInfo?.parentCompany;
+        let parentDomain = null;
         
-        // Ensure parentCompany is a string, not an object
+        // Handle both string and object formats for parent company
         if (typeof parentCompany === 'object' && parentCompany !== null) {
+            parentDomain = parentCompany.domain;
             parentCompany = parentCompany.name || parentCompany.companyName || parentCompany.toString();
         }
         
@@ -1573,7 +1716,8 @@ class CorePipeline {
                     parentCompany, 
                     result, 
                     'parent_company',
-                    'Standard Corporate Executives'
+                    'Standard Corporate Executives',
+                    parentDomain
                 );
                 if (parentResult) {
                     relatedCompaniesToAdd.push(parentResult);
@@ -1596,25 +1740,199 @@ class CorePipeline {
             return false;
         }
         
+        // ALWAYS add parent companies for acquisitions (this is critical for finding executives)
+        if (result.corporateStructure?.isAcquired && result.corporateStructure?.parentCompany) {
+            console.log(`   🎯 ACQUISITION: Will research parent company ${result.corporateStructure.parentCompany} for executives`);
+            return true;
+        }
+        
         // Add parent companies for publicly traded companies or companies with clear corporate structures
         return result.corporateStructure?.parentCompany && 
                result.corporateStructure.parentCompany !== 'None';
     }
 
     /**
+     * 🎯 SMART EXECUTIVE TARGETING DECISION
+     * 
+     * Determines whether to use parent company executives based on operational assessment
+     */
+    shouldUseParentExecutives(parentExecutives, operationalAssessment) {
+        // If no parent executives found, can't use them
+        if (!parentExecutives || (!parentExecutives.cfo?.name && !parentExecutives.cro?.name)) {
+            console.log('   ❌ No parent executives found - will research subsidiary');
+            return false;
+        }
+
+        // If no operational assessment, default to conservative parent targeting
+        if (!operationalAssessment) {
+            console.log('   ⚠️ No operational assessment - defaulting to parent executives');
+            return true;
+        }
+
+        const strategy = operationalAssessment.executiveTargeting?.strategy;
+        const operationalStatus = operationalAssessment.operationalStatus;
+
+        console.log(`   🎯 Executive targeting strategy: ${strategy}`);
+        console.log(`   📊 Operational status: ${operationalStatus}`);
+
+        switch (strategy) {
+            case 'subsidiary_first':
+                // Subsidiary is fully operational - research subsidiary executives first
+                console.log('   🏢 Subsidiary fully operational - will research subsidiary executives');
+                return false;
+                
+            case 'parent_primary':
+            case 'parent_only':
+                // Parent company controls operations - use parent executives
+                console.log('   🏛️ Parent controls operations - using parent executives');
+                return true;
+                
+            case 'dual_targeting':
+            case 'transitional_dual_targeting':
+                // Mixed scenario - use parent executives but note we should also research subsidiary
+                console.log('   🔄 Mixed operations - using parent executives (dual targeting recommended)');
+                return true;
+                
+            default:
+                // Fallback to parent executives for safety
+                console.log('   🛡️ Unknown strategy - defaulting to parent executives');
+                return true;
+        }
+    }
+
+    /**
+     * 🏢 SUBSIDIARY VS PARENT EXECUTIVE DECISION
+     * 
+     * Determines whether to use subsidiary executives when we already have parent executives
+     */
+    shouldUseSubsidiaryExecutives(subsidiaryResearch, currentResult, operationalAssessment) {
+        // If no subsidiary research results, can't use them
+        if (!subsidiaryResearch || (!subsidiaryResearch.cfo?.name && !subsidiaryResearch.cro?.name)) {
+            console.log('   ❌ No subsidiary executives found');
+            return false;
+        }
+
+        // If no current executives (parent), always use subsidiary
+        if (!currentResult.cfo?.name && !currentResult.cro?.name) {
+            console.log('   ✅ No parent executives - using subsidiary executives');
+            return true;
+        }
+
+        // If no operational assessment, be conservative and keep parent executives
+        if (!operationalAssessment) {
+            console.log('   ⚠️ No operational assessment - keeping parent executives');
+            return false;
+        }
+
+        const strategy = operationalAssessment.executiveTargeting?.strategy;
+        const operationalStatus = operationalAssessment.operationalStatus;
+
+        switch (strategy) {
+            case 'subsidiary_first':
+                // Subsidiary is fully operational - prefer subsidiary executives
+                console.log('   🏢 Subsidiary fully operational - using subsidiary executives');
+                return true;
+                
+            case 'dual_targeting':
+            case 'transitional_dual_targeting':
+                // Mixed scenario - use higher confidence executives
+                const subsidiaryConfidence = Math.max(
+                    subsidiaryResearch.cfo?.confidence || 0,
+                    subsidiaryResearch.cro?.confidence || 0
+                );
+                const parentConfidence = Math.max(
+                    currentResult.cfo?.confidence || 0,
+                    currentResult.cro?.confidence || 0
+                );
+                
+                if (subsidiaryConfidence > parentConfidence + 0.2) { // 20% threshold
+                    console.log(`   📊 Subsidiary executives higher confidence (${subsidiaryConfidence} vs ${parentConfidence}) - using subsidiary`);
+                    return true;
+                } else {
+                    console.log(`   📊 Parent executives similar/higher confidence - keeping parent`);
+                    return false;
+                }
+                
+            case 'parent_primary':
+            case 'parent_only':
+            default:
+                // Parent company controls - keep parent executives
+                console.log('   🏛️ Parent controls operations - keeping parent executives');
+                return false;
+        }
+    }
+
+    /**
+     * Research parent company executives for acquisitions
+     */
+    async researchParentCompanyExecutives(parentCompanyName, corporateStructure) {
+        console.log(`      🔍 Researching parent company: ${parentCompanyName}`);
+        
+        try {
+            // Extract parent domain if available
+            let parentDomain = null;
+            if (typeof corporateStructure.parentCompany === 'object') {
+                parentDomain = corporateStructure.parentCompany.domain;
+                parentCompanyName = corporateStructure.parentCompany.name || parentCompanyName;
+            }
+            
+            // Create parent company website URL
+            const parentWebsite = parentDomain ? 
+                (parentDomain.startsWith('http') ? parentDomain : `https://www.${parentDomain}`) :
+                await this.guessCompanyWebsite(parentCompanyName);
+            
+            console.log(`      Using website: ${parentWebsite} for ${parentCompanyName}`);
+            
+            // STEP 1: Company Resolution (SAME AS REGULAR COMPANIES)
+            console.log(`      Step 1: Resolving parent company identity...`);
+            const parentCompanyResolution = await this.companyResolver.resolveCompany(parentWebsite);
+            
+            // STEP 2: Executive Research (SAME AS REGULAR COMPANIES)
+            console.log(`      Step 2: Researching parent company executives...`);
+            const research = await this.researcher.researchExecutives({
+                companyName: parentCompanyResolution.companyName || parentCompanyName,
+                website: parentCompanyResolution.finalUrl || parentWebsite,
+                companyResolution: parentCompanyResolution
+            });
+            
+            if (research && (research.cfo || research.cro)) {
+                console.log(`      ✅ Found executives at parent company ${parentCompanyName}`);
+                console.log(`         CFO: ${research.cfo?.name || 'Not found'}`);
+                console.log(`         CRO: ${research.cro?.name || 'Not found'}`);
+                return {
+                    cfo: research.cfo,
+                    cro: research.cro,
+                    companyResolution: parentCompanyResolution
+                };
+            } else {
+                console.log(`      ⚠️ No executives found at parent company ${parentCompanyName}`);
+                return null;
+            }
+        } catch (error) {
+            console.error(`      ❌ Error researching parent company ${parentCompanyName}: ${error.message}`);
+            return null;
+        }
+    }
+
+    /**
      * Research related company (parent/merger/acquisition)
      */
-    async researchRelatedCompany(companyName, originalResult, relationType, executiveType) {
+    async researchRelatedCompany(companyName, originalResult, relationType, executiveType, parentDomain = null) {
         console.log(`      Researching ${relationType}: ${companyName}`);
         
         try {
+            // Use provided domain or guess the website
+            const website = parentDomain ? `www.${parentDomain}` : await this.guessCompanyWebsite(companyName);
+            
             // Create a simplified company object for the related company
             const relatedCompany = {
                 company_name: companyName,
-                website: await this.guessCompanyWebsite(companyName),
+                website: website,
                 accountOwner: originalResult.accountOwner || 'Unknown',
                 isTop1000: false
             };
+            
+            console.log(`      Using website: ${website} for ${companyName}`);
             
             // Process the related company with core pipeline logic
             const result = await this.processCompany(relatedCompany, -1); // -1 indicates related company
@@ -1624,6 +1942,7 @@ class CorePipeline {
                 result.relationType = relationType;
                 result.originalCompany = originalResult.companyName;
                 result.isRelatedCompany = true;
+                result.companyStatus = 'parent_company'; // Mark as parent company
                 
                 return result;
             }

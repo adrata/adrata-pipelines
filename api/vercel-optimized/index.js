@@ -572,14 +572,20 @@ function mapToCoreCSV(result) {
             "Website": result.website || 'Not available',
             "Company Name": result.companyName || 'Not available',
             "Executive Name": result.cfo.name,
-            "Executive Title": result.cfo.title || 'Not available',
-            "Executive Role": 'CFO',
+            "Title": result.cfo.title || 'Not available',
+            "Role": 'CFO',
             "Email": result.cfo.email || 'Not available',
             "Phone": result.cfo.phone || 'Not available',
             "LinkedIn": result.cfo.linkedIn || result.cfo.linkedin || 'Not available',
             "Confidence": result.cfo.confidence || 'Not available',
             "Selection Reason": generateCFOSelectionReasoning(result),
-            "Account Owner": result.accountOwner || 'Not available'
+            "Account Owner": result.accountOwner || 'Not available',
+            "Operational Status": result.operationalStatus || (result.companyStatus === 'acquired' ? 'acquired' : 'active'),
+            "Target Entity": result.targetEntity || 'original_company',
+            "Executive Source": result.researchMethod || 'standard_research',
+            "Parent Company": result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany || 'N/A',
+            "Acquisition Date": result.acquisitionIntelligence?.acquisitionDate || result.corporateStructure?.acquisitionDate || 'N/A',
+            "Targeting Strategy": result.executiveTargeting?.strategy || 'direct_targeting'
         });
     }
     
@@ -589,14 +595,20 @@ function mapToCoreCSV(result) {
             "Website": result.website || 'Not available',
             "Company Name": result.companyName || 'Not available',
             "Executive Name": result.cro.name,
-            "Executive Title": result.cro.title || 'Not available',
-            "Executive Role": 'CRO',
+            "Title": result.cro.title || 'Not available',
+            "Role": 'CRO',
             "Email": result.cro.email || 'Not available',
             "Phone": result.cro.phone || 'Not available',
             "LinkedIn": result.cro.linkedIn || result.cro.linkedin || 'Not available',
             "Confidence": result.cro.confidence || 'Not available',
             "Selection Reason": generateCROSelectionReasoning(result),
-            "Account Owner": result.accountOwner || 'Not available'
+            "Account Owner": result.accountOwner || 'Not available',
+            "Operational Status": result.operationalStatus || (result.companyStatus === 'acquired' ? 'acquired' : 'active'),
+            "Target Entity": result.targetEntity || 'original_company',
+            "Executive Source": result.researchMethod || 'standard_research',
+            "Parent Company": result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany || 'N/A',
+            "Acquisition Date": result.acquisitionIntelligence?.acquisitionDate || result.corporateStructure?.acquisitionDate || 'N/A',
+            "Targeting Strategy": result.executiveTargeting?.strategy || 'direct_targeting'
         });
     }
     

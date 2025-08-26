@@ -278,6 +278,10 @@ class CompanyResolver {
      * 📚 CHECK RECENT ACQUISITIONS DATABASE
      */
     checkRecentAcquisitions(originalDomain, finalDomain) {
+        console.log(`   🔍 Domain extraction debug:`);
+        console.log(`      Original domain: "${originalDomain}"`);
+        console.log(`      Final domain: "${finalDomain}"`);
+        
         const recentAcquisitions = {
             // QTS Realty Trust - Acquired by Blackstone in 2021
             'qtsdatacenters.com': {
@@ -305,6 +309,55 @@ class CompanyResolver {
                     }
                 }
             },
+            // INAP - Acquired by HorizonIQ in 2022
+            'inap.com': {
+                isAcquired: true,
+                parentCompany: {
+                    name: 'HorizonIQ',
+                    domain: 'horizoniq.com',
+                    ticker: null
+                },
+                acquisitionDate: '2022-05-09',
+                type: 'full_acquisition',
+                confidence: 95,
+                originalCompany: 'INAP (Internap Corporation)',
+                parentCompanyDetails: 'HorizonIQ (formerly Internap Network Services Corporation)',
+                executiveTracking: {
+                    'needs_research': {
+                        originalRole: 'Various Executives',
+                        originalCompany: 'INAP',
+                        status: 'needs_verification',
+                        lastVerified: '2022-05-09',
+                        notes: 'Post-acquisition executive team needs research at HorizonIQ'
+                    }
+                }
+            },
+            // GfK - Acquired by Nielsen in 2022
+            'gfk.com': {
+                isAcquired: true,
+                parentCompany: {
+                    name: 'Nielsen Consumer LLC',
+                    domain: 'nielsen.com',
+                    ticker: null
+                },
+                acquisitionDate: '2022-10-01',
+                type: 'full_acquisition',
+                confidence: 95,
+                originalCompany: 'GfK SE',
+                parentCompanyDetails: 'Nielsen Consumer LLC (Nielsen Holdings)',
+                executiveTracking: {
+                    'needs_research': {
+                        originalRole: 'Various Executives',
+                        originalCompany: 'GfK SE',
+                        status: 'needs_verification',
+                        lastVerified: '2022-10-01',
+                        notes: 'Post-acquisition executive team needs research at Nielsen Consumer LLC'
+                    }
+                }
+            },
+            // Note: investisdigital.com redirects to idx.inc but they are different companies
+            // Investis Digital (London) was acquired by Investcorp, but domain redirects to IDX (Oregon)
+            // This is handled by regular company resolution, not acquisition detection
             // Add more recent acquisitions here
             'zoom.us': {
                 isAcquired: false, // Zoom is independent
@@ -315,8 +368,33 @@ class CompanyResolver {
             }
         };
 
-        // Check if either domain matches our database
-        const match = recentAcquisitions[originalDomain] || recentAcquisitions[finalDomain];
+        // Check if either domain matches our database (with debug logging)
+        console.log(`   🔍 Checking acquisition database for: ${originalDomain} and ${finalDomain}`);
+        console.log(`   📋 Available keys: ${Object.keys(recentAcquisitions).join(', ')}`);
+        
+        // Try multiple domain variations
+        const domainVariations = [
+            originalDomain,
+            finalDomain,
+            this.extractDomain(originalDomain),
+            this.extractDomain(finalDomain)
+        ].filter(d => d); // Remove empty values
+        
+        console.log(`   🔍 Trying domain variations: ${domainVariations.join(', ')}`);
+        
+        let match = null;
+        for (const domain of domainVariations) {
+            if (recentAcquisitions[domain]) {
+                match = recentAcquisitions[domain];
+                console.log(`   🎯 FOUND ACQUISITION MATCH: ${domain} → ${match.parentCompany?.name || match.parentCompany}`);
+                break;
+            }
+        }
+        
+        if (!match) {
+            console.log(`   ℹ️ No acquisition match found in database`);
+        }
+        
         return match || { isAcquired: false, confidence: 0 };
     }
 
