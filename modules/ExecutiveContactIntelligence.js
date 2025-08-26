@@ -785,6 +785,7 @@ Provide ONLY a JSON response:
 
     /**
      * ✅ CROSS-VALIDATE EMAILS BETWEEN CORESIGNAL AND LUSHA
+     * ENHANCED: Detect and fix redacted emails
      */
     crossValidateEmails(coreSignalData, lushaData, domain, firstName, lastName) {
         const validation = {
@@ -831,23 +832,41 @@ Provide ONLY a JSON response:
         
         // Only CoreSignal has email
         if (coreSignalData?.email && !lushaData?.email) {
-            validation.email = coreSignalData.email;
-            validation.confidence = 85;
-            validation.source = 'CoreSignal verified';
+            // CRITICAL: Check for redacted email and fix immediately
+            if (this.isEmailRedacted(coreSignalData.email)) {
+                console.log(`      🚨 REDACTED CoreSignal email detected: ${coreSignalData.email}`);
+                validation.email = this.generateProbableEmail(firstName, lastName, domain);
+                validation.confidence = 60; // Lower confidence for generated email
+                validation.source = 'Generated (CoreSignal redacted)';
+                console.log(`      🔧 Generated clean email: ${validation.email}`);
+            } else {
+                validation.email = coreSignalData.email;
+                validation.confidence = 85;
+                validation.source = 'CoreSignal verified';
+            }
             validation.validationDetails.reliability = 'high';
             
-            console.log(`      📧 CoreSignal email only: ${coreSignalData.email}`);
+            console.log(`      📧 CoreSignal email only: ${validation.email}`);
             return validation;
         }
         
         // Only Lusha has email
         if (!coreSignalData?.email && lushaData?.email) {
-            validation.email = lushaData.email;
-            validation.confidence = 70;
-            validation.source = 'Lusha only';
+            // CRITICAL: Check for redacted email and fix immediately
+            if (this.isEmailRedacted(lushaData.email)) {
+                console.log(`      🚨 REDACTED Lusha email detected: ${lushaData.email}`);
+                validation.email = this.generateProbableEmail(firstName, lastName, domain);
+                validation.confidence = 50; // Lower confidence for generated email
+                validation.source = 'Generated (Lusha redacted)';
+                console.log(`      🔧 Generated clean email: ${validation.email}`);
+            } else {
+                validation.email = lushaData.email;
+                validation.confidence = 70;
+                validation.source = 'Lusha only';
+            }
             validation.validationDetails.reliability = 'medium';
             
-            console.log(`      📧 Lusha email only: ${lushaData.email}`);
+            console.log(`      📧 Lusha email only: ${validation.email}`);
             return validation;
         }
         
@@ -1300,15 +1319,23 @@ Provide ONLY a JSON response:
         
         // Validation data from CoreSignal (cross-validation)
         if (coreSignalData) {
-            // Cross-validate email
+            // Cross-validate email with redaction check
             if (coreSignalData.primaryEmail && combined.email === coreSignalData.primaryEmail) {
                 console.log(`   ✅ Email cross-validated: ${combined.email}`);
                 combined.confidence += 30;
                 combined.emailValidated = true;
             } else if (coreSignalData.primaryEmail && !combined.email) {
-                combined.email = coreSignalData.primaryEmail;
-                combined.confidence += 25;
-                console.log(`   ✅ Email from CoreSignal: ${coreSignalData.primaryEmail}`);
+                // CRITICAL: Check for redacted email before using
+                if (this.isEmailRedacted(coreSignalData.primaryEmail)) {
+                    console.log(`   🚨 REDACTED CoreSignal email: ${coreSignalData.primaryEmail}`);
+                    combined.email = this.generateProbableEmail(executiveName.split(' ')[0], executiveName.split(' ').pop(), combined.domain || 'company.com');
+                    combined.confidence += 15; // Lower confidence for generated
+                    console.log(`   🔧 Generated clean email: ${combined.email}`);
+                } else {
+                    combined.email = coreSignalData.primaryEmail;
+                    combined.confidence += 25;
+                    console.log(`   ✅ Email from CoreSignal: ${coreSignalData.primaryEmail}`);
+                }
             }
             
             // Add alternative emails
@@ -1337,6 +1364,60 @@ Provide ONLY a JSON response:
         
         console.log(`   🎯 Combined confidence: ${combined.confidence}% from sources: ${combined.sources.join(', ')}`);
         return combined;
+    }
+
+    /**
+     * 🚨 DETECT REDACTED EMAILS
+     * CRITICAL: Identifies emails with asterisks or other redaction patterns
+     */
+    isEmailRedacted(email) {
+        if (!email) return false;
+        
+        // Common redaction patterns
+        const redactionPatterns = [
+            /\*+/,           // Asterisks: d****d@adobe.com
+            /x+/i,           // X's: dxxxxd@adobe.com  
+            /\.{3,}/,        // Dots: d...d@adobe.com
+            /-+/,            // Dashes: d----d@adobe.com
+            /_+/,            // Underscores: d____d@adobe.com
+            /\[redacted\]/i, // [REDACTED]
+            /\[hidden\]/i,   // [HIDDEN]
+            /\[private\]/i   // [PRIVATE]
+        ];
+        
+        const isRedacted = redactionPatterns.some(pattern => pattern.test(email));
+        
+        if (isRedacted) {
+            console.log(`   🚨 REDACTED EMAIL DETECTED: ${email}`);
+        }
+        
+        return isRedacted;
+    }
+
+    /**
+     * 📧 GENERATE PROBABLE EMAIL FROM NAME AND DOMAIN
+     * Enhanced to create realistic executive email patterns
+     */
+    generateProbableEmail(firstName, lastName, domain) {
+        if (!firstName || !lastName || !domain) {
+            return 'Not available';
+        }
+        
+        const cleanDomain = domain.replace(/^www\./, '').toLowerCase();
+        const first = firstName.toLowerCase().replace(/[^a-z]/g, '');
+        const last = lastName.toLowerCase().replace(/[^a-z]/g, '');
+        
+        // Executive email patterns (most likely first)
+        const patterns = [
+            `${first}.${last}@${cleanDomain}`,      // john.smith@company.com
+            `${first}${last}@${cleanDomain}`,       // johnsmith@company.com
+            `${first[0]}${last}@${cleanDomain}`,    // jsmith@company.com
+            `${first}${last[0]}@${cleanDomain}`,    // johns@company.com
+            `${first[0]}.${last}@${cleanDomain}`,   // j.smith@company.com
+        ];
+        
+        console.log(`   📧 Generated probable email: ${patterns[0]} (most likely pattern)`);
+        return patterns[0];
     }
 }
 

@@ -1,0 +1,4675 @@
+{
+  "index": 1,
+  "website": "hubspot.com",
+  "accountOwner": "Dan Mirolli",
+  "isTop1000": false,
+  "companyName": "Hubspot",
+  "ceo": {
+    "name": "",
+    "title": "",
+    "confidence": 0,
+    "source": "",
+    "validated": false
+  },
+  "financeLeader": {
+    "name": "",
+    "title": "",
+    "confidence": 0,
+    "source": "",
+    "validated": false,
+    "role": "",
+    "financeResponsibilities": ""
+  },
+  "researchMethod": "enhanced_research",
+  "overallConfidence": 0,
+  "riskLevel": "CRITICAL",
+  "processingTime": 75772,
+  "timestamp": "2025-08-24T15:46:08.017Z",
+  "validationNotes": [
+    "CEO identification has moderate confidence - verify manually",
+    "Finance leader identification has moderate confidence - verify manually"
+  ],
+  "error": null,
+  "companyResolution": {
+    "originalUrl": "hubspot.com",
+    "canonicalUrl": "https://hubspot.com",
+    "finalUrl": "https://www.hubspot.com/",
+    "redirectChain": [
+      "https://hubspot.com",
+      "https://www.hubspot.com/"
+    ],
+    "companyName": "HubSpot, Inc.",
+    "companyStatus": "active",
+    "isAcquired": false,
+    "parentCompany": null,
+    "acquisitionInfo": null,
+    "domains": [
+      "hubspot.com",
+      "www.hubspot.com"
+    ],
+    "confidence": 95,
+    "resolutionMethod": "ai_research",
+    "timestamp": "2025-08-24T15:46:08.017Z",
+    "metadata": {
+      "source": "company_website/about_page/footer",
+      "statusInfo": "HubSpot, Inc. remains an independent, publicly traded company on the NYSE as of August 2025, reporting strong revenue growth and ongoing product launches. No acquisition or merger has occurred; Google considered a bid in 2024 but did not proceed."
+    },
+    "acquisitionDetected": false,
+    "acquisitionDetails": {
+      "isAcquired": false,
+      "parentCompany": null,
+      "acquisitionDate": null,
+      "acquisitionType": null,
+      "confidence": 0,
+      "evidence": [
+        "domain_redirect"
+      ]
+    },
+    "status": "active",
+    "industry": "Unknown",
+    "industrySource": "detection_failed"
+  },
+  "corporateStructure": {},
+  "companyDetails": {},
+  "dataFreshness": {},
+  "confidenceExplanation": {},
+  "peOwnership": {
+    "isPEOwned": false,
+    "peOwner": "None",
+    "peOwnerFullName": "N/A",
+    "peOwnerType": "Not PE-owned",
+    "peOwnerAUM": "N/A",
+    "peFocus": "N/A",
+    "peHoldingPeriod": "N/A",
+    "peExitStrategy": "N/A",
+    "peInvestmentThesis": "N/A",
+    "peSalesImplications": "Standard corporate approach",
+    "peStrategicNotes": "Independent company - standard corporate approach"
+  },
+  "executiveContactIntelligence": {
+    "companyIntelligence": {
+      "companyId": 752371,
+      "employeeCount": 10908,
+      "employeeGrowth": {
+        "current": 10908,
+        "change_monthly": 0,
+        "change_monthly_percentage": 0,
+        "change_quarterly": 662,
+        "change_quarterly_percentage": 6.461057973843451,
+        "change_yearly": 491,
+        "change_yearly_percentage": 4.713449169626572
+      },
+      "industry": "Software Development",
+      "foundedYear": "2006",
+      "revenueRange": {
+        "source_4_annual_revenue_range": {
+          "annual_revenue_range_from": 2000000000,
+          "annual_revenue_range_to": 5000000000,
+          "annual_revenue_range_currency": "USD"
+        },
+        "source_6_annual_revenue_range": {
+          "annual_revenue_range_from": 1000000000,
+          "annual_revenue_range_to": null,
+          "annual_revenue_range_currency": "USD"
+        }
+      },
+      "website": "https://www.hubspot.com",
+      "headquarters": {
+        "country": "United States",
+        "city": "Cambridge",
+        "state": "Massachusetts"
+      },
+      "confidence": 90,
+      "executiveData": {
+        "keyExecutives": [
+          {
+            "parent_id": 456936872,
+            "member_full_name": "手塚達也",
+            "member_position_title": "GrowthSpecialist_DirectSales"
+          },
+          {
+            "parent_id": 49127985,
+            "member_full_name": "Matt Ginnard",
+            "member_position_title": "Director, Design"
+          },
+          {
+            "parent_id": 102075403,
+            "member_full_name": "Stephen O'keefe",
+            "member_position_title": "Senior Director, Customer Success"
+          },
+          {
+            "parent_id": 27037137,
+            "member_full_name": "Pat Debiasi",
+            "member_position_title": "Principal Account Executive III MidMarket"
+          },
+          {
+            "parent_id": 54829246,
+            "member_full_name": "Maura Mcgrath",
+            "member_position_title": "Head Of Creative Production Project Management"
+          },
+          {
+            "parent_id": 134023271,
+            "member_full_name": "Jonathan Chesney",
+            "member_position_title": "Director Of Product Management"
+          },
+          {
+            "parent_id": 248810177,
+            "member_full_name": "Elanna Lalezari",
+            "member_position_title": "Senior Director Of Sales, Corporate"
+          },
+          {
+            "parent_id": 391836615,
+            "member_full_name": "Mawghan Mccabe",
+            "member_position_title": "Director, Platform Partnerships"
+          },
+          {
+            "parent_id": 359886821,
+            "member_full_name": "Matthew Watkins",
+            "member_position_title": "Creative Director"
+          },
+          {
+            "parent_id": 358534117,
+            "member_full_name": "Sandra Cooper",
+            "member_position_title": "Global PreSales Enablement Partner"
+          },
+          {
+            "parent_id": 344517663,
+            "member_full_name": "John Polaschek",
+            "member_position_title": "Senior Director, Learning Experience"
+          },
+          {
+            "parent_id": 498228229,
+            "member_full_name": "Ryan Hall",
+            "member_position_title": "Marketing Director"
+          },
+          {
+            "parent_id": 229009088,
+            "member_full_name": "Will Dekrey",
+            "member_position_title": "Director Of Product Management"
+          },
+          {
+            "parent_id": 134375486,
+            "member_full_name": "Noemie Aguettant",
+            "member_position_title": "EMEA APAC Inbound Sales Director"
+          },
+          {
+            "parent_id": 221556546,
+            "member_full_name": "Samantha Kirshen",
+            "member_position_title": "Director Of PreSales, JAPAC"
+          },
+          {
+            "parent_id": 519663729,
+            "member_full_name": "Katelyn Caruso",
+            "member_position_title": "Partner Onboarding Manager PSO"
+          },
+          {
+            "parent_id": 65999590,
+            "member_full_name": "Dani De Sousa",
+            "member_position_title": "Head Of Partner Development, South Of Europe"
+          },
+          {
+            "parent_id": 163441082,
+            "member_full_name": "Stephen Fiske",
+            "member_position_title": "Head Of Video"
+          },
+          {
+            "parent_id": 222449826,
+            "member_full_name": "Adam Wainwright",
+            "member_position_title": "Director Of Product Management"
+          },
+          {
+            "parent_id": 285233110,
+            "member_full_name": "Christine Natal",
+            "member_position_title": "People Partner, Global Sales"
+          },
+          {
+            "parent_id": 332802839,
+            "member_full_name": "Magdalena Georgieva",
+            "member_position_title": "Director Of Product"
+          },
+          {
+            "parent_id": 16156761,
+            "member_full_name": "Tabetha Palmatary",
+            "member_position_title": "Principal Account Executive"
+          },
+          {
+            "parent_id": 230278720,
+            "member_full_name": "Rebecca Yang",
+            "member_position_title": "Director Of Engineering"
+          },
+          {
+            "parent_id": 102018687,
+            "member_full_name": "Stephen Higgins",
+            "member_position_title": "Sales Director - SB MM - EMEA"
+          },
+          {
+            "parent_id": 524872296,
+            "member_full_name": "Ana Almeida Marcancola",
+            "member_position_title": "Principal People Business Partner"
+          },
+          {
+            "parent_id": 92912613,
+            "member_full_name": "Samuel Donner",
+            "member_position_title": "Creator Partner"
+          },
+          {
+            "parent_id": 96236318,
+            "member_full_name": "Stephen Kelleher",
+            "member_position_title": "Principal Recruiter, Executive Recruitment"
+          },
+          {
+            "parent_id": 129099106,
+            "member_full_name": "Kipp Bodnar",
+            "member_position_title": "CMO"
+          },
+          {
+            "parent_id": 70430288,
+            "member_full_name": "Shelley P",
+            "member_position_title": "Senior Director Of Marketing, Latin America And Iberia"
+          },
+          {
+            "parent_id": 459582178,
+            "member_full_name": "Tabetha Ryser",
+            "member_position_title": "Principal Account Executive"
+          },
+          {
+            "parent_id": 272898250,
+            "member_full_name": "Andrea Abbate",
+            "member_position_title": "Senior Director, GTM Enablement"
+          },
+          {
+            "parent_id": 631117556,
+            "member_full_name": "Charlee Bowers",
+            "member_position_title": "Team Technical Director"
+          },
+          {
+            "parent_id": 367623971,
+            "member_full_name": "Megan Smith",
+            "member_position_title": "Director Deal Strategy"
+          },
+          {
+            "parent_id": 208038673,
+            "member_full_name": "Hannah Hoar",
+            "member_position_title": "Director, CXM"
+          },
+          {
+            "parent_id": 39677996,
+            "member_full_name": "Bridgett Henwood",
+            "member_position_title": "Director Of Video Production"
+          },
+          {
+            "parent_id": 23394461,
+            "member_full_name": "Paul F Weston",
+            "member_position_title": "GM Sr. Director Of Product"
+          },
+          {
+            "parent_id": 132876149,
+            "member_full_name": "Melanie Hendrick",
+            "member_position_title": "Senior Director Talent Acquisition"
+          },
+          {
+            "parent_id": 118378827,
+            "member_full_name": "Nawal Fakhoury",
+            "member_position_title": "Senior Director, Culture"
+          },
+          {
+            "parent_id": 828620139,
+            "member_full_name": "Priya Shanmukha",
+            "member_position_title": "Senior HR Director"
+          },
+          {
+            "parent_id": 128560595,
+            "member_full_name": "Jennifer Cedorchuk",
+            "member_position_title": "Principal Account Executive"
+          },
+          {
+            "parent_id": 335897060,
+            "member_full_name": "Sonali Shanker Kamath",
+            "member_position_title": "Principal, Product Partnerships Strategic Alliances"
+          },
+          {
+            "parent_id": 153781370,
+            "member_full_name": "Colton Wiseman",
+            "member_position_title": "Team Lead Principal Account Executive IV"
+          },
+          {
+            "parent_id": 330187628,
+            "member_full_name": "Diarmuid Walsh",
+            "member_position_title": "Senior Enterprise Sales Leader - UKI"
+          },
+          {
+            "parent_id": 214068273,
+            "member_full_name": "Mauricio F",
+            "member_position_title": "Head Of Corporate Sales, NAM"
+          },
+          {
+            "parent_id": 360009953,
+            "member_full_name": "Patrick Moore",
+            "member_position_title": "Growth Partner"
+          },
+          {
+            "parent_id": 119878288,
+            "member_full_name": "Chantelle Young",
+            "member_position_title": "Product Lead"
+          },
+          {
+            "parent_id": 260742542,
+            "member_full_name": "Drew Doherty",
+            "member_position_title": "Partner Specialist L4"
+          },
+          {
+            "parent_id": 161119985,
+            "member_full_name": "Nicole Mactaggart",
+            "member_position_title": "Principal Account Executive - Mid-Market And Corporate Partner Acquisition"
+          },
+          {
+            "parent_id": 196401753,
+            "member_full_name": "Aubrey Zych",
+            "member_position_title": "Creative Director"
+          },
+          {
+            "parent_id": 68429937,
+            "member_full_name": "Dharmesh Shah",
+            "member_position_title": "Founder And CTO"
+          },
+          {
+            "parent_id": 332179109,
+            "member_full_name": "Jason Webber",
+            "member_position_title": "Senior Director Of Information Technology"
+          },
+          {
+            "parent_id": 98743559,
+            "member_full_name": "James Densmore",
+            "member_position_title": "Director Of Engineering"
+          },
+          {
+            "parent_id": 269350577,
+            "member_full_name": "Alyssa Robinson",
+            "member_position_title": "Chief Information Security Officer"
+          },
+          {
+            "parent_id": 76935046,
+            "member_full_name": "Karina Klippel",
+            "member_position_title": "Partner Specialist"
+          },
+          {
+            "parent_id": 262903256,
+            "member_full_name": "Kelly Marek",
+            "member_position_title": "HR Business Partner"
+          },
+          {
+            "parent_id": 723827436,
+            "member_full_name": "Adam Biddlecombe",
+            "member_position_title": "Head Of Brand - Mindstream"
+          },
+          {
+            "parent_id": 226790707,
+            "member_full_name": "Helen Russell",
+            "member_position_title": "Chief People Officer"
+          },
+          {
+            "parent_id": 192816339,
+            "member_full_name": "Stacy Shaw",
+            "member_position_title": "Director EMEA Business Development"
+          },
+          {
+            "parent_id": 382218493,
+            "member_full_name": "Emily James",
+            "member_position_title": "Director, Chief Of Staff"
+          },
+          {
+            "parent_id": 356577976,
+            "member_full_name": "George Davis",
+            "member_position_title": "Director, AI Product"
+          },
+          {
+            "parent_id": 49172663,
+            "member_full_name": "Matthew Raffol",
+            "member_position_title": "Director, Product Strategy Operations"
+          },
+          {
+            "parent_id": 56034334,
+            "member_full_name": "Matt Schnitt",
+            "member_position_title": "GM Sr. Director Of Product"
+          },
+          {
+            "parent_id": 182138836,
+            "member_full_name": "Dara Boland",
+            "member_position_title": "Enterprise Account Director"
+          },
+          {
+            "parent_id": 300790500,
+            "member_full_name": "Kayla Thornton",
+            "member_position_title": "Director, Incentive Compensation"
+          },
+          {
+            "parent_id": 343427090,
+            "member_full_name": "Brian Gibree",
+            "member_position_title": "Senior Director, Head Of Global Tax"
+          },
+          {
+            "parent_id": 128351161,
+            "member_full_name": "Lara Tacito",
+            "member_position_title": "Sr Director Of UX"
+          },
+          {
+            "parent_id": 225860591,
+            "member_full_name": "Tom Middleton",
+            "member_position_title": "Director Of Engineering"
+          },
+          {
+            "parent_id": 207587986,
+            "member_full_name": "Azim Mitha",
+            "member_position_title": "Director, Sales Strategy Operations (APAC)"
+          },
+          {
+            "parent_id": 74470264,
+            "member_full_name": "Jamie Gillingham",
+            "member_position_title": "Head Of Global Product Communications"
+          },
+          {
+            "parent_id": 458525775,
+            "member_full_name": "Mike La Capria",
+            "member_position_title": "Principal Account Executive - Upmarket Partner Acquisition"
+          },
+          {
+            "parent_id": 92190161,
+            "member_full_name": "Vivien Cheng",
+            "member_position_title": "Senior Talent Mobility Partner"
+          },
+          {
+            "parent_id": 203215761,
+            "member_full_name": "Adrian Chiriac",
+            "member_position_title": "Sales Team Lead And Principal Account Executive L4 DACH And CEE"
+          },
+          {
+            "parent_id": 358574235,
+            "member_full_name": "Sarah Organ",
+            "member_position_title": "Director, GTM Strategy Operations"
+          },
+          {
+            "parent_id": 191088070,
+            "member_full_name": "John Kopke",
+            "member_position_title": "Team Lead Principal Account Executive IV"
+          },
+          {
+            "parent_id": 216382035,
+            "member_full_name": "Kaiya Salemy",
+            "member_position_title": "Social Impact Lead"
+          },
+          {
+            "parent_id": 350020854,
+            "member_full_name": "Shashidhar Bellur",
+            "member_position_title": "Partner Development"
+          },
+          {
+            "parent_id": 194085027,
+            "member_full_name": "Sabari Ram",
+            "member_position_title": "Product Lead"
+          },
+          {
+            "parent_id": 395128025,
+            "member_full_name": "Dinesh Dheenathayalan",
+            "member_position_title": "Director, Partner Analytics Operations"
+          },
+          {
+            "parent_id": 423601620,
+            "member_full_name": "Akari Manabe",
+            "member_position_title": "Partner Specialist"
+          },
+          {
+            "parent_id": 619327593,
+            "member_full_name": "Zachary Oneal",
+            "member_position_title": "Licenced Partner"
+          },
+          {
+            "parent_id": 214360681,
+            "member_full_name": "Alex Potrivaev",
+            "member_position_title": "Director Of Product Design"
+          },
+          {
+            "parent_id": 52459712,
+            "member_full_name": "Emmanuel Giannopoulos",
+            "member_position_title": "Principal Account Executive And Team Lead - Mid Market"
+          },
+          {
+            "parent_id": 578891145,
+            "member_full_name": "Sharron Schreiber",
+            "member_position_title": "Director Of Partner Strategy And Operations"
+          },
+          {
+            "parent_id": 485352615,
+            "member_full_name": "Steve Simmons",
+            "member_position_title": "Director Of Engineering"
+          },
+          {
+            "parent_id": 240498972,
+            "member_full_name": "Garrett Park",
+            "member_position_title": "Principal Account Executive"
+          },
+          {
+            "parent_id": 3522542,
+            "member_full_name": "Jocelyn Perron",
+            "member_position_title": "Senior Director Of User Experience"
+          },
+          {
+            "parent_id": 62188375,
+            "member_full_name": "Michael Zielinski",
+            "member_position_title": "Principal Account Executive"
+          },
+          {
+            "parent_id": 238664017,
+            "member_full_name": "Lindsay Konte",
+            "member_position_title": "Director Of Global Sales Planning"
+          },
+          {
+            "parent_id": 501871234,
+            "member_full_name": "Adrian Rochford",
+            "member_position_title": "Growth Specialist - Mid Market Corp Accounts Middle East North Africa"
+          },
+          {
+            "parent_id": 152858064,
+            "member_full_name": "Karli Amber Smith",
+            "member_position_title": "Chief Of Staff. JAPAC"
+          },
+          {
+            "parent_id": 403584922,
+            "member_full_name": "Jan André Simon",
+            "member_position_title": "Principal Account Executive Mid Market (L1) Team Lead"
+          },
+          {
+            "parent_id": 53401960,
+            "member_full_name": "Franziska Kolbe",
+            "member_position_title": "Head Of Partner Development DACH CEE"
+          },
+          {
+            "parent_id": 410344868,
+            "member_full_name": "Angela Hainsworth",
+            "member_position_title": "Director, Enterprise Risk Management"
+          },
+          {
+            "parent_id": 255585138,
+            "member_full_name": "Nicholas Bereza",
+            "member_position_title": "Director Of Engineering (Mobile)"
+          },
+          {
+            "parent_id": 395190340,
+            "member_full_name": "Ryan Carter",
+            "member_position_title": "Director, Talent Management"
+          },
+          {
+            "parent_id": 87599901,
+            "member_full_name": "Lisa Danaher",
+            "member_position_title": "Principal Enablement Partner"
+          },
+          {
+            "parent_id": 18636670,
+            "member_full_name": "Tiffany Poeppelman",
+            "member_position_title": "Director, Talent Management"
+          },
+          {
+            "parent_id": 143707378,
+            "member_full_name": "Maggie Mirsky",
+            "member_position_title": "Product Lead"
+          },
+          {
+            "parent_id": 171577128,
+            "member_full_name": "Dee Murphy",
+            "member_position_title": "Sr. Director, Leadership Development"
+          },
+          {
+            "parent_id": 400447331,
+            "member_full_name": "Sarah Mcg",
+            "member_position_title": "Presales Director"
+          },
+          {
+            "parent_id": 222759839,
+            "member_full_name": "Dolly Jaiyeola",
+            "member_position_title": "Principal Account Director - HubSpot Africa"
+          },
+          {
+            "parent_id": 688996085,
+            "member_full_name": "Gina Stimpel",
+            "member_position_title": "Principal Account Executive (L3)"
+          },
+          {
+            "parent_id": 90997578,
+            "member_full_name": "Amy Mcclure",
+            "member_position_title": "Director Of Product Design"
+          },
+          {
+            "parent_id": 71549390,
+            "member_full_name": "Colin Gillingham",
+            "member_position_title": "Product Lead"
+          },
+          {
+            "parent_id": 143783293,
+            "member_full_name": "Antonio Nestola",
+            "member_position_title": "Lead Principal Contract Manager"
+          },
+          {
+            "parent_id": 387724055,
+            "member_full_name": "Itamar Ben Kassiff",
+            "member_position_title": "Principal Account Executive"
+          },
+          {
+            "parent_id": 397491819,
+            "member_full_name": "Sarah Mercedes",
+            "member_position_title": "Director Of Sales, Corporate"
+          },
+          {
+            "parent_id": 492469708,
+            "member_full_name": "Jamie Wasley",
+            "member_position_title": "Human Resources Business Partner"
+          },
+          {
+            "parent_id": 17158914,
+            "member_full_name": "Tendayi Mawushe",
+            "member_position_title": "Senior Director Of Engineering"
+          },
+          {
+            "parent_id": 432941574,
+            "member_full_name": "Catherine Martin",
+            "member_position_title": "People Partner"
+          },
+          {
+            "parent_id": 21610226,
+            "member_full_name": "Tansy Murray",
+            "member_position_title": "Senior Director Of Product Design"
+          },
+          {
+            "parent_id": 28979307,
+            "member_full_name": "Beril Maples",
+            "member_position_title": "Sr. Director Of UX, Service Hub"
+          },
+          {
+            "parent_id": 107506998,
+            "member_full_name": "Lauren O'gorman",
+            "member_position_title": "Sr. Director, Finance"
+          },
+          {
+            "parent_id": 396670733,
+            "member_full_name": "Jon Loehr",
+            "member_position_title": "Senior Director, Workforce Planning People Analytics"
+          },
+          {
+            "parent_id": 398579836,
+            "member_full_name": "Nancy Mai Harnett",
+            "member_position_title": "Senior Manager, Head Of Affiliate Marketing"
+          },
+          {
+            "parent_id": 193425499,
+            "member_full_name": "Julia Pilkes",
+            "member_position_title": "Senior Marketing Director EMEA"
+          },
+          {
+            "parent_id": 92348348,
+            "member_full_name": "Gina Stimpel",
+            "member_position_title": "Principal Account Executive (L3)"
+          },
+          {
+            "parent_id": 27396111,
+            "member_full_name": "Pratik Tiki Biswal",
+            "member_position_title": "Director Of Sales, Mid-Market"
+          },
+          {
+            "parent_id": 255111834,
+            "member_full_name": "Katie Lambert",
+            "member_position_title": "Director, Solutions Partner Marketing And Enablement"
+          },
+          {
+            "parent_id": 69640989,
+            "member_full_name": "Christine Celli",
+            "member_position_title": "Director Of Product Design"
+          },
+          {
+            "parent_id": 73942749,
+            "member_full_name": "James Mack",
+            "member_position_title": "Director, Strategy And Operations"
+          },
+          {
+            "parent_id": 415972067,
+            "member_full_name": "Hunter Davis",
+            "member_position_title": "Principal Account Executive Team Lead"
+          },
+          {
+            "parent_id": 352789118,
+            "member_full_name": "Alexander Unmack",
+            "member_position_title": "Principal Account Executive"
+          },
+          {
+            "parent_id": 124277527,
+            "member_full_name": "Swetha N",
+            "member_position_title": "Director, Engineering"
+          },
+          {
+            "parent_id": 413863892,
+            "member_full_name": "Matt Smith",
+            "member_position_title": "Corporate Account Director - UKI"
+          },
+          {
+            "parent_id": 7833896,
+            "member_full_name": "Elena Hekimian",
+            "member_position_title": "Director Product Strategy"
+          },
+          {
+            "parent_id": 289150321,
+            "member_full_name": "Elle Midey",
+            "member_position_title": "Director, Mid Market Sales"
+          },
+          {
+            "parent_id": 406803765,
+            "member_full_name": "Clearthur Bo Billingsley",
+            "member_position_title": "Partner Specialist"
+          },
+          {
+            "parent_id": 266862436,
+            "member_full_name": "Mélanie Lesade",
+            "member_position_title": "Partner Customer Success Manager"
+          },
+          {
+            "parent_id": 146740902,
+            "member_full_name": "Evan Hamilton",
+            "member_position_title": "Director Of Community"
+          },
+          {
+            "parent_id": 191422227,
+            "member_full_name": "Bill Goodrich",
+            "member_position_title": "Director Of Engineering"
+          },
+          {
+            "parent_id": 472146565,
+            "member_full_name": "Katie Tade",
+            "member_position_title": "Product Lead"
+          },
+          {
+            "parent_id": 354145552,
+            "member_full_name": "Parisa Kosari",
+            "member_position_title": "Senior Producer And Director"
+          },
+          {
+            "parent_id": 194313668,
+            "member_full_name": "Lauren Leggio",
+            "member_position_title": "Human Resources Business Partner"
+          },
+          {
+            "parent_id": 357139384,
+            "member_full_name": "Jordan Brown",
+            "member_position_title": "Web3 Growth Director"
+          },
+          {
+            "parent_id": 172400853,
+            "member_full_name": "Daniel Koch",
+            "member_position_title": "Senior Director Of Creative"
+          },
+          {
+            "parent_id": 269712723,
+            "member_full_name": "Sam Firman",
+            "member_position_title": "Director Of Sales"
+          },
+          {
+            "parent_id": 261807809,
+            "member_full_name": "玉莲 Elaine Battersby",
+            "member_position_title": "Business Development Director JAPAC"
+          },
+          {
+            "parent_id": 387909195,
+            "member_full_name": "Brian Powell",
+            "member_position_title": "Corporate Account Director"
+          },
+          {
+            "parent_id": 212735827,
+            "member_full_name": "Stephanie Graves",
+            "member_position_title": "Partner Strategy Ops"
+          },
+          {
+            "parent_id": 419283001,
+            "member_full_name": "Bruno Sancar",
+            "member_position_title": "Associated Partner"
+          },
+          {
+            "parent_id": 437467646,
+            "member_full_name": "Mark Brady",
+            "member_position_title": "Global Head Of Creative Solutions"
+          },
+          {
+            "parent_id": 395151174,
+            "member_full_name": "Ian Jones",
+            "member_position_title": "Director, Recruiting Operations And Enablement"
+          },
+          {
+            "parent_id": 839281755,
+            "member_full_name": "Nicole Chen",
+            "member_position_title": "Director Data Science"
+          },
+          {
+            "parent_id": 122937343,
+            "member_full_name": "Gary Corcoran",
+            "member_position_title": "Head Of International Hubspot For Startups"
+          },
+          {
+            "parent_id": 128265172,
+            "member_full_name": "Bryan Lowry",
+            "member_position_title": "Principal Account Executive 4"
+          },
+          {
+            "parent_id": 171139861,
+            "member_full_name": "Erika Fisher",
+            "member_position_title": "Chief Legal Officer"
+          },
+          {
+            "parent_id": 341513250,
+            "member_full_name": "Judith Millar",
+            "member_position_title": "ER Partner"
+          },
+          {
+            "parent_id": 443619673,
+            "member_full_name": "Thomas Baseley",
+            "member_position_title": "Senior Solutions Engineer L2 - Southern Europe"
+          },
+          {
+            "parent_id": 96506786,
+            "member_full_name": "Sarah Devlin",
+            "member_position_title": "Principal Executive Recruiter"
+          },
+          {
+            "parent_id": 435083112,
+            "member_full_name": "Janani Venkatesan",
+            "member_position_title": "Senior Director Finance Transformation"
+          },
+          {
+            "parent_id": 276351725,
+            "member_full_name": "Varun Khanna",
+            "member_position_title": "Director Of Engineering"
+          },
+          {
+            "parent_id": 540310765,
+            "member_full_name": "Antonio V",
+            "member_position_title": "Head Of Sales And Business Development"
+          },
+          {
+            "parent_id": 325296037,
+            "member_full_name": "Meagan Mooney",
+            "member_position_title": "HR Business Partner - Marketing"
+          },
+          {
+            "parent_id": 116526129,
+            "member_full_name": "Sarah Posnak",
+            "member_position_title": "Principal Growth Executive"
+          },
+          {
+            "parent_id": 156080038,
+            "member_full_name": "Sean Counceller",
+            "member_position_title": "Product Lead"
+          },
+          {
+            "parent_id": 7034826,
+            "member_full_name": "Yoan Demarty",
+            "member_position_title": "Principal Enterprise Account Executive"
+          },
+          {
+            "parent_id": 52970790,
+            "member_full_name": "Sam Shoolman",
+            "member_position_title": "Senior Director Of Corporate Sales"
+          },
+          {
+            "parent_id": 192574246,
+            "member_full_name": "Brooks Jung",
+            "member_position_title": "Director, Go-to-Market Strategy Operations"
+          },
+          {
+            "parent_id": 347999349,
+            "member_full_name": "Jed Northridge",
+            "member_position_title": "Director Of Engineering - Commerce Product Group"
+          },
+          {
+            "parent_id": 776009783,
+            "member_full_name": "Rebecca Pilpel",
+            "member_position_title": "Employer"
+          },
+          {
+            "parent_id": 328841406,
+            "member_full_name": "Kyaterekera Charles",
+            "member_position_title": "HubSpot Solution Partner"
+          },
+          {
+            "parent_id": 172170037,
+            "member_full_name": "Jesse Tremblay",
+            "member_position_title": "Director Of Product"
+          },
+          {
+            "parent_id": 345734313,
+            "member_full_name": "Marva Christian",
+            "member_position_title": "Global People Partner"
+          },
+          {
+            "parent_id": 142050082,
+            "member_full_name": "Brian Barbosa",
+            "member_position_title": "Director Of Engineering"
+          },
+          {
+            "parent_id": 268682529,
+            "member_full_name": "Bryan Ash",
+            "member_position_title": "Director Of Engineering"
+          },
+          {
+            "parent_id": 392079009,
+            "member_full_name": "Michael O'brien",
+            "member_position_title": "Director Of Engineering"
+          },
+          {
+            "parent_id": 190703036,
+            "member_full_name": "Emma Culver",
+            "member_position_title": "Director Of Business Development"
+          },
+          {
+            "parent_id": 394913124,
+            "member_full_name": "Andrew Martin",
+            "member_position_title": "Director, Data Strategy Operations"
+          },
+          {
+            "parent_id": 43901571,
+            "member_full_name": "Maria Alejandra Arrieta Arango",
+            "member_position_title": "Employee Relations Partner"
+          },
+          {
+            "parent_id": 302276310,
+            "member_full_name": "Kimberly Pittman",
+            "member_position_title": "VP, Deputy General Counsel, Corporate, Compliance, And Risk"
+          },
+          {
+            "parent_id": 386627957,
+            "member_full_name": "Eric Schroeder",
+            "member_position_title": "Director, Associate General Counsel"
+          },
+          {
+            "parent_id": 83169660,
+            "member_full_name": "Daniel Cano",
+            "member_position_title": "Head Of Sales"
+          },
+          {
+            "parent_id": 358920963,
+            "member_full_name": "Tim Madden",
+            "member_position_title": "Compensation Partner"
+          },
+          {
+            "parent_id": 799374936,
+            "member_full_name": "S J",
+            "member_position_title": "Financial Director"
+          },
+          {
+            "parent_id": 126583666,
+            "member_full_name": "Bhargava Gade",
+            "member_position_title": "Product Lead"
+          },
+          {
+            "parent_id": 131372862,
+            "member_full_name": "Donato Giuliano",
+            "member_position_title": "Director, Localization"
+          },
+          {
+            "parent_id": 61300902,
+            "member_full_name": "Ryan West",
+            "member_position_title": "Senior Director Of User Experience"
+          },
+          {
+            "parent_id": 172131320,
+            "member_full_name": "Aanchal Hooda",
+            "member_position_title": "Team Lead Principal Account Executive"
+          },
+          {
+            "parent_id": 199760435,
+            "member_full_name": "Andrew Meinert",
+            "member_position_title": "Director Of System Operations"
+          },
+          {
+            "parent_id": 236328450,
+            "member_full_name": "Henry Wu",
+            "member_position_title": "Director Of UX"
+          },
+          {
+            "parent_id": 241839300,
+            "member_full_name": "Jeff Russo",
+            "member_position_title": "Director Of Product Strategy"
+          },
+          {
+            "parent_id": 29183298,
+            "member_full_name": "Blake Winchester",
+            "member_position_title": "Director, Accounting"
+          },
+          {
+            "parent_id": 82387358,
+            "member_full_name": "Kara Kendi",
+            "member_position_title": "Global Strategic Workforce Planning Lead"
+          },
+          {
+            "parent_id": 421001637,
+            "member_full_name": "Dola Akinduro",
+            "member_position_title": "Director, PreSales EMEA"
+          },
+          {
+            "parent_id": 382451955,
+            "member_full_name": "Clara-jane Manning",
+            "member_position_title": "Sales Director Mid Market"
+          },
+          {
+            "parent_id": 336019122,
+            "member_full_name": "Mark Metcoff",
+            "member_position_title": "Senior Director, Marketing Technology"
+          },
+          {
+            "parent_id": 289446877,
+            "member_full_name": "Andrew Tosi",
+            "member_position_title": "Sales Director"
+          },
+          {
+            "parent_id": 200787820,
+            "member_full_name": "Gil Roeder",
+            "member_position_title": "Director - HubSpot Center For Inbound Advertising"
+          },
+          {
+            "parent_id": 579872236,
+            "member_full_name": "Erika Mickens",
+            "member_position_title": "Human Resources Business Partner"
+          },
+          {
+            "parent_id": 101485016,
+            "member_full_name": "Jonathon Mckenzie",
+            "member_position_title": "Head Of Brand Paid Media"
+          },
+          {
+            "parent_id": 87822735,
+            "member_full_name": "Mark Whelan",
+            "member_position_title": "Director, Executive Communications"
+          },
+          {
+            "parent_id": 186574505,
+            "member_full_name": "Alanah Joseph",
+            "member_position_title": "Head Of Creator Partnerships"
+          },
+          {
+            "parent_id": 342889187,
+            "member_full_name": "Emily Stirling",
+            "member_position_title": "Director Of Talent Mobility"
+          },
+          {
+            "parent_id": 736306902,
+            "member_full_name": "Brendan Hilden",
+            "member_position_title": "Principle Business Development Representative"
+          },
+          {
+            "parent_id": 834277690,
+            "member_full_name": "Leo Cortez",
+            "member_position_title": "Director"
+          },
+          {
+            "parent_id": 349130767,
+            "member_full_name": "Ian Rockett",
+            "member_position_title": "HR Business Partner"
+          },
+          {
+            "parent_id": 58404554,
+            "member_full_name": "Sophie Salzman",
+            "member_position_title": "Principal Corporate Account Executive"
+          },
+          {
+            "parent_id": 264453357,
+            "member_full_name": "Steve Sears",
+            "member_position_title": "Director, Go-to-Market Strategy"
+          },
+          {
+            "parent_id": 358403124,
+            "member_full_name": "Robert Cole",
+            "member_position_title": "Director, Strategic Programs"
+          },
+          {
+            "parent_id": 360625600,
+            "member_full_name": "John Russell",
+            "member_position_title": "Director Of Engineering"
+          },
+          {
+            "parent_id": 119812052,
+            "member_full_name": "Alli Kleppe",
+            "member_position_title": "Senior GTM Enablement Partner"
+          },
+          {
+            "parent_id": 119237098,
+            "member_full_name": "David Cohen",
+            "member_position_title": "Chief Sales Officer (CSO)"
+          },
+          {
+            "parent_id": 418046527,
+            "member_full_name": "Rob Campion",
+            "member_position_title": "Director Of Engineering, Growth"
+          },
+          {
+            "parent_id": 191378519,
+            "member_full_name": "Jamie Hager",
+            "member_position_title": "Head Of Global Onboarding- HubSpot"
+          },
+          {
+            "parent_id": 94607217,
+            "member_full_name": "Andrew Dungan",
+            "member_position_title": "Senior Account Director - EMEA Corp"
+          },
+          {
+            "parent_id": 429141874,
+            "member_full_name": "Jairo Castro",
+            "member_position_title": "Principal Account Executive Team Lead"
+          },
+          {
+            "parent_id": 164775152,
+            "member_full_name": "Anshu Raj",
+            "member_position_title": "Product Lead"
+          },
+          {
+            "parent_id": 248452066,
+            "member_full_name": "Seona Tully",
+            "member_position_title": "Senior Sales Director UKI MM"
+          },
+          {
+            "parent_id": 213085052,
+            "member_full_name": "Claire Brereton",
+            "member_position_title": "Talent And Leadership Development Partner"
+          },
+          {
+            "parent_id": 629059424,
+            "member_full_name": "Camilo Bejarano",
+            "member_position_title": "Associate Marketing Manager, Solutions Partners"
+          },
+          {
+            "parent_id": 484921656,
+            "member_full_name": "Áine Crowley",
+            "member_position_title": "Global Snr. Human Resource Director, HubSpot"
+          },
+          {
+            "parent_id": 111979162,
+            "member_full_name": "Virginie Le Lièvre",
+            "member_position_title": "Head Of Brand And Marketing France"
+          },
+          {
+            "parent_id": 280330819,
+            "member_full_name": "小島裕一郎",
+            "member_position_title": "Director"
+          },
+          {
+            "parent_id": 526646592,
+            "member_full_name": "Kazimiera Elson",
+            "member_position_title": "Senior Talent Mobility Partner"
+          },
+          {
+            "parent_id": 411070802,
+            "member_full_name": "Johana R",
+            "member_position_title": "Director Of Customer Support"
+          },
+          {
+            "parent_id": 1951656,
+            "member_full_name": "Bavo Van Roost",
+            "member_position_title": "Senior Manager Head Of Renewals - JAPAC"
+          },
+          {
+            "parent_id": 140204427,
+            "member_full_name": "Jamee Sheehy",
+            "member_position_title": "Senior Director Of Creative Studio"
+          },
+          {
+            "parent_id": 325377701,
+            "member_full_name": "Conor Mullen",
+            "member_position_title": "Senior Director Of Engineering"
+          },
+          {
+            "parent_id": 308225751,
+            "member_full_name": "Carol Fong",
+            "member_position_title": "Head Of Sales, Asia"
+          },
+          {
+            "parent_id": 156248364,
+            "member_full_name": "Daniela Zacharieva",
+            "member_position_title": "Principal Account Executive CEE"
+          },
+          {
+            "parent_id": 85378387,
+            "member_full_name": "Jake Morgen",
+            "member_position_title": "Senior Partner Manager - Platform Ecosystem"
+          },
+          {
+            "parent_id": 200043440,
+            "member_full_name": "Gregory Golinski",
+            "member_position_title": "Head Of Growth Marketing France, HubSpot"
+          },
+          {
+            "parent_id": 32856086,
+            "member_full_name": "Eabhan Rowe",
+            "member_position_title": "Director, Marketing Automation"
+          },
+          {
+            "parent_id": 419083527,
+            "member_full_name": "Anthony Camilleri",
+            "member_position_title": "Director Of Financial Operations"
+          },
+          {
+            "parent_id": 222196065,
+            "member_full_name": "Aisling Towey",
+            "member_position_title": "Sales Strategy Business Partner"
+          },
+          {
+            "parent_id": 213593497,
+            "member_full_name": "Alan Kartholl",
+            "member_position_title": "Principal Account Executive"
+          },
+          {
+            "parent_id": 87983819,
+            "member_full_name": "Kuba Niechciał",
+            "member_position_title": "Director Of Engineering"
+          },
+          {
+            "parent_id": 234664663,
+            "member_full_name": "Kat Warboys",
+            "member_position_title": "Senior Marketing Director, APAC At HubSpot"
+          },
+          {
+            "parent_id": 131465603,
+            "member_full_name": "Emer Duffy",
+            "member_position_title": "UKI Enterprise Account Director"
+          },
+          {
+            "parent_id": 65900674,
+            "member_full_name": "Katie Walsh",
+            "member_position_title": "Director Of Sales"
+          },
+          {
+            "parent_id": 99382585,
+            "member_full_name": "Luciana Gerbasio",
+            "member_position_title": "Talent Mobility Partner"
+          },
+          {
+            "parent_id": 205576140,
+            "member_full_name": "Richa Khandelwal",
+            "member_position_title": "Director Of Engineering"
+          },
+          {
+            "parent_id": 121134030,
+            "member_full_name": "Gregory Ray",
+            "member_position_title": "Head Of Business Systems"
+          },
+          {
+            "parent_id": 202468744,
+            "member_full_name": "Karla Cook Hesterberg",
+            "member_position_title": "Director, Content Marketing"
+          },
+          {
+            "parent_id": 426913589,
+            "member_full_name": "Akari Manabe",
+            "member_position_title": "Partner Specialist"
+          },
+          {
+            "parent_id": 447589804,
+            "member_full_name": "Enrique Martinez",
+            "member_position_title": "Director Of Operations"
+          },
+          {
+            "parent_id": 235207562,
+            "member_full_name": "Ankhbayar Bold",
+            "member_position_title": "Principal Account Executive"
+          },
+          {
+            "parent_id": 769719919,
+            "member_full_name": "Jasmine Daniels",
+            "member_position_title": "Employee Relations Business Partner"
+          },
+          {
+            "parent_id": 269125581,
+            "member_full_name": "Ethan Kopit",
+            "member_position_title": "Product Lead"
+          },
+          {
+            "parent_id": 352204656,
+            "member_full_name": "Sandra Kater",
+            "member_position_title": "Sales Director"
+          },
+          {
+            "parent_id": 97160807,
+            "member_full_name": "Andrew Hicks",
+            "member_position_title": "Principal Account Executive - L4"
+          },
+          {
+            "parent_id": 213937115,
+            "member_full_name": "Georg Maikler",
+            "member_position_title": "Account Director, EMEA"
+          },
+          {
+            "parent_id": 540078567,
+            "member_full_name": "Eoin Mcguinness",
+            "member_position_title": "Head Of Startups Emerging Markets HubSpot For Startups"
+          },
+          {
+            "parent_id": 282328705,
+            "member_full_name": "Rose Sail",
+            "member_position_title": "Product Lead"
+          },
+          {
+            "parent_id": 725003662,
+            "member_full_name": "Danielle Rementeria",
+            "member_position_title": "Owner"
+          },
+          {
+            "parent_id": 144615741,
+            "member_full_name": "Aoife Morris",
+            "member_position_title": "Partner Specialist"
+          },
+          {
+            "parent_id": 255300065,
+            "member_full_name": "Hayley Hughes",
+            "member_position_title": "Director Of Product Design"
+          },
+          {
+            "parent_id": 132570749,
+            "member_full_name": "Corey Wainwright",
+            "member_position_title": "Director Of Content"
+          },
+          {
+            "parent_id": 828597921,
+            "member_full_name": "Karson Thompson",
+            "member_position_title": "Principal Account Executive, Mid-Market"
+          },
+          {
+            "parent_id": 419150189,
+            "member_full_name": "Alina Schmitz",
+            "member_position_title": "Team Lead Principal Account Executive"
+          },
+          {
+            "parent_id": 340828149,
+            "member_full_name": "Joseph Hanlon",
+            "member_position_title": "Director, Treasury"
+          },
+          {
+            "parent_id": 198312241,
+            "member_full_name": "Darragh Mcgrath",
+            "member_position_title": "Head Of Visual Design"
+          },
+          {
+            "parent_id": 139535870,
+            "member_full_name": "Claire Connellan",
+            "member_position_title": "Sales Director, UKI"
+          },
+          {
+            "parent_id": 272388982,
+            "member_full_name": "Brandon Walsh",
+            "member_position_title": "Director Of Product Management"
+          },
+          {
+            "parent_id": 184266476,
+            "member_full_name": "Brian Halligan",
+            "member_position_title": "Co-founder Chairperson"
+          },
+          {
+            "parent_id": 124623504,
+            "member_full_name": "Peter Riedle",
+            "member_position_title": "Director, Web Development And Operations"
+          },
+          {
+            "parent_id": 209927591,
+            "member_full_name": "Kieran O'flynn",
+            "member_position_title": "Senior Sales Director"
+          },
+          {
+            "parent_id": 419844744,
+            "member_full_name": "Alexandra Cunningham",
+            "member_position_title": "Channel Monetization Lead, Newsletters"
+          },
+          {
+            "parent_id": 279370527,
+            "member_full_name": "Juan Sebastián Molano",
+            "member_position_title": "Senior Brand Marketing Manager - Head Of Brand And Comms (LatAm Iberia)"
+          },
+          {
+            "parent_id": 293679781,
+            "member_full_name": "Kim Nolan",
+            "member_position_title": "Account Director"
+          },
+          {
+            "parent_id": 394903707,
+            "member_full_name": "Reggie Hutcherson",
+            "member_position_title": "Director Developer Relations"
+          },
+          {
+            "parent_id": 286366829,
+            "member_full_name": "William O'toole",
+            "member_position_title": "Senior Sales Director"
+          },
+          {
+            "parent_id": 162722893,
+            "member_full_name": "Adam Crahen",
+            "member_position_title": "Director Of Analytics Engineering - Sales"
+          },
+          {
+            "parent_id": 152128987,
+            "member_full_name": "Dylan Sellberg",
+            "member_position_title": "Director Of Product, AI"
+          },
+          {
+            "parent_id": 33815185,
+            "member_full_name": "Rex Gelb",
+            "member_position_title": "Senior Director, Paid Advertising Affiliate Marketing"
+          },
+          {
+            "parent_id": 182846189,
+            "member_full_name": "Noel O'reilly",
+            "member_position_title": "Director Of Customer Support, EMEA"
+          },
+          {
+            "parent_id": 723753739,
+            "member_full_name": "Clara Liu",
+            "member_position_title": "Team Technical Director"
+          },
+          {
+            "parent_id": 11959635,
+            "member_full_name": "Zachary M G",
+            "member_position_title": "Principal, Product Partnerships Strategic Alliances"
+          },
+          {
+            "parent_id": 422152410,
+            "member_full_name": "John Miller",
+            "member_position_title": "Director, GTM Strategy"
+          },
+          {
+            "parent_id": 75466471,
+            "member_full_name": "Jessica Lee",
+            "member_position_title": "Head Of Digital Project Management"
+          },
+          {
+            "parent_id": 343823877,
+            "member_full_name": "Lena Cardell",
+            "member_position_title": "Chief Of Staff"
+          },
+          {
+            "parent_id": 98759204,
+            "member_full_name": "Steve Laham",
+            "member_position_title": "Director Of Developer Relations"
+          },
+          {
+            "parent_id": 200362394,
+            "member_full_name": "Kelsey Dietz",
+            "member_position_title": "Director, Product Analytics"
+          },
+          {
+            "parent_id": 329466599,
+            "member_full_name": "Sharan Bansal",
+            "member_position_title": "Head Of Customer Marketing, UK I"
+          },
+          {
+            "parent_id": 216443634,
+            "member_full_name": "Fiorella Cárdenas",
+            "member_position_title": "Senior Head Of Direct Sales Emerging Markets - Latin America"
+          },
+          {
+            "parent_id": 94398920,
+            "member_full_name": "Sabrina Park",
+            "member_position_title": "Sr. Director, Global Talent Management"
+          },
+          {
+            "parent_id": 257254223,
+            "member_full_name": "Blake Bowers",
+            "member_position_title": "Principal Account Executive Team Lead"
+          },
+          {
+            "parent_id": 124433699,
+            "member_full_name": "Christina Clark",
+            "member_position_title": "Head Of Product SEO"
+          },
+          {
+            "parent_id": 349666693,
+            "member_full_name": "James Conant",
+            "member_position_title": "Principal 4 Account Executive"
+          },
+          {
+            "parent_id": 2012352,
+            "member_full_name": "Bryna Corcoran",
+            "member_position_title": "Director, Head Of Global Brand Social Media"
+          },
+          {
+            "parent_id": 150932763,
+            "member_full_name": "Graham Hughes",
+            "member_position_title": "Associate ER Partner"
+          },
+          {
+            "parent_id": 393261970,
+            "member_full_name": "Soraya Alizadeh",
+            "member_position_title": "Principal Account Executive - L4"
+          },
+          {
+            "parent_id": 514964924,
+            "member_full_name": "Jill Cody",
+            "member_position_title": "Director - Global Employment Tax"
+          },
+          {
+            "parent_id": 631792520,
+            "member_full_name": "Tony Bordier",
+            "member_position_title": "Sales Development Director"
+          },
+          {
+            "parent_id": 49248135,
+            "member_full_name": "Max Freiert",
+            "member_position_title": "Director Of Product"
+          }
+        ],
+        "companyEmails": [
+          "info@hubspot.com"
+        ],
+        "executiveContacts": [
+          {
+            "name": "手塚達也",
+            "title": "GrowthSpecialist_DirectSales",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Matt Ginnard",
+            "title": "Director, Design",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Stephen O'keefe",
+            "title": "Senior Director, Customer Success",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Pat Debiasi",
+            "title": "Principal Account Executive III MidMarket",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Maura Mcgrath",
+            "title": "Head Of Creative Production Project Management",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jonathan Chesney",
+            "title": "Director Of Product Management",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Elanna Lalezari",
+            "title": "Senior Director Of Sales, Corporate",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Mawghan Mccabe",
+            "title": "Director, Platform Partnerships",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Matthew Watkins",
+            "title": "Creative Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sandra Cooper",
+            "title": "Global PreSales Enablement Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "John Polaschek",
+            "title": "Senior Director, Learning Experience",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Ryan Hall",
+            "title": "Marketing Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Will Dekrey",
+            "title": "Director Of Product Management",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Noemie Aguettant",
+            "title": "EMEA APAC Inbound Sales Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Samantha Kirshen",
+            "title": "Director Of PreSales, JAPAC",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Katelyn Caruso",
+            "title": "Partner Onboarding Manager PSO",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Dani De Sousa",
+            "title": "Head Of Partner Development, South Of Europe",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Stephen Fiske",
+            "title": "Head Of Video",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Adam Wainwright",
+            "title": "Director Of Product Management",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Christine Natal",
+            "title": "People Partner, Global Sales",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Magdalena Georgieva",
+            "title": "Director Of Product",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Tabetha Palmatary",
+            "title": "Principal Account Executive",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Rebecca Yang",
+            "title": "Director Of Engineering",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Stephen Higgins",
+            "title": "Sales Director - SB MM - EMEA",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Ana Almeida Marcancola",
+            "title": "Principal People Business Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Samuel Donner",
+            "title": "Creator Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Stephen Kelleher",
+            "title": "Principal Recruiter, Executive Recruitment",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Kipp Bodnar",
+            "title": "CMO",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Shelley P",
+            "title": "Senior Director Of Marketing, Latin America And Iberia",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Tabetha Ryser",
+            "title": "Principal Account Executive",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Andrea Abbate",
+            "title": "Senior Director, GTM Enablement",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Charlee Bowers",
+            "title": "Team Technical Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Megan Smith",
+            "title": "Director Deal Strategy",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Hannah Hoar",
+            "title": "Director, CXM",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Bridgett Henwood",
+            "title": "Director Of Video Production",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Paul F Weston",
+            "title": "GM Sr. Director Of Product",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Melanie Hendrick",
+            "title": "Senior Director Talent Acquisition",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Nawal Fakhoury",
+            "title": "Senior Director, Culture",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Priya Shanmukha",
+            "title": "Senior HR Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jennifer Cedorchuk",
+            "title": "Principal Account Executive",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sonali Shanker Kamath",
+            "title": "Principal, Product Partnerships Strategic Alliances",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Colton Wiseman",
+            "title": "Team Lead Principal Account Executive IV",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Diarmuid Walsh",
+            "title": "Senior Enterprise Sales Leader - UKI",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Mauricio F",
+            "title": "Head Of Corporate Sales, NAM",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Patrick Moore",
+            "title": "Growth Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Chantelle Young",
+            "title": "Product Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Drew Doherty",
+            "title": "Partner Specialist L4",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Nicole Mactaggart",
+            "title": "Principal Account Executive - Mid-Market And Corporate Partner Acquisition",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Aubrey Zych",
+            "title": "Creative Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Dharmesh Shah",
+            "title": "Founder And CTO",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jason Webber",
+            "title": "Senior Director Of Information Technology",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "James Densmore",
+            "title": "Director Of Engineering",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Alyssa Robinson",
+            "title": "Chief Information Security Officer",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Karina Klippel",
+            "title": "Partner Specialist",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Kelly Marek",
+            "title": "HR Business Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Adam Biddlecombe",
+            "title": "Head Of Brand - Mindstream",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Helen Russell",
+            "title": "Chief People Officer",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Stacy Shaw",
+            "title": "Director EMEA Business Development",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Emily James",
+            "title": "Director, Chief Of Staff",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "George Davis",
+            "title": "Director, AI Product",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Matthew Raffol",
+            "title": "Director, Product Strategy Operations",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Matt Schnitt",
+            "title": "GM Sr. Director Of Product",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Dara Boland",
+            "title": "Enterprise Account Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Kayla Thornton",
+            "title": "Director, Incentive Compensation",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Brian Gibree",
+            "title": "Senior Director, Head Of Global Tax",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Lara Tacito",
+            "title": "Sr Director Of UX",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Tom Middleton",
+            "title": "Director Of Engineering",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Azim Mitha",
+            "title": "Director, Sales Strategy Operations (APAC)",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jamie Gillingham",
+            "title": "Head Of Global Product Communications",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Mike La Capria",
+            "title": "Principal Account Executive - Upmarket Partner Acquisition",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Vivien Cheng",
+            "title": "Senior Talent Mobility Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Adrian Chiriac",
+            "title": "Sales Team Lead And Principal Account Executive L4 DACH And CEE",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sarah Organ",
+            "title": "Director, GTM Strategy Operations",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "John Kopke",
+            "title": "Team Lead Principal Account Executive IV",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Kaiya Salemy",
+            "title": "Social Impact Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Shashidhar Bellur",
+            "title": "Partner Development",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sabari Ram",
+            "title": "Product Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Dinesh Dheenathayalan",
+            "title": "Director, Partner Analytics Operations",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Akari Manabe",
+            "title": "Partner Specialist",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Zachary Oneal",
+            "title": "Licenced Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Alex Potrivaev",
+            "title": "Director Of Product Design",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Emmanuel Giannopoulos",
+            "title": "Principal Account Executive And Team Lead - Mid Market",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sharron Schreiber",
+            "title": "Director Of Partner Strategy And Operations",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Steve Simmons",
+            "title": "Director Of Engineering",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Garrett Park",
+            "title": "Principal Account Executive",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jocelyn Perron",
+            "title": "Senior Director Of User Experience",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Michael Zielinski",
+            "title": "Principal Account Executive",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Lindsay Konte",
+            "title": "Director Of Global Sales Planning",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Adrian Rochford",
+            "title": "Growth Specialist - Mid Market Corp Accounts Middle East North Africa",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Karli Amber Smith",
+            "title": "Chief Of Staff. JAPAC",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jan André Simon",
+            "title": "Principal Account Executive Mid Market (L1) Team Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Franziska Kolbe",
+            "title": "Head Of Partner Development DACH CEE",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Angela Hainsworth",
+            "title": "Director, Enterprise Risk Management",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Nicholas Bereza",
+            "title": "Director Of Engineering (Mobile)",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Ryan Carter",
+            "title": "Director, Talent Management",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Lisa Danaher",
+            "title": "Principal Enablement Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Tiffany Poeppelman",
+            "title": "Director, Talent Management",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Maggie Mirsky",
+            "title": "Product Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Dee Murphy",
+            "title": "Sr. Director, Leadership Development",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sarah Mcg",
+            "title": "Presales Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Dolly Jaiyeola",
+            "title": "Principal Account Director - HubSpot Africa",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Gina Stimpel",
+            "title": "Principal Account Executive (L3)",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Amy Mcclure",
+            "title": "Director Of Product Design",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Colin Gillingham",
+            "title": "Product Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Antonio Nestola",
+            "title": "Lead Principal Contract Manager",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Itamar Ben Kassiff",
+            "title": "Principal Account Executive",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sarah Mercedes",
+            "title": "Director Of Sales, Corporate",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jamie Wasley",
+            "title": "Human Resources Business Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Tendayi Mawushe",
+            "title": "Senior Director Of Engineering",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Catherine Martin",
+            "title": "People Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Tansy Murray",
+            "title": "Senior Director Of Product Design",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Beril Maples",
+            "title": "Sr. Director Of UX, Service Hub",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Lauren O'gorman",
+            "title": "Sr. Director, Finance",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jon Loehr",
+            "title": "Senior Director, Workforce Planning People Analytics",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Nancy Mai Harnett",
+            "title": "Senior Manager, Head Of Affiliate Marketing",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Julia Pilkes",
+            "title": "Senior Marketing Director EMEA",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Gina Stimpel",
+            "title": "Principal Account Executive (L3)",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Pratik Tiki Biswal",
+            "title": "Director Of Sales, Mid-Market",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Katie Lambert",
+            "title": "Director, Solutions Partner Marketing And Enablement",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Christine Celli",
+            "title": "Director Of Product Design",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "James Mack",
+            "title": "Director, Strategy And Operations",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Hunter Davis",
+            "title": "Principal Account Executive Team Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Alexander Unmack",
+            "title": "Principal Account Executive",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Swetha N",
+            "title": "Director, Engineering",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Matt Smith",
+            "title": "Corporate Account Director - UKI",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Elena Hekimian",
+            "title": "Director Product Strategy",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Elle Midey",
+            "title": "Director, Mid Market Sales",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Clearthur Bo Billingsley",
+            "title": "Partner Specialist",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Mélanie Lesade",
+            "title": "Partner Customer Success Manager",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Evan Hamilton",
+            "title": "Director Of Community",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Bill Goodrich",
+            "title": "Director Of Engineering",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Katie Tade",
+            "title": "Product Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Parisa Kosari",
+            "title": "Senior Producer And Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Lauren Leggio",
+            "title": "Human Resources Business Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jordan Brown",
+            "title": "Web3 Growth Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Daniel Koch",
+            "title": "Senior Director Of Creative",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sam Firman",
+            "title": "Director Of Sales",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "玉莲 Elaine Battersby",
+            "title": "Business Development Director JAPAC",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Brian Powell",
+            "title": "Corporate Account Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Stephanie Graves",
+            "title": "Partner Strategy Ops",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Bruno Sancar",
+            "title": "Associated Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Mark Brady",
+            "title": "Global Head Of Creative Solutions",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Ian Jones",
+            "title": "Director, Recruiting Operations And Enablement",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Nicole Chen",
+            "title": "Director Data Science",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Gary Corcoran",
+            "title": "Head Of International Hubspot For Startups",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Bryan Lowry",
+            "title": "Principal Account Executive 4",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Erika Fisher",
+            "title": "Chief Legal Officer",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Judith Millar",
+            "title": "ER Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Thomas Baseley",
+            "title": "Senior Solutions Engineer L2 - Southern Europe",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sarah Devlin",
+            "title": "Principal Executive Recruiter",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Janani Venkatesan",
+            "title": "Senior Director Finance Transformation",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Varun Khanna",
+            "title": "Director Of Engineering",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Antonio V",
+            "title": "Head Of Sales And Business Development",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Meagan Mooney",
+            "title": "HR Business Partner - Marketing",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sarah Posnak",
+            "title": "Principal Growth Executive",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sean Counceller",
+            "title": "Product Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Yoan Demarty",
+            "title": "Principal Enterprise Account Executive",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sam Shoolman",
+            "title": "Senior Director Of Corporate Sales",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Brooks Jung",
+            "title": "Director, Go-to-Market Strategy Operations",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jed Northridge",
+            "title": "Director Of Engineering - Commerce Product Group",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Rebecca Pilpel",
+            "title": "Employer",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Kyaterekera Charles",
+            "title": "HubSpot Solution Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jesse Tremblay",
+            "title": "Director Of Product",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Marva Christian",
+            "title": "Global People Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Brian Barbosa",
+            "title": "Director Of Engineering",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Bryan Ash",
+            "title": "Director Of Engineering",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Michael O'brien",
+            "title": "Director Of Engineering",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Emma Culver",
+            "title": "Director Of Business Development",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Andrew Martin",
+            "title": "Director, Data Strategy Operations",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Maria Alejandra Arrieta Arango",
+            "title": "Employee Relations Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Kimberly Pittman",
+            "title": "VP, Deputy General Counsel, Corporate, Compliance, And Risk",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Eric Schroeder",
+            "title": "Director, Associate General Counsel",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Daniel Cano",
+            "title": "Head Of Sales",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Tim Madden",
+            "title": "Compensation Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "S J",
+            "title": "Financial Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Bhargava Gade",
+            "title": "Product Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Donato Giuliano",
+            "title": "Director, Localization",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Ryan West",
+            "title": "Senior Director Of User Experience",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Aanchal Hooda",
+            "title": "Team Lead Principal Account Executive",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Andrew Meinert",
+            "title": "Director Of System Operations",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Henry Wu",
+            "title": "Director Of UX",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jeff Russo",
+            "title": "Director Of Product Strategy",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Blake Winchester",
+            "title": "Director, Accounting",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Kara Kendi",
+            "title": "Global Strategic Workforce Planning Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Dola Akinduro",
+            "title": "Director, PreSales EMEA",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Clara-jane Manning",
+            "title": "Sales Director Mid Market",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Mark Metcoff",
+            "title": "Senior Director, Marketing Technology",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Andrew Tosi",
+            "title": "Sales Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Gil Roeder",
+            "title": "Director - HubSpot Center For Inbound Advertising",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Erika Mickens",
+            "title": "Human Resources Business Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jonathon Mckenzie",
+            "title": "Head Of Brand Paid Media",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Mark Whelan",
+            "title": "Director, Executive Communications",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Alanah Joseph",
+            "title": "Head Of Creator Partnerships",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Emily Stirling",
+            "title": "Director Of Talent Mobility",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Brendan Hilden",
+            "title": "Principle Business Development Representative",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Leo Cortez",
+            "title": "Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Ian Rockett",
+            "title": "HR Business Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sophie Salzman",
+            "title": "Principal Corporate Account Executive",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Steve Sears",
+            "title": "Director, Go-to-Market Strategy",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Robert Cole",
+            "title": "Director, Strategic Programs",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "John Russell",
+            "title": "Director Of Engineering",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Alli Kleppe",
+            "title": "Senior GTM Enablement Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "David Cohen",
+            "title": "Chief Sales Officer (CSO)",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Rob Campion",
+            "title": "Director Of Engineering, Growth",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jamie Hager",
+            "title": "Head Of Global Onboarding- HubSpot",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Andrew Dungan",
+            "title": "Senior Account Director - EMEA Corp",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jairo Castro",
+            "title": "Principal Account Executive Team Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Anshu Raj",
+            "title": "Product Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Seona Tully",
+            "title": "Senior Sales Director UKI MM",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Claire Brereton",
+            "title": "Talent And Leadership Development Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Camilo Bejarano",
+            "title": "Associate Marketing Manager, Solutions Partners",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Áine Crowley",
+            "title": "Global Snr. Human Resource Director, HubSpot",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Virginie Le Lièvre",
+            "title": "Head Of Brand And Marketing France",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "小島裕一郎",
+            "title": "Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Kazimiera Elson",
+            "title": "Senior Talent Mobility Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Johana R",
+            "title": "Director Of Customer Support",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Bavo Van Roost",
+            "title": "Senior Manager Head Of Renewals - JAPAC",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jamee Sheehy",
+            "title": "Senior Director Of Creative Studio",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Conor Mullen",
+            "title": "Senior Director Of Engineering",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Carol Fong",
+            "title": "Head Of Sales, Asia",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Daniela Zacharieva",
+            "title": "Principal Account Executive CEE",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jake Morgen",
+            "title": "Senior Partner Manager - Platform Ecosystem",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Gregory Golinski",
+            "title": "Head Of Growth Marketing France, HubSpot",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Eabhan Rowe",
+            "title": "Director, Marketing Automation",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Anthony Camilleri",
+            "title": "Director Of Financial Operations",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Aisling Towey",
+            "title": "Sales Strategy Business Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Alan Kartholl",
+            "title": "Principal Account Executive",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Kuba Niechciał",
+            "title": "Director Of Engineering",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Kat Warboys",
+            "title": "Senior Marketing Director, APAC At HubSpot",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Emer Duffy",
+            "title": "UKI Enterprise Account Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Katie Walsh",
+            "title": "Director Of Sales",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Luciana Gerbasio",
+            "title": "Talent Mobility Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Richa Khandelwal",
+            "title": "Director Of Engineering",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Gregory Ray",
+            "title": "Head Of Business Systems",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Karla Cook Hesterberg",
+            "title": "Director, Content Marketing",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Akari Manabe",
+            "title": "Partner Specialist",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Enrique Martinez",
+            "title": "Director Of Operations",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Ankhbayar Bold",
+            "title": "Principal Account Executive",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jasmine Daniels",
+            "title": "Employee Relations Business Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Ethan Kopit",
+            "title": "Product Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sandra Kater",
+            "title": "Sales Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Andrew Hicks",
+            "title": "Principal Account Executive - L4",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Georg Maikler",
+            "title": "Account Director, EMEA",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Eoin Mcguinness",
+            "title": "Head Of Startups Emerging Markets HubSpot For Startups",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Rose Sail",
+            "title": "Product Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Danielle Rementeria",
+            "title": "Owner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Aoife Morris",
+            "title": "Partner Specialist",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Hayley Hughes",
+            "title": "Director Of Product Design",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Corey Wainwright",
+            "title": "Director Of Content",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Karson Thompson",
+            "title": "Principal Account Executive, Mid-Market",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Alina Schmitz",
+            "title": "Team Lead Principal Account Executive",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Joseph Hanlon",
+            "title": "Director, Treasury",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Darragh Mcgrath",
+            "title": "Head Of Visual Design",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Claire Connellan",
+            "title": "Sales Director, UKI",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Brandon Walsh",
+            "title": "Director Of Product Management",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Brian Halligan",
+            "title": "Co-founder Chairperson",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Peter Riedle",
+            "title": "Director, Web Development And Operations",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Kieran O'flynn",
+            "title": "Senior Sales Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Alexandra Cunningham",
+            "title": "Channel Monetization Lead, Newsletters",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Juan Sebastián Molano",
+            "title": "Senior Brand Marketing Manager - Head Of Brand And Comms (LatAm Iberia)",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Kim Nolan",
+            "title": "Account Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Reggie Hutcherson",
+            "title": "Director Developer Relations",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "William O'toole",
+            "title": "Senior Sales Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Adam Crahen",
+            "title": "Director Of Analytics Engineering - Sales",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Dylan Sellberg",
+            "title": "Director Of Product, AI",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Rex Gelb",
+            "title": "Senior Director, Paid Advertising Affiliate Marketing",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Noel O'reilly",
+            "title": "Director Of Customer Support, EMEA",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Clara Liu",
+            "title": "Team Technical Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Zachary M G",
+            "title": "Principal, Product Partnerships Strategic Alliances",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "John Miller",
+            "title": "Director, GTM Strategy",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jessica Lee",
+            "title": "Head Of Digital Project Management",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Lena Cardell",
+            "title": "Chief Of Staff",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Steve Laham",
+            "title": "Director Of Developer Relations",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Kelsey Dietz",
+            "title": "Director, Product Analytics",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sharan Bansal",
+            "title": "Head Of Customer Marketing, UK I",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Fiorella Cárdenas",
+            "title": "Senior Head Of Direct Sales Emerging Markets - Latin America",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Sabrina Park",
+            "title": "Sr. Director, Global Talent Management",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Blake Bowers",
+            "title": "Principal Account Executive Team Lead",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Christina Clark",
+            "title": "Head Of Product SEO",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "James Conant",
+            "title": "Principal 4 Account Executive",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Bryna Corcoran",
+            "title": "Director, Head Of Global Brand Social Media",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Graham Hughes",
+            "title": "Associate ER Partner",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Soraya Alizadeh",
+            "title": "Principal Account Executive - L4",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Jill Cody",
+            "title": "Director - Global Employment Tax",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Tony Bordier",
+            "title": "Sales Development Director",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          },
+          {
+            "name": "Max Freiert",
+            "title": "Director Of Product",
+            "email": null,
+            "linkedIn": null,
+            "department": null,
+            "seniority": null,
+            "source": "coresignal_executives"
+          }
+        ]
+      }
+    },
+    "executiveContacts": {
+      "executives": [],
+      "totalFound": 0,
+      "searchAttempts": 0
+    },
+    "hiringIntelligence": null,
+    "dataQuality": {
+      "confidence": 40,
+      "sources": [
+        "CoreSignal Company"
+      ],
+      "creditsUsed": 2,
+      "costEfficient": true
+    }
+  },
+  "industryIntelligence": {
+    "industryClassification": {
+      "naicsCode": "518210",
+      "naicsDescription": "Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services",
+      "sicCode": "7374",
+      "sicDescription": "Computer Processing and Data Preparation and Processing Services",
+      "primarySector": "Technology",
+      "businessVertical": "SaaS",
+      "marketSegment": "SMB, Enterprise",
+      "industryTrends": [
+        "Rapid adoption of cloud-based SaaS solutions",
+        "Increasing integration of AI and automation in marketing and sales platforms",
+        "Growing demand for unified customer experience and CRM platforms"
+      ],
+      "growthOutlook": "Growing",
+      "marketSize": "Large"
+    },
+    "competitorIntelligence": {
+      "directCompetitors": [
+        "Zoho CRM",
+        "Salesforce",
+        "Pipedrive"
+      ],
+      "indirectCompetitors": [
+        "ActiveCampaign",
+        "EngageBay"
+      ],
+      "marketLeaders": [
+        "Salesforce",
+        "Zoho CRM"
+      ],
+      "emergingCompetitors": [
+        "EngageBay",
+        "NetHunt CRM"
+      ],
+      "competitivePosition": "Market Leader",
+      "competitiveDifferentiators": [
+        "All-in-one inbound marketing, sales, and service platform",
+        "Robust marketing automation and analytics"
+      ],
+      "marketShare": "Large",
+      "competitiveThreat": "Medium"
+    },
+    "strategicContext": "Growing industry - expansion opportunities | Market leader - enterprise-ready solutions needed | Technology sector - innovation and scalability focus"
+  },
+  "buyerGroupIntelligence": {
+    "success": true,
+    "companyName": "HubSpot, Inc.",
+    "context": {
+      "companyName": "HubSpot, Inc.",
+      "website": "hubspot.com",
+      "industry": "Technology",
+      "businessVertical": "SaaS",
+      "marketSegment": "SMB, Enterprise",
+      "employeeCount": 10908,
+      "isPEOwned": false,
+      "peOwner": "None",
+      "headquarters": {
+        "country": "United States",
+        "city": "Cambridge",
+        "state": "Massachusetts"
+      },
+      "competitors": [
+        "Zoho CRM",
+        "Salesforce",
+        "Pipedrive"
+      ],
+      "executiveStructure": {
+        "ceo": {
+          "name": "",
+          "title": "",
+          "confidence": 0
+        },
+        "financeLeader": {
+          "name": "",
+          "title": "",
+          "role": "",
+          "confidence": 0
+        }
+      },
+      "salesContext": {
+        "accountOwner": "Dan Mirolli",
+        "isTop1000": false,
+        "overallConfidence": 0,
+        "riskLevel": "HIGH"
+      },
+      "businessType": "Unknown",
+      "purchaseType": "operational",
+      "dealSizeRange": "medium",
+      "decisionComplexity": "medium",
+      "relevantDepartments": []
+    },
+    "buyerGroup": {
+      "roles": {
+        "decisionMakers": {
+          "titles": [
+            "president",
+            "ceo",
+            "vice president",
+            "vp",
+            "general manager"
+          ],
+          "departments": [
+            "executive",
+            "leadership"
+          ],
+          "priority": "high",
+          "targetCount": 2,
+          "reasoning": "Budget authority for business decisions"
+        },
+        "champions": {
+          "titles": [
+            "director",
+            "manager",
+            "head of"
+          ],
+          "departments": [
+            "operations",
+            "business"
+          ],
+          "priority": "high",
+          "targetCount": 3,
+          "reasoning": "Internal advocates who drive purchases"
+        },
+        "influencers": {
+          "titles": [
+            "senior manager",
+            "specialist",
+            "analyst",
+            "coordinator"
+          ],
+          "departments": [
+            "relevant to product/service"
+          ],
+          "priority": "medium",
+          "targetCount": 3,
+          "reasoning": "Provide input and influence specifications"
+        },
+        "financialStakeholders": {
+          "titles": [
+            "cfo",
+            "finance director",
+            "controller"
+          ],
+          "departments": [
+            "finance",
+            "accounting"
+          ],
+          "priority": "medium",
+          "targetCount": 1,
+          "reasoning": "Budget approval and financial oversight"
+        },
+        "procurementStakeholders": {
+          "titles": [
+            "procurement manager",
+            "purchasing manager",
+            "buyer"
+          ],
+          "departments": [
+            "procurement",
+            "purchasing"
+          ],
+          "priority": "medium",
+          "targetCount": 1,
+          "reasoning": "Vendor selection and contract management"
+        }
+      },
+      "confidence": 70,
+      "reasoning": "Default buyer group model applied",
+      "recommendations": [],
+      "missingRoles": [],
+      "irrelevantRoles": []
+    },
+    "searchCriteria": {
+      "decisionMakers": {
+        "titles": [
+          "president",
+          "ceo",
+          "vice president",
+          "vp",
+          "general manager"
+        ],
+        "departments": [
+          "executive",
+          "leadership"
+        ],
+        "keywords": [
+          "president",
+          "ceo",
+          "vice president",
+          "vp",
+          "general manager",
+          "president Technology",
+          "president retail",
+          "ceo Technology",
+          "ceo retail",
+          "vice president Technology",
+          "vice president retail",
+          "vp Technology",
+          "vp retail",
+          "general manager Technology",
+          "general manager retail",
+          "president HubSpot, Inc.",
+          "ceo HubSpot, Inc.",
+          "vice president HubSpot, Inc.",
+          "vp HubSpot, Inc.",
+          "general manager HubSpot, Inc."
+        ],
+        "priority": "high",
+        "targetCount": 2
+      },
+      "champions": {
+        "titles": [
+          "director",
+          "manager",
+          "head of"
+        ],
+        "departments": [
+          "operations",
+          "business"
+        ],
+        "keywords": [
+          "director",
+          "manager",
+          "head of",
+          "director Technology",
+          "director retail",
+          "manager Technology",
+          "manager retail",
+          "head of Technology",
+          "head of retail",
+          "director HubSpot, Inc.",
+          "manager HubSpot, Inc.",
+          "head of HubSpot, Inc."
+        ],
+        "priority": "high",
+        "targetCount": 3
+      },
+      "influencers": {
+        "titles": [
+          "senior manager",
+          "specialist",
+          "analyst",
+          "coordinator"
+        ],
+        "departments": [
+          "relevant to product/service"
+        ],
+        "keywords": [
+          "senior manager",
+          "specialist",
+          "analyst",
+          "coordinator",
+          "senior manager Technology",
+          "senior manager retail",
+          "specialist Technology",
+          "specialist retail",
+          "analyst Technology",
+          "analyst retail",
+          "coordinator Technology",
+          "coordinator retail",
+          "senior manager HubSpot, Inc.",
+          "specialist HubSpot, Inc.",
+          "analyst HubSpot, Inc.",
+          "coordinator HubSpot, Inc."
+        ],
+        "priority": "medium",
+        "targetCount": 3
+      },
+      "financialStakeholders": {
+        "titles": [
+          "cfo",
+          "finance director",
+          "controller"
+        ],
+        "departments": [
+          "finance",
+          "accounting"
+        ],
+        "keywords": [
+          "cfo",
+          "finance director",
+          "controller",
+          "cfo Technology",
+          "cfo retail",
+          "finance director Technology",
+          "finance director retail",
+          "controller Technology",
+          "controller retail",
+          "cfo HubSpot, Inc.",
+          "finance director HubSpot, Inc.",
+          "controller HubSpot, Inc."
+        ],
+        "priority": "medium",
+        "targetCount": 1
+      },
+      "procurementStakeholders": {
+        "titles": [
+          "procurement manager",
+          "purchasing manager",
+          "buyer"
+        ],
+        "departments": [
+          "procurement",
+          "purchasing"
+        ],
+        "keywords": [
+          "procurement manager",
+          "purchasing manager",
+          "buyer",
+          "procurement manager Technology",
+          "procurement manager retail",
+          "purchasing manager Technology",
+          "purchasing manager retail",
+          "buyer Technology",
+          "buyer retail",
+          "procurement manager HubSpot, Inc.",
+          "purchasing manager HubSpot, Inc.",
+          "buyer HubSpot, Inc."
+        ],
+        "priority": "medium",
+        "targetCount": 1
+      }
+    },
+    "confidence": 70,
+    "reasoning": "Default buyer group model applied",
+    "companyContext": {
+      "companyName": "HubSpot, Inc.",
+      "website": "hubspot.com",
+      "industry": "Technology",
+      "businessVertical": "SaaS",
+      "marketSegment": "SMB, Enterprise",
+      "employeeCount": 10908,
+      "isPEOwned": false,
+      "peOwner": "None",
+      "headquarters": {
+        "country": "United States",
+        "city": "Cambridge",
+        "state": "Massachusetts"
+      },
+      "competitors": [
+        "Zoho CRM",
+        "Salesforce",
+        "Pipedrive"
+      ],
+      "executiveStructure": {
+        "ceo": {
+          "name": "",
+          "title": "",
+          "confidence": 0
+        },
+        "financeLeader": {
+          "name": "",
+          "title": "",
+          "role": "",
+          "confidence": 0
+        }
+      },
+      "salesContext": {
+        "accountOwner": "Dan Mirolli",
+        "isTop1000": false,
+        "overallConfidence": 0,
+        "riskLevel": "HIGH"
+      }
+    },
+    "generatedAt": "2025-08-24T15:46:50.460Z"
+  },
+  "contactValidation": {
+    "companyName": "HubSpot, Inc.",
+    "domain": "hubspot.com",
+    "enrichedExecutives": {
+      "ceo": {
+        "name": "",
+        "title": "",
+        "confidence": 0,
+        "source": "",
+        "validated": false,
+        "contacts": {
+          "emails": [
+            {
+              "email": ".@undefined.com",
+              "pattern": "first.last@undefined.com",
+              "confidence": 80,
+              "source": "corporate_structure",
+              "reasoning": "This is the most common professional email pattern for executives, as it is clear, easy to remember, and widely used in business contexts[1][5].",
+              "verified": false,
+              "verificationSources": []
+            },
+            {
+              "email": "f.@undefined.com",
+              "pattern": "f.last@undefined.com",
+              "confidence": 80,
+              "source": "corporate_structure",
+              "reasoning": "The first initial plus last name format is used in some companies, but is less common for executives compared to the full first.last pattern[1].",
+              "verified": false,
+              "verificationSources": []
+            }
+          ],
+          "phones": [],
+          "profiles": []
+        },
+        "enrichmentNotes": []
+      },
+      "cfo": null,
+      "cro": null
+    },
+    "enrichmentStats": {
+      "emailsGenerated": 2,
+      "emailsValidated": 0,
+      "phonesFound": 0,
+      "profilesFound": 0,
+      "totalCost": 0,
+      "accuracyScore": 30
+    },
+    "timestamp": "2025-08-24T15:46:50.460Z",
+    "enhancedDiscoveryUsed": true,
+    "enhancedDiscoveryMethods": [
+      "corporate_structure"
+    ],
+    "enhancedDiscoveryConfidence": 80
+  },
+  "dataValidation": {
+    "companyName": "HubSpot, Inc.",
+    "validationTimestamp": "2025-08-24T15:47:17.457Z",
+    "overallScore": 50,
+    "riskLevel": "HIGH",
+    "validationResults": {
+      "ceo": {
+        "executiveName": "",
+        "role": "CEO",
+        "currentlyEmployed": false,
+        "titleAccurate": false,
+        "contactsValid": false,
+        "dataFresh": false,
+        "confidence": 0,
+        "riskFactors": [
+          "Low detection confidence",
+          "Potentially outdated information"
+        ],
+        "validationNotes": [
+          "Employment verification failed"
+        ],
+        "contactValidation": {
+          "emails": [
+            {
+              "email": ".@undefined.com",
+              "isValid": false,
+              "confidence": 80,
+              "riskLevel": "MEDIUM"
+            },
+            {
+              "email": "f.@undefined.com",
+              "isValid": false,
+              "confidence": 80,
+              "riskLevel": "MEDIUM"
+            }
+          ],
+          "phones": [],
+          "profiles": []
+        },
+        "lastVerified": "2025-08-24T15:47:23.702Z"
+      },
+      "cfo": null,
+      "company": {
+        "companyExists": true,
+        "statusAccurate": true,
+        "acquisitionVerified": false,
+        "domainValid": true,
+        "confidence": 99,
+        "notes": [
+          "HubSpot reported Q2 2025 financial results and issued guidance for Q3 and full year 2025, confirming ongoing operations and growth.",
+          "No evidence of HubSpot being acquired; recent acquisition rumors (e.g., Google) did not materialize, and HubSpot itself continues to acquire other companies.",
+          "The official website (https://www.hubspot.com/) and investor relations site are active and regularly updated.",
+          "Recent product launches and acquisitions (e.g., Dashworks in April 2025) further confirm active status."
+        ],
+        "lastVerified": "2025-08-24T15:47:17.457Z"
+      }
+    },
+    "qualityMetrics": {
+      "dataFreshness": 85,
+      "sourceReliability": 50,
+      "crossValidation": 85,
+      "contactAccuracy": 0
+    },
+    "recommendations": [
+      "Verify CEO current employment",
+      "Update CEO title information",
+      "Validate with additional reliable sources"
+    ],
+    "warnings": [
+      "CEO employment status uncertain",
+      "CEO title may be inaccurate",
+      "Low detection confidence",
+      "Potentially outdated information",
+      "Source reliability concerns"
+    ],
+    "timestamp": "2025-08-24T15:47:17.457Z"
+  },
+  "relationshipIntelligence": {
+    "overallConfidence": 0,
+    "validationSources": [
+      "pipeline_research"
+    ],
+    "organizationalStructure": {
+      "structureType": "independent",
+      "autonomyLevel": "unknown"
+    },
+    "executiveConnections": {
+      "internalConnections": [],
+      "externalConnections": []
+    },
+    "pipelineEnhancements": {
+      "executiveConfidence": {
+        "ceo": 0,
+        "finance": 0,
+        "combined": 0
+      },
+      "dataSource": "enhanced_executive_research",
+      "hasRealData": false
+    }
+  },
+  "dataSource": "REAL_PIPELINE_APIs",
+  "syntheticData": false
+}

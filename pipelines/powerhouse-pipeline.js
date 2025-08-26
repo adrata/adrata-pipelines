@@ -33,6 +33,7 @@ const { AccuracyOptimizedContacts } = require("../modules/AccuracyOptimizedConta
 const { BuyerGroupAI } = require("../modules/BuyerGroupAI");
 const { ApiCostOptimizer } = require("../modules/ApiCostOptimizer");
 const { ExecutiveTransitionDetector } = require("../modules/ExecutiveTransitionDetector");
+const { ExecutiveValidation } = require("../modules/ExecutiveValidation");
 
 class PowerhousePipeline {
     constructor() {
@@ -67,6 +68,7 @@ class PowerhousePipeline {
         this.dataEnhancer = new DataEnhancer();
         this.accuracyOptimizedContacts = new AccuracyOptimizedContacts();
         this.buyerGroupAI = new BuyerGroupAI(config);
+        this.executiveValidation = new ExecutiveValidation(config);
         this.results = [];
         this.stats = {
             processed: 0,
@@ -128,12 +130,11 @@ class PowerhousePipeline {
 
             // STEP 4: Generate dataset CSV
             console.log('\nSTEP 4: Generating Powerhouse Dataset CSV');
-            const version = this.versionManager.getNextVersion();
-            await this.generateDatasetCSV(version);
+            await this.generateDatasetCSV();
 
             // STEP 5: Generate metrics file
             console.log('\nSTEP 5: Generating Dataset Metrics');
-            await this.generateDatasetMetrics(version);
+            await this.generateDatasetMetrics();
 
             // STEP 6: Generate summary report
             console.log('\nSTEP 6: Pipeline Summary');
@@ -271,6 +272,35 @@ class PowerhousePipeline {
             result.companyDetails = research.companyDetails || {};
             result.dataFreshness = research.dataFreshness || {};
             result.confidenceExplanation = research.confidenceExplanation || {};
+
+            // STEP 2.5: Executive Employment Validation (PREVENT CROSS-CONTAMINATION)
+            console.log('🛡️ Validating executive employment to prevent cross-contamination...');
+
+            if (result.ceo && result.ceo.name && result.ceo.name !== '' && result.ceo.confidence >= 90) {
+                console.log(`   🔍 Validating CEO: ${result.ceo.name} at ${result.companyName}`);
+                const validatedCeo = await this.executiveValidation.validateAndCorrectExecutive(
+                    result.ceo,
+                    result.companyName,
+                    company.website
+                );
+                result.ceo = { ...result.ceo, ...validatedCeo };
+            } else if (result.ceo && result.ceo.confidence < 90) {
+                console.log(`   ❌ CEO confidence too low (${result.ceo.confidence}%) - skipping`);
+                result.ceo = { name: '', title: '', confidence: 0 };
+            }
+
+            if (result.financeLeader && result.financeLeader.name && result.financeLeader.name !== '' && result.financeLeader.confidence >= 90) {
+                console.log(`   🔍 Validating Finance Leader: ${result.financeLeader.name} at ${result.companyName}`);
+                const validatedFinance = await this.executiveValidation.validateAndCorrectExecutive(
+                    result.financeLeader,
+                    result.companyName,
+                    company.website
+                );
+                result.financeLeader = { ...result.financeLeader, ...validatedFinance };
+            } else if (result.financeLeader && result.financeLeader.confidence < 90) {
+                console.log(`   ❌ Finance Leader confidence too low (${result.financeLeader.confidence}%) - skipping`);
+                result.financeLeader = { name: '', title: '', confidence: 0 };
+            }
 
             // STEP 6: PE Ownership Analysis
             console.log(' Analyzing PE ownership...');
@@ -964,6 +994,10 @@ Provide ONLY a JSON response:
      *  GENERATE COMPREHENSIVE DATASET METRICS
      */
     async generateDatasetMetrics() {
+        const outputDir = path.join(__dirname, '../../outputs/powerhouse');
+        if (!fs.existsSync(outputDir)) {
+            fs.mkdirSync(outputDir, { recursive: true });
+        }
         const metrics = {
             // PIPELINE PERFORMANCE
             pipelinePerformance: {

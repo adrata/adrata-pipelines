@@ -3,7 +3,7 @@
   "name": "adrata-pipeline-vercel-optimized",
   "functions": {
     "api/vercel-optimized/index.js": {
-      "maxDuration": 300,
+              "maxDuration": 600,
       "memory": 1024
     }
   },

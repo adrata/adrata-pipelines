@@ -29,6 +29,7 @@ const { PEOwnershipAnalysis } = require("../modules/PEOwnershipAnalysis");
 const { ApiCostOptimizer } = require("../modules/ApiCostOptimizer");
 const { ExecutiveTransitionDetector } = require("../modules/ExecutiveTransitionDetector");
 const { DataCache } = require("../modules/DataCache");
+const { ExecutiveValidation } = require("../modules/ExecutiveValidation");
 
 /**
  * CORE PIPELINE 
@@ -68,6 +69,7 @@ class CorePipeline {
         this.peIntelligence = new PEOwnershipAnalysis(config);
         this.apiCostOptimizer = new ApiCostOptimizer(config);
         this.executiveTransitionDetector = new ExecutiveTransitionDetector(config);
+        this.executiveValidation = new ExecutiveValidation(config);
         // Version management removed for self-contained deployment
         this.dataCache = new DataCache({
             CACHE_TTL_DAYS: 30,
@@ -404,7 +406,34 @@ class CorePipeline {
                 this.stats.croFound++;
             }
 
-            // STEP 3: Contact Intelligence (Email/Phone Discovery)
+            // STEP 2.5: Executive Employment Validation (PREVENT CROSS-CONTAMINATION) - MOVED UP
+            console.log('🛡️ Validating executive employment to prevent cross-contamination...');
+            
+            if (result.cfo && result.cfo.name && result.cfo.name !== '' && result.cfo.confidence >= 90) {
+                console.log(`   🔍 Validating CFO: ${result.cfo.name} at ${result.companyName}`);
+                result.cfo = await this.executiveValidation.validateAndCorrectExecutive(
+                    result.cfo, 
+                    result.companyName, 
+                    company.website
+                );
+            } else if (result.cfo && result.cfo.confidence < 90) {
+                console.log(`   ❌ CFO confidence too low (${result.cfo.confidence}%) - skipping`);
+                result.cfo = { name: '', title: '', email: '', phone: '', linkedIn: '', confidence: 0, tier: null, role: 'N/A' };
+            }
+            
+            if (result.cro && result.cro.name && result.cro.name !== '' && result.cro.confidence >= 90) {
+                console.log(`   🔍 Validating CRO: ${result.cro.name} at ${result.companyName}`);
+                result.cro = await this.executiveValidation.validateAndCorrectExecutive(
+                    result.cro, 
+                    result.companyName, 
+                    company.website
+                );
+            } else if (result.cro && result.cro.confidence < 90) {
+                console.log(`   ❌ CRO confidence too low (${result.cro.confidence}%) - skipping`);
+                result.cro = { name: '', title: '', email: '', phone: '', linkedIn: '', confidence: 0, tier: null, role: 'N/A' };
+            }
+
+            // STEP 3: Contact Intelligence (Email/Phone Discovery) - ONLY ON VALIDATED EXECUTIVES
             console.log('Discovering contact information...');
             console.log('🔍 DEBUG: Starting contact intelligence with detailed API logging...');
             const contactIntelligence = await this.executiveContactIntelligence.enhanceExecutiveIntelligence(result);
@@ -426,6 +455,8 @@ class CorePipeline {
                 result.companyInfo.employeeCount = result.companyInfo.employeeCount || research.companyDetails.employeeCount || '';
                 result.companyInfo.headquarters = result.companyInfo.headquarters || research.companyDetails.headquarters || '';
             }
+
+            // Executive validation already completed in STEP 2.5 above
 
             // STEP 4: Essential Contact Validation
             console.log('Validating executive contacts...');

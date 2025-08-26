@@ -1,0 +1,505 @@
+{
+  "pipeline": "advanced",
+  "companies": [
+    {
+      "companyName": "Cielotalent",
+      "domain": "cielotalent.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Optimizely",
+      "domain": "optimizely.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Highradius",
+      "domain": "highradius.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Softchoice",
+      "domain": "softchoice.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Inap",
+      "domain": "inap.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Westmonroe",
+      "domain": "westmonroe.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Exadel",
+      "domain": "exadel.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Investisdigital",
+      "domain": "investisdigital.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Gfk",
+      "domain": "gfk.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Pos",
+      "domain": "pos.toasttab.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Dropbox",
+      "domain": "dropbox.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Gep",
+      "domain": "gep.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Beyondsoft",
+      "domain": "beyondsoft.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Calamp",
+      "domain": "calamp.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Gavstech",
+      "domain": "gavstech.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Qtsdatacenters",
+      "domain": "qtsdatacenters.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Ahead",
+      "domain": "ahead.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Kaseya",
+      "domain": "kaseya.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Altimetrik",
+      "domain": "altimetrik.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Consolidated",
+      "domain": "consolidated.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Oneadvanced",
+      "domain": "oneadvanced.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Parkplacetechnologies",
+      "domain": "parkplacetechnologies.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Intrado",
+      "domain": "intrado.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Renaissance",
+      "domain": "renaissance.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Siriuscom",
+      "domain": "siriuscom.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Vertafore",
+      "domain": "vertafore.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Stada",
+      "domain": "stada.de",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "3pillarglobal",
+      "domain": "3pillarglobal.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Marconet",
+      "domain": "marconet.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Continuumgbl",
+      "domain": "continuumgbl.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Orioninc",
+      "domain": "orioninc.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Onediversified",
+      "domain": "onediversified.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Csscorp",
+      "domain": "csscorp.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Isg One",
+      "domain": "isg-one.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Integrichain",
+      "domain": "integrichain.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Coforge",
+      "domain": "coforge.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Cyberark",
+      "domain": "cyberark.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Solifi",
+      "domain": "solifi.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Forterro",
+      "domain": "forterro.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Gft",
+      "domain": "gft.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Switch",
+      "domain": "switch.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Charge",
+      "domain": "charge.enterprises",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Amdocs",
+      "domain": "amdocs.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Connection",
+      "domain": "connection.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Dlhcorp",
+      "domain": "dlhcorp.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Griddynamics",
+      "domain": "griddynamics.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Daffodilsw",
+      "domain": "daffodilsw.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Xometry",
+      "domain": "xometry.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Saic",
+      "domain": "saic.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Leidos",
+      "domain": "leidos.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Corescientific",
+      "domain": "corescientific.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Kla",
+      "domain": "kla.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Civica",
+      "domain": "civica.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Civicplus",
+      "domain": "civicplus.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Kainos",
+      "domain": "kainos.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Cohortplc",
+      "domain": "cohortplc.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Convergetp",
+      "domain": "convergetp.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Omantel",
+      "domain": "omantel.om",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Endava",
+      "domain": "endava.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Kinandcarta",
+      "domain": "kinandcarta.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Tigeranalytics",
+      "domain": "tigeranalytics.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Softline",
+      "domain": "softline.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Boewe Systec",
+      "domain": "boewe-systec.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Services",
+      "domain": "services.global.ntt",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Fortra",
+      "domain": "fortra.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Symbotic",
+      "domain": "symbotic.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Arcfield",
+      "domain": "arcfield.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Valuemomentum",
+      "domain": "valuemomentum.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Marlabs",
+      "domain": "marlabs.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Pomeroy",
+      "domain": "pomeroy.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Harriscomputer",
+      "domain": "harriscomputer.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Nttdata",
+      "domain": "nttdata.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Visionet",
+      "domain": "visionet.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Ciena",
+      "domain": "ciena.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Bmc",
+      "domain": "bmc.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Dxc",
+      "domain": "dxc.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Navisite",
+      "domain": "navisite.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Compucom",
+      "domain": "compucom.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Tellabs",
+      "domain": "tellabs.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Motorolasolutions",
+      "domain": "motorolasolutions.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Ctg",
+      "domain": "ctg.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Cubic",
+      "domain": "cubic.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Ness",
+      "domain": "ness.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Perficient",
+      "domain": "perficient.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Quantum",
+      "domain": "quantum.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Redhat",
+      "domain": "redhat.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Tylertech",
+      "domain": "tylertech.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Unisys",
+      "domain": "unisys.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Blackbox",
+      "domain": "blackbox.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Rackspace",
+      "domain": "rackspace.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Zebra",
+      "domain": "zebra.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Inmar",
+      "domain": "inmar.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Ipc",
+      "domain": "ipc.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Here",
+      "domain": "here.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Cdw",
+      "domain": "cdw.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Dnb",
+      "domain": "dnb.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Axway",
+      "domain": "axway.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Careerbuilder",
+      "domain": "careerbuilder.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Epam",
+      "domain": "epam.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Cognizant",
+      "domain": "cognizant.com",
+      "accountOwner": "Andrew Urteaga\r"
+    }
+  ]
+}

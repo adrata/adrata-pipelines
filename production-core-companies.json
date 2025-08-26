@@ -1,0 +1,15 @@
+{
+  "pipeline": "core",
+  "companies": [
+    {"companyName": "Salesforce Inc", "domain": "salesforce.com", "accountOwner": "Dan Mirolli"},
+    {"companyName": "Microsoft Corporation", "domain": "microsoft.com", "accountOwner": "Sarah Chen"},
+    {"companyName": "Adobe Inc", "domain": "adobe.com", "accountOwner": "Mike Rodriguez"},
+    {"companyName": "HubSpot Inc", "domain": "hubspot.com", "accountOwner": "Lisa Wang"},
+    {"companyName": "Zoom Video Communications", "domain": "zoom.us", "accountOwner": "Alex Thompson"},
+    {"companyName": "Shopify Inc", "domain": "shopify.com", "accountOwner": "Jennifer Davis"},
+    {"companyName": "Atlassian Corporation", "domain": "atlassian.com", "accountOwner": "David Kim"},
+    {"companyName": "Twilio Inc", "domain": "twilio.com", "accountOwner": "Maria Garcia"},
+    {"companyName": "Datadog Inc", "domain": "datadog.com", "accountOwner": "Robert Johnson"},
+    {"companyName": "Snowflake Inc", "domain": "snowflake.com", "accountOwner": "Emily Brown"}
+  ]
+}

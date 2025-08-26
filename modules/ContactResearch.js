@@ -325,6 +325,7 @@ Only return contacts with high confidence from verifiable sources. Do not use so
      * 🔄 EMAIL TRANSITION TRACKING
      * 
      * Tracks email changes due to acquisitions, mergers, or rebranding
+     * CRITICAL FIX: Strict domain validation to prevent cross-contamination
      */
     async emailTransitionTracking(executiveData, companyData) {
         const results = { emails: [], confidence: 0 };
@@ -332,6 +333,13 @@ Only return contacts with high confidence from verifiable sources. Do not use so
         try {
             if (!companyData.isAcquired && !companyData.isRebranded) {
                 return results; // No transitions to track
+            }
+
+            // CRITICAL: Extract target company domain for validation
+            const targetDomain = this.extractDomain(companyData.website);
+            if (!targetDomain) {
+                console.log('   ❌ No target domain found - skipping email transition tracking');
+                return results;
             }
 
             const prompt = `Track email address changes for ${executiveData.name} at ${companyData.name}.
@@ -367,16 +375,36 @@ Provide ONLY a JSON response:
 }`;
 
             const response = await this.callPerplexityAPI(prompt, 'email_transitions');
+            
+            // CRITICAL DOMAIN VALIDATION: Only accept emails matching target company domain
             if (response.currentEmail) {
-                results.emails.push({
-                    email: response.currentEmail,
-                    type: 'current',
-                    confidence: response.confidence || 70,
-                    source: 'transition_tracking'
-                });
+                const emailDomain = this.extractDomain(response.currentEmail);
+                if (emailDomain === targetDomain) {
+                    results.emails.push({
+                        email: response.currentEmail,
+                        type: 'current',
+                        confidence: response.confidence || 70,
+                        source: 'transition_tracking'
+                    });
+                    console.log(`   ✅ Validated email domain: ${response.currentEmail}`);
+                } else {
+                    console.log(`   ❌ REJECTED: Email domain mismatch - ${response.currentEmail} (${emailDomain}) vs target (${targetDomain})`);
+                }
             }
+            
             if (response.legacyEmails) {
-                results.emails.push(...response.legacyEmails.map(email => ({
+                const validatedEmails = response.legacyEmails.filter(email => {
+                    const emailDomain = this.extractDomain(email.email);
+                    if (emailDomain === targetDomain) {
+                        console.log(`   ✅ Validated legacy email: ${email.email}`);
+                        return true;
+                    } else {
+                        console.log(`   ❌ REJECTED: Legacy email domain mismatch - ${email.email} (${emailDomain})`);
+                        return false;
+                    }
+                });
+                
+                results.emails.push(...validatedEmails.map(email => ({
                     email: email.email,
                     type: 'legacy',
                     confidence: (response.confidence || 70) - 20,
@@ -545,6 +573,22 @@ Provide ONLY a JSON response:
         }
 
         return results;
+    }
+
+    /**
+     * 🔍 EXTRACT DOMAIN FROM URL OR EMAIL
+     */
+    extractDomain(urlOrEmail) {
+        if (!urlOrEmail) return null;
+        try {
+            if (urlOrEmail.includes('@')) {
+                return urlOrEmail.split('@')[1].toLowerCase();
+            }
+            const url = new URL(urlOrEmail.startsWith('http') ? urlOrEmail : `https://${urlOrEmail}`);
+            return url.hostname.replace(/^www\./, '').toLowerCase();
+        } catch (error) {
+            return null;
+        }
     }
 
     /**

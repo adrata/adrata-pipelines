@@ -1,0 +1,56 @@
+{
+  "testCompany": {
+    "companyName": "HubSpot",
+    "domain": "hubspot.com"
+  },
+  "timestamp": "2025-08-24T15:47:23.861Z",
+  "results": {
+    "core": {
+      "success": true,
+      "quality": {
+        "score": 69,
+        "issues": [
+          "Missing CFO Phone",
+          "Missing CFO LinkedIn",
+          "Missing CRO Phone",
+          "Missing CRO LinkedIn"
+        ],
+        "filledFields": 9,
+        "totalFields": 13
+      }
+    },
+    "advanced": {
+      "success": true,
+      "quality": {
+        "score": 63,
+        "issues": [
+          "Missing Executive Stability Risk",
+          "Missing Deal Complexity Assessment",
+          "Missing Competitive Context Analysis"
+        ],
+        "filledFields": 5,
+        "totalFields": 8
+      }
+    },
+    "powerhouse": {
+      "success": true,
+      "quality": {
+        "score": 27,
+        "issues": [
+          "Missing Decision Maker",
+          "Missing Decision Maker Role",
+          "Missing Champion",
+          "Missing Champion Role",
+          "Missing Budget Authority Mapping",
+          "Missing Procurement Maturity Score",
+          "Missing Decision Style Analysis",
+          "Missing Sales Cycle Prediction"
+        ],
+        "filledFields": 3,
+        "totalFields": 11
+      }
+    }
+  },
+  "overallScore": 53,
+  "readyForProduction": false
+}

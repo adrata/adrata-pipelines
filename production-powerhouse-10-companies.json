@@ -1,0 +1,55 @@
+{
+  "pipeline": "powerhouse",
+  "companies": [
+    {
+      "companyName": "Cielotalent",
+      "domain": "cielotalent.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Optimizely",
+      "domain": "optimizely.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Highradius",
+      "domain": "highradius.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Softchoice",
+      "domain": "softchoice.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Inap",
+      "domain": "inap.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Westmonroe",
+      "domain": "westmonroe.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Exadel",
+      "domain": "exadel.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Investisdigital",
+      "domain": "investisdigital.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Gfk",
+      "domain": "gfk.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Pos",
+      "domain": "pos.toasttab.com",
+      "accountOwner": "Andrew Urteaga\r"
+    }
+  ]
+}

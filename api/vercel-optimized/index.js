@@ -15,14 +15,14 @@ const { PowerhousePipeline } = require('../../pipelines/powerhouse-pipeline.js')
 
 // VERCEL-OPTIMIZED CONFIGURATION
 const VERCEL_CONFIG = {
-    // Batch sizes based on working CloudCaddie implementation
+    // Batch sizes optimized for complex pipelines
     CORE_BATCH_SIZE: 5,            // Core pipeline: 5 companies per batch (proven to work)
-    ADVANCED_BATCH_SIZE: 5,        // Advanced pipeline: 5 companies per batch
-    POWERHOUSE_BATCH_SIZE: 3,      // Powerhouse pipeline: 3 companies per batch
+    ADVANCED_BATCH_SIZE: 3,        // Advanced pipeline: 3 companies per batch (more complex)
+    POWERHOUSE_BATCH_SIZE: 1,      // Powerhouse pipeline: 1 company per batch (most complex)
     
-    // Timeouts optimized for executive search reality
-    BATCH_TIMEOUT: 280000,         // 4.5 minutes per batch (under 5min Vercel limit)
-    COMPANY_TIMEOUT: 120000,       // 2 minutes per company (4-layer executive search needs time)
+    // Timeouts optimized for complex executive search
+    BATCH_TIMEOUT: 580000,         // 9.5 minutes per batch (under 10min Vercel limit)
+    COMPANY_TIMEOUT: 300000,       // 5 minutes per company (complex analysis needs time)
     
     // Rate limiting based on working CloudCaddie implementation
     BATCH_DELAY: 5000,             // 5 seconds between batches

@@ -1,0 +1,58 @@
+{
+  "index": 1,
+  "website": "hubspot.com",
+  "accountOwner": "Dan Mirolli",
+  "isTop1000": false,
+  "companyName": "HubSpot, Inc.",
+  "cfo": {
+    "name": "Kathryn (Kate) Bueker",
+    "title": "Chief Financial Officer & Treasurer",
+    "email": "kathryn.(.bueker@hubspot.com",
+    "phone": "",
+    "linkedIn": "",
+    "confidence": 97,
+    "source": "https://simplywall.st/stocks/us/software/nyse-hubs/hubspot/management",
+    "validated": true,
+    "role": "CFO",
+    "tier": 1
+  },
+  "cro": {
+    "name": "Christian Kinnear",
+    "title": "Chief Sales Officer",
+    "email": "christian.kinnear@hubspot.com",
+    "phone": "",
+    "linkedIn": "",
+    "confidence": 96,
+    "source": "https://www.thecscafe.com/p/hubspot-leadership-changes",
+    "validated": true,
+    "role": "CSO",
+    "tier": 1
+  },
+  "companyInfo": {
+    "isPublic": false,
+    "ticker": "",
+    "parentCompany": "",
+    "industry": "Unknown",
+    "employeeCount": "",
+    "headquarters": ""
+  },
+  "researchMethod": "cfo_cro_focused",
+  "overallConfidence": 97,
+  "processingTime": 138062,
+  "timestamp": "2025-08-24T15:42:21.308Z",
+  "validationNotes": [
+    "High-confidence CFO identification (Tier 1)",
+    "High-confidence CRO identification (Tier 1)",
+    "Both CFO and CRO emails discovered"
+  ],
+  "error": null,
+  "corporateStructure": {
+    "isAcquired": false,
+    "parentCompany": "",
+    "acquisitionDate": "",
+    "acquisitionType": "",
+    "confidence": 0
+  },
+  "dataSource": "REAL_PIPELINE_APIs",
+  "syntheticData": false
+}

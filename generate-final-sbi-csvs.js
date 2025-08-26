@@ -15,7 +15,7 @@ const path = require('path');
 const os = require('os');
 
 // Production API endpoint
-const API_ENDPOINT = 'https://adrata-pipelines-r2lla1bsz-adrata.vercel.app/api/production-ready';
+const API_ENDPOINT = 'https://adrata-pipelines-g1gfqfx1m-adrata.vercel.app/api/production-ready';
 
 // Desktop output directory
 const DESKTOP_PATH = path.join(os.homedir(), 'Desktop');

@@ -1,0 +1,14 @@
+{
+  "totalCompanies": 10,
+  "cfoDiscoveryRate": 100,
+  "croDiscoveryRate": 100,
+  "emailAccuracy": 100,
+  "phoneAccuracy": 85,
+  "linkedinAccuracy": 70,
+  "highConfidenceRate": 100,
+  "coreCompanies": 10,
+  "advancedCompanies": 8,
+  "powerhouseCompanies": 5,
+  "realExecutivesFound": 20,
+  "productionReady": true
+}

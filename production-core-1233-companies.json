@@ -1,0 +1,6170 @@
+{
+  "pipeline": "core",
+  "companies": [
+    {
+      "companyName": "Cielotalent",
+      "domain": "cielotalent.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Optimizely",
+      "domain": "optimizely.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Highradius",
+      "domain": "highradius.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Softchoice",
+      "domain": "softchoice.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Inap",
+      "domain": "inap.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Westmonroe",
+      "domain": "westmonroe.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Exadel",
+      "domain": "exadel.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Investisdigital",
+      "domain": "investisdigital.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Gfk",
+      "domain": "gfk.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Pos",
+      "domain": "pos.toasttab.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Dropbox",
+      "domain": "dropbox.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Gep",
+      "domain": "gep.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Beyondsoft",
+      "domain": "beyondsoft.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Calamp",
+      "domain": "calamp.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Gavstech",
+      "domain": "gavstech.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Qtsdatacenters",
+      "domain": "qtsdatacenters.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Ahead",
+      "domain": "ahead.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Kaseya",
+      "domain": "kaseya.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Altimetrik",
+      "domain": "altimetrik.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Consolidated",
+      "domain": "consolidated.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Oneadvanced",
+      "domain": "oneadvanced.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Parkplacetechnologies",
+      "domain": "parkplacetechnologies.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Intrado",
+      "domain": "intrado.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Renaissance",
+      "domain": "renaissance.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Siriuscom",
+      "domain": "siriuscom.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Vertafore",
+      "domain": "vertafore.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Stada",
+      "domain": "stada.de",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "3pillarglobal",
+      "domain": "3pillarglobal.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Marconet",
+      "domain": "marconet.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Continuumgbl",
+      "domain": "continuumgbl.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Orioninc",
+      "domain": "orioninc.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Onediversified",
+      "domain": "onediversified.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Csscorp",
+      "domain": "csscorp.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Isg One",
+      "domain": "isg-one.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Integrichain",
+      "domain": "integrichain.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Coforge",
+      "domain": "coforge.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Cyberark",
+      "domain": "cyberark.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Solifi",
+      "domain": "solifi.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Forterro",
+      "domain": "forterro.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Gft",
+      "domain": "gft.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Switch",
+      "domain": "switch.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Charge",
+      "domain": "charge.enterprises",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Amdocs",
+      "domain": "amdocs.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Connection",
+      "domain": "connection.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Dlhcorp",
+      "domain": "dlhcorp.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Griddynamics",
+      "domain": "griddynamics.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Daffodilsw",
+      "domain": "daffodilsw.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Xometry",
+      "domain": "xometry.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Saic",
+      "domain": "saic.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Leidos",
+      "domain": "leidos.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Corescientific",
+      "domain": "corescientific.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Kla",
+      "domain": "kla.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Civica",
+      "domain": "civica.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Civicplus",
+      "domain": "civicplus.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Kainos",
+      "domain": "kainos.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Cohortplc",
+      "domain": "cohortplc.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Convergetp",
+      "domain": "convergetp.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Omantel",
+      "domain": "omantel.om",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Endava",
+      "domain": "endava.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Kinandcarta",
+      "domain": "kinandcarta.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Tigeranalytics",
+      "domain": "tigeranalytics.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Softline",
+      "domain": "softline.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Boewe Systec",
+      "domain": "boewe-systec.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Services",
+      "domain": "services.global.ntt",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Fortra",
+      "domain": "fortra.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Symbotic",
+      "domain": "symbotic.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Arcfield",
+      "domain": "arcfield.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Valuemomentum",
+      "domain": "valuemomentum.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Marlabs",
+      "domain": "marlabs.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Pomeroy",
+      "domain": "pomeroy.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Harriscomputer",
+      "domain": "harriscomputer.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Nttdata",
+      "domain": "nttdata.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Visionet",
+      "domain": "visionet.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Ciena",
+      "domain": "ciena.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Bmc",
+      "domain": "bmc.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Dxc",
+      "domain": "dxc.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Navisite",
+      "domain": "navisite.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Compucom",
+      "domain": "compucom.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Tellabs",
+      "domain": "tellabs.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Motorolasolutions",
+      "domain": "motorolasolutions.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Ctg",
+      "domain": "ctg.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Cubic",
+      "domain": "cubic.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Ness",
+      "domain": "ness.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Perficient",
+      "domain": "perficient.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Quantum",
+      "domain": "quantum.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Redhat",
+      "domain": "redhat.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Tylertech",
+      "domain": "tylertech.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Unisys",
+      "domain": "unisys.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Blackbox",
+      "domain": "blackbox.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Rackspace",
+      "domain": "rackspace.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Zebra",
+      "domain": "zebra.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Inmar",
+      "domain": "inmar.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Ipc",
+      "domain": "ipc.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Here",
+      "domain": "here.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Cdw",
+      "domain": "cdw.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Dnb",
+      "domain": "dnb.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Axway",
+      "domain": "axway.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Careerbuilder",
+      "domain": "careerbuilder.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Epam",
+      "domain": "epam.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Cognizant",
+      "domain": "cognizant.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Juniper",
+      "domain": "juniper.net",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Gigamon",
+      "domain": "gigamon.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Commscope",
+      "domain": "commscope.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Riministreet",
+      "domain": "riministreet.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Cas",
+      "domain": "cas.org",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Rubicon",
+      "domain": "rubicon.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Purestorage",
+      "domain": "purestorage.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Rocketsoftware",
+      "domain": "rocketsoftware.com",
+      "accountOwner": "Andrew Urteaga\r"
+    },
+    {
+      "companyName": "Evalueserve",
+      "domain": "evalueserve.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Drivelineretail",
+      "domain": "drivelineretail.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Vistex",
+      "domain": "vistex.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Evosysglobal",
+      "domain": "evosysglobal.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "On24",
+      "domain": "on24.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Automationanywhere",
+      "domain": "automationanywhere.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Blueprism",
+      "domain": "blueprism.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Similarweb",
+      "domain": "similarweb.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Datadog",
+      "domain": "datadoghq.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Dynatrace",
+      "domain": "dynatrace.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Zetaglobal",
+      "domain": "zetaglobal.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Zensar",
+      "domain": "zensar.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Collibra",
+      "domain": "collibra.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Thoughtspot",
+      "domain": "thoughtspot.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Blackknightinc",
+      "domain": "blackknightinc.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Aptos",
+      "domain": "aptos.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Ecisolutions",
+      "domain": "ecisolutions.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Guidewire",
+      "domain": "guidewire.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Solera",
+      "domain": "solera.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Socialsolutions",
+      "domain": "socialsolutions.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Clarivate",
+      "domain": "clarivate.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Datastax",
+      "domain": "datastax.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Thesmartcube",
+      "domain": "thesmartcube.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Fico",
+      "domain": "fico.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Looker",
+      "domain": "looker.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Verisk",
+      "domain": "verisk.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Keeptruckin",
+      "domain": "keeptruckin.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Yext",
+      "domain": "yext.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Mediakind",
+      "domain": "mediakind.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Aveva",
+      "domain": "aveva.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Brillio",
+      "domain": "brillio.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Recordedfuture",
+      "domain": "recordedfuture.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Appsflyer",
+      "domain": "appsflyer.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Pendo",
+      "domain": "pendo.io",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Jumpcloud",
+      "domain": "jumpcloud.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Accurate",
+      "domain": "accurate.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Coalfire",
+      "domain": "coalfire.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Fractal",
+      "domain": "fractal.ai",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Inmarsat",
+      "domain": "inmarsat.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Gardaworld",
+      "domain": "gardaworld.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Discoveryeducation",
+      "domain": "discoveryeducation.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Contentsquare",
+      "domain": "contentsquare.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Podium",
+      "domain": "podium.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Google",
+      "domain": "google.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Gong",
+      "domain": "gong.io",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Porch",
+      "domain": "porch.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Axtria",
+      "domain": "axtria.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Cytel",
+      "domain": "cytel.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Hedgeserv",
+      "domain": "hedgeserv.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Syniti",
+      "domain": "syniti.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Intapp",
+      "domain": "intapp.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Datasite",
+      "domain": "datasite.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Smarttech",
+      "domain": "smarttech.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Lighthouseglobal",
+      "domain": "lighthouseglobal.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Confluent",
+      "domain": "confluent.io",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Dynata",
+      "domain": "dynata.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Clarivate",
+      "domain": "clarivate.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Altusgroup",
+      "domain": "altusgroup.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Board",
+      "domain": "board.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Alvaria",
+      "domain": "alvaria.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Reputation",
+      "domain": "reputation.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Syndigo",
+      "domain": "syndigo.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Episource",
+      "domain": "episource.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Origamirisk",
+      "domain": "origamirisk.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Qt",
+      "domain": "qt.io",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Pubmatic",
+      "domain": "pubmatic.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Aurea",
+      "domain": "aurea.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Verramobility",
+      "domain": "verramobility.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Infogain",
+      "domain": "infogain.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Geniussports",
+      "domain": "geniussports.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Pason",
+      "domain": "pason.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Mfec",
+      "domain": "mfec.co.th",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Altron",
+      "domain": "altron.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Aubay",
+      "domain": "aubay.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Bravurasolutions",
+      "domain": "bravurasolutions.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Atea",
+      "domain": "atea.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Proact",
+      "domain": "proact.eu",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Linx",
+      "domain": "linx.com.br",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Sonata Software",
+      "domain": "sonata-software.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Nemetschek",
+      "domain": "nemetschek.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Lntinfotech",
+      "domain": "lntinfotech.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Global E",
+      "domain": "global-e.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Digia",
+      "domain": "digia.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Komodohealth",
+      "domain": "komodohealth.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Arcadia",
+      "domain": "arcadia.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Cegeka",
+      "domain": "cegeka.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Ecoonline",
+      "domain": "ecoonline.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Enable",
+      "domain": "enable.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Marketo",
+      "domain": "marketo.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Amplexor",
+      "domain": "amplexor.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Creditsafe",
+      "domain": "creditsafe.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Bloomreach",
+      "domain": "bloomreach.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Plume",
+      "domain": "plume.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Isoftstone",
+      "domain": "isoftstone.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Osisoft",
+      "domain": "osisoft.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Teoco",
+      "domain": "teoco.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Amplitude",
+      "domain": "amplitude.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Liveramp",
+      "domain": "liveramp.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Nuance",
+      "domain": "nuance.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Home",
+      "domain": "home.neustar",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Tibco",
+      "domain": "tibco.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Ert",
+      "domain": "ert.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Blackbaud",
+      "domain": "blackbaud.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Relx",
+      "domain": "relx.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Riverbed",
+      "domain": "riverbed.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Adobe",
+      "domain": "adobe.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Aspect",
+      "domain": "aspect.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Epicor",
+      "domain": "epicor.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Qad",
+      "domain": "qad.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Partech",
+      "domain": "partech.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Synchronoss",
+      "domain": "synchronoss.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Teletech",
+      "domain": "teletech.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Thomsonreuters",
+      "domain": "thomsonreuters.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Bazaarvoice",
+      "domain": "bazaarvoice.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Veeam",
+      "domain": "veeam.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Talend",
+      "domain": "talend.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Paycor",
+      "domain": "paycor.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Abbyy",
+      "domain": "abbyy.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Coresite",
+      "domain": "coresite.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Netenrich",
+      "domain": "netenrich.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Demandbase",
+      "domain": "demandbase.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Domo",
+      "domain": "domo.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Microsoft",
+      "domain": "microsoft.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Vmware",
+      "domain": "vmware.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Techtarget",
+      "domain": "techtarget.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Sas",
+      "domain": "sas.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Alegeus",
+      "domain": "alegeus.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Bigcommerce",
+      "domain": "bigcommerce.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Activenetwork",
+      "domain": "activenetwork.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Marketsandmarkets",
+      "domain": "marketsandmarkets.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Databricks",
+      "domain": "databricks.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Deltek",
+      "domain": "deltek.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Wizeline",
+      "domain": "wizeline.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Azentio",
+      "domain": "azentio.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Mews",
+      "domain": "mews.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Telesign",
+      "domain": "telesign.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Symphonyai",
+      "domain": "symphonyai.com",
+      "accountOwner": "Andrew Worzella\r"
+    },
+    {
+      "companyName": "Reedtech",
+      "domain": "reedtech.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Changehealthcare",
+      "domain": "changehealthcare.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Neogov",
+      "domain": "neogov.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Mitratech",
+      "domain": "mitratech.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Pressganey",
+      "domain": "pressganey.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Refinitiv",
+      "domain": "refinitiv.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Vectra",
+      "domain": "vectra.ai",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Snowflake",
+      "domain": "snowflake.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Smartsheet",
+      "domain": "smartsheet.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Flatiron",
+      "domain": "flatiron.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Modmed",
+      "domain": "modmed.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Carecloud",
+      "domain": "carecloud.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Consilio",
+      "domain": "consilio.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Imedx",
+      "domain": "imedx.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Sharecare",
+      "domain": "sharecare.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Medassets",
+      "domain": "medassets.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Fiserv",
+      "domain": "fiserv.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Sphera",
+      "domain": "sphera.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Mindbodyonline",
+      "domain": "mindbodyonline.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Docebo",
+      "domain": "docebo.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Tradesmeninternational",
+      "domain": "tradesmeninternational.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Healthedge",
+      "domain": "healthedge.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Qualifacts",
+      "domain": "qualifacts.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Softeon",
+      "domain": "softeon.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Intermedia",
+      "domain": "intermedia.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Csdisco",
+      "domain": "csdisco.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Signanthealth",
+      "domain": "signanthealth.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Litera",
+      "domain": "litera.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Cloudmed",
+      "domain": "cloudmed.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Relexsolutions",
+      "domain": "relexsolutions.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Esentire",
+      "domain": "esentire.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Carecentrix",
+      "domain": "carecentrix.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Webpt",
+      "domain": "webpt.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Inovalon",
+      "domain": "inovalon.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Clari",
+      "domain": "clari.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Icertis",
+      "domain": "icertis.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Business",
+      "domain": "business.amwell.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Trimedx",
+      "domain": "trimedx.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Meddata",
+      "domain": "meddata.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Ensemblehp",
+      "domain": "ensemblehp.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Inmoment",
+      "domain": "inmoment.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Epiqglobal",
+      "domain": "epiqglobal.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Relativity",
+      "domain": "relativity.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Arcesium",
+      "domain": "arcesium.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Wellsky",
+      "domain": "wellsky.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Sweepingcorp",
+      "domain": "sweepingcorp.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Coronishealth",
+      "domain": "coronishealth.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Medhost",
+      "domain": "medhost.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Agshealth",
+      "domain": "agshealth.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Exterro",
+      "domain": "exterro.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Gebbs",
+      "domain": "gebbs.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Scribeamerica",
+      "domain": "scribeamerica.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Serviceexpress",
+      "domain": "serviceexpress.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Patientpop",
+      "domain": "patientpop.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Navihealth",
+      "domain": "navihealth.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Grandrounds",
+      "domain": "grandrounds.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Covermymeds",
+      "domain": "covermymeds.health",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Netdocuments",
+      "domain": "netdocuments.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "A Lign",
+      "domain": "a-lign.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Caseware",
+      "domain": "caseware.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Clario",
+      "domain": "clario.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Cloudinary",
+      "domain": "cloudinary.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Reifyhealth",
+      "domain": "reifyhealth.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Chainalysis",
+      "domain": "chainalysis.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "1worldsync",
+      "domain": "1worldsync.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Innovaccer",
+      "domain": "innovaccer.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Phreesia",
+      "domain": "phreesia.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Healthcatalyst",
+      "domain": "healthcatalyst.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Elevancehealth",
+      "domain": "elevancehealth.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Inficon",
+      "domain": "inficon.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Lumiradx",
+      "domain": "lumiradx.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Idg",
+      "domain": "idg.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Babylonhealth",
+      "domain": "babylonhealth.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Globalaes",
+      "domain": "globalaes.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Imanage",
+      "domain": "imanage.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Gordonbrothers",
+      "domain": "gordonbrothers.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Diligent",
+      "domain": "diligent.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Clover",
+      "domain": "clover.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Gohealth",
+      "domain": "gohealth.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Aledade",
+      "domain": "aledade.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Alterahealth",
+      "domain": "alterahealth.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Varicent",
+      "domain": "varicent.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Emed",
+      "domain": "emed.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Integraconnect",
+      "domain": "integraconnect.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Villagemd",
+      "domain": "villagemd.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Bighand",
+      "domain": "bighand.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Business",
+      "domain": "business.amwell.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Evernorth",
+      "domain": "evernorth.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Collectivehealth",
+      "domain": "collectivehealth.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Weareeverise",
+      "domain": "weareeverise.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Coretrustpg",
+      "domain": "coretrustpg.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Sisfirst",
+      "domain": "sisfirst.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Sealedair",
+      "domain": "sealedair.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Qsii",
+      "domain": "qsii.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Omnicell",
+      "domain": "omnicell.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Xactlycorp",
+      "domain": "xactlycorp.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Fisglobal",
+      "domain": "fisglobal.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Aderant",
+      "domain": "aderant.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Barcodesinc",
+      "domain": "barcodesinc.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Pingidentity",
+      "domain": "pingidentity.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Infoblox",
+      "domain": "infoblox.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Medidata",
+      "domain": "medidata.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Kareo",
+      "domain": "kareo.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Castlighthealth",
+      "domain": "castlighthealth.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Cvent",
+      "domain": "cvent.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Spok",
+      "domain": "spok.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Lexisnexis",
+      "domain": "lexisnexis.ca",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Advancedmd",
+      "domain": "advancedmd.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Virginpulse",
+      "domain": "virginpulse.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Evicore",
+      "domain": "evicore.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Welocalize",
+      "domain": "welocalize.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Tunstall",
+      "domain": "tunstall.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Pluralsight",
+      "domain": "pluralsight.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Ghx",
+      "domain": "ghx.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Color",
+      "domain": "color.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Truvenhealth",
+      "domain": "truvenhealth.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Outcomes",
+      "domain": "outcomes.com",
+      "accountOwner": "Brian Stearns\r"
+    },
+    {
+      "companyName": "Transporeon",
+      "domain": "transporeon.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Alpha Sense",
+      "domain": "alpha-sense.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Securonix",
+      "domain": "securonix.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Outfront",
+      "domain": "outfront.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Modeln",
+      "domain": "modeln.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Bitly",
+      "domain": "bitly.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Plansource",
+      "domain": "plansource.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Avalara",
+      "domain": "avalara.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Drift",
+      "domain": "drift.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Salesloft",
+      "domain": "salesloft.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Ecovadis",
+      "domain": "ecovadis.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Meltwater",
+      "domain": "meltwater.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Eagleview",
+      "domain": "eagleview.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Taskus",
+      "domain": "taskus.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Logicmonitor",
+      "domain": "logicmonitor.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Q Centrix",
+      "domain": "q-centrix.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Onfido",
+      "domain": "onfido.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "W3",
+      "domain": "w3.accelya.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Transplace",
+      "domain": "transplace.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Spins",
+      "domain": "spins.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Tcpsoftware",
+      "domain": "tcpsoftware.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Integralads",
+      "domain": "integralads.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Clearesult",
+      "domain": "clearesult.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Fourwindsinteractive",
+      "domain": "fourwindsinteractive.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Ep",
+      "domain": "ep.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Sisense",
+      "domain": "sisense.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Digital",
+      "domain": "digital.ai",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Gdba",
+      "domain": "gdba.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Visiblealpha",
+      "domain": "visiblealpha.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Data Axle",
+      "domain": "data-axle.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Unitekglobalservices",
+      "domain": "unitekglobalservices.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Hearthsidefoods",
+      "domain": "hearthsidefoods.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Conveyhealthsolutions",
+      "domain": "conveyhealthsolutions.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Tenthrevolution",
+      "domain": "tenthrevolution.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Pritchardindustries",
+      "domain": "pritchardindustries.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Corsearch",
+      "domain": "corsearch.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Dzsi",
+      "domain": "dzsi.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Granicus",
+      "domain": "granicus.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Forsta",
+      "domain": "forsta.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Grafana",
+      "domain": "grafana.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Patientpoint",
+      "domain": "patientpoint.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Engagesmart",
+      "domain": "engagesmart.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Khoros",
+      "domain": "khoros.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Applause",
+      "domain": "applause.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Eso",
+      "domain": "eso.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Venasolutions",
+      "domain": "venasolutions.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Tpg",
+      "domain": "tpg.com.au",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Everlaw",
+      "domain": "everlaw.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Miqdigital",
+      "domain": "miqdigital.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Elite",
+      "domain": "elite.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Citrix",
+      "domain": "citrix.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Blackboard",
+      "domain": "blackboard.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Acquia",
+      "domain": "acquia.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Tableau",
+      "domain": "tableau.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Tnsi",
+      "domain": "tnsi.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Saucelabs",
+      "domain": "saucelabs.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Gainsight",
+      "domain": "gainsight.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Jamf",
+      "domain": "jamf.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Sonatype",
+      "domain": "sonatype.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Greenwayhealth",
+      "domain": "greenwayhealth.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Adaptiveplanning",
+      "domain": "adaptiveplanning.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Eisgroup",
+      "domain": "eisgroup.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Cloud",
+      "domain": "cloud.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Flashparking",
+      "domain": "flashparking.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Visma",
+      "domain": "visma.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Infoblox",
+      "domain": "infoblox.com",
+      "accountOwner": "Eric Estrella\r"
+    },
+    {
+      "companyName": "Fadv",
+      "domain": "fadv.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Datamatics",
+      "domain": "datamatics.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Blackberry",
+      "domain": "blackberry.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Cybereason",
+      "domain": "cybereason.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Saviynt",
+      "domain": "saviynt.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Okta",
+      "domain": "okta.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Mirakl",
+      "domain": "mirakl.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Hibu",
+      "domain": "hibu.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Insurity",
+      "domain": "insurity.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Financialforce",
+      "domain": "financialforce.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Ifsworld",
+      "domain": "ifsworld.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Synopsys",
+      "domain": "synopsys.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Doxim",
+      "domain": "doxim.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Cloudreach",
+      "domain": "cloudreach.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Tealium",
+      "domain": "tealium.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Cegid",
+      "domain": "cegid.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Imperva",
+      "domain": "imperva.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Fastly",
+      "domain": "fastly.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Bitdefender",
+      "domain": "bitdefender.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Daxko",
+      "domain": "daxko.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Celonis",
+      "domain": "celonis.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Convergint",
+      "domain": "convergint.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Kaspersky",
+      "domain": "kaspersky.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Sailpoint",
+      "domain": "sailpoint.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Arcticwolf",
+      "domain": "arcticwolf.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Dataminr",
+      "domain": "dataminr.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Globaltranz",
+      "domain": "globaltranz.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Miteksystems",
+      "domain": "miteksystems.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Bugcrowd",
+      "domain": "bugcrowd.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Milestone",
+      "domain": "milestone.tech",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Watchguard",
+      "domain": "watchguard.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Walkme",
+      "domain": "walkme.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Riskified",
+      "domain": "riskified.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Clearme",
+      "domain": "clearme.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Emids",
+      "domain": "emids.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Allocatesoftware",
+      "domain": "allocatesoftware.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Pi Ag",
+      "domain": "pi-ag.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "A10networks",
+      "domain": "a10networks.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Qualys",
+      "domain": "qualys.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Aras",
+      "domain": "aras.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Syntellis",
+      "domain": "syntellis.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Mobileum",
+      "domain": "mobileum.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Episerver",
+      "domain": "episerver.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Accolite",
+      "domain": "accolite.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Bounteous",
+      "domain": "bounteous.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Thoughtfocus",
+      "domain": "thoughtfocus.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Alertlogic",
+      "domain": "alertlogic.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Lacework",
+      "domain": "lacework.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Exabeam",
+      "domain": "exabeam.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Snyk",
+      "domain": "snyk.io",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Sinch",
+      "domain": "sinch.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Zonarsystems",
+      "domain": "zonarsystems.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Evercommerce",
+      "domain": "evercommerce.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Nwn",
+      "domain": "nwn.ai",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Jumio",
+      "domain": "jumio.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Dotmatics",
+      "domain": "dotmatics.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Infor",
+      "domain": "infor.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Miro",
+      "domain": "miro.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Benchling",
+      "domain": "benchling.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Optiv",
+      "domain": "optiv.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Onespan",
+      "domain": "onespan.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Digitalturbine",
+      "domain": "digitalturbine.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Stem",
+      "domain": "stem.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Consensus",
+      "domain": "consensus.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Identiv",
+      "domain": "identiv.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Doximity",
+      "domain": "doximity.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Widepoint",
+      "domain": "widepoint.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Axonius",
+      "domain": "axonius.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Cognyte",
+      "domain": "cognyte.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Nagra",
+      "domain": "nagra.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Ideagen",
+      "domain": "ideagen.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Gendigital",
+      "domain": "gendigital.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Ahnlab",
+      "domain": "ahnlab.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Nanometrics",
+      "domain": "nanometrics.ca",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Vikingcloud",
+      "domain": "vikingcloud.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Figma",
+      "domain": "figma.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Dock",
+      "domain": "dock.tech",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Finalsite",
+      "domain": "finalsite.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Intersystems",
+      "domain": "intersystems.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Esri",
+      "domain": "esri.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Fivetran",
+      "domain": "fivetran.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Withsecure",
+      "domain": "withsecure.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Airtable",
+      "domain": "airtable.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Acronis",
+      "domain": "acronis.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Onetrust",
+      "domain": "onetrust.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Entrust",
+      "domain": "entrust.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Vasco",
+      "domain": "vasco.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Windriver",
+      "domain": "windriver.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Anaplan",
+      "domain": "anaplan.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Lionbridge",
+      "domain": "lionbridge.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Jaggaer",
+      "domain": "jaggaer.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Pulsesecure",
+      "domain": "pulsesecure.net",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Zscaler",
+      "domain": "zscaler.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Netskope",
+      "domain": "netskope.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Niceactimize",
+      "domain": "niceactimize.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Cioxhealth",
+      "domain": "cioxhealth.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Nice",
+      "domain": "nice.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Paloaltonetworks",
+      "domain": "paloaltonetworks.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Couchbase",
+      "domain": "couchbase.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Egnyte",
+      "domain": "egnyte.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Proquest",
+      "domain": "proquest.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Softwareag",
+      "domain": "softwareag.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Ddn",
+      "domain": "ddn.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Avepoint",
+      "domain": "avepoint.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Fortinet",
+      "domain": "fortinet.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Mongodb",
+      "domain": "mongodb.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Absolute",
+      "domain": "absolute.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Varonis",
+      "domain": "varonis.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Sicpa",
+      "domain": "sicpa.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Achievers",
+      "domain": "achievers.com",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Indium",
+      "domain": "indium.tech",
+      "accountOwner": "Ethan Radoff\r"
+    },
+    {
+      "companyName": "Aventri",
+      "domain": "aventri.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Vectorsolutions",
+      "domain": "vectorsolutions.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Theaccessgroup",
+      "domain": "theaccessgroup.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Aptean",
+      "domain": "aptean.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Homeadvisor",
+      "domain": "homeadvisor.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Limelight",
+      "domain": "limelight.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Kofax",
+      "domain": "kofax.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Broadsoft",
+      "domain": "broadsoft.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Slack",
+      "domain": "slack.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Pandadoc",
+      "domain": "pandadoc.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Cohesity",
+      "domain": "cohesity.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Zywave",
+      "domain": "zywave.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Monotype",
+      "domain": "monotype.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Metricstream",
+      "domain": "metricstream.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Planview",
+      "domain": "planview.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Brightcove",
+      "domain": "brightcove.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "8x8",
+      "domain": "8x8.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Getweave",
+      "domain": "getweave.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Ntst",
+      "domain": "ntst.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Trendmicro",
+      "domain": "trendmicro.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Ivanti",
+      "domain": "ivanti.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Btconferencing",
+      "domain": "btconferencing.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Sentinelone",
+      "domain": "sentinelone.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Nthrive",
+      "domain": "nthrive.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Elastic",
+      "domain": "elastic.co",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Invisionapp",
+      "domain": "invisionapp.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Conga",
+      "domain": "conga.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Ibsplc",
+      "domain": "ibsplc.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Zoom",
+      "domain": "zoom.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Ringcentral",
+      "domain": "ringcentral.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Insightsoftware",
+      "domain": "insightsoftware.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Insight",
+      "domain": "insight.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Assentcompliance",
+      "domain": "assentcompliance.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Oeconnection",
+      "domain": "oeconnection.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Prometheusgroup",
+      "domain": "prometheusgroup.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Sovos",
+      "domain": "sovos.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Onsolve",
+      "domain": "onsolve.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Pdisoftware",
+      "domain": "pdisoftware.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Apprisshealth",
+      "domain": "apprisshealth.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Advarra",
+      "domain": "advarra.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Digicert",
+      "domain": "digicert.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Allvuesystems",
+      "domain": "allvuesystems.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Accionlabs",
+      "domain": "accionlabs.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Idera",
+      "domain": "idera.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Rldatix",
+      "domain": "rldatix.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Perforce",
+      "domain": "perforce.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Quest",
+      "domain": "quest.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Fiverr",
+      "domain": "fiverr.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Amcsgroup",
+      "domain": "amcsgroup.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Wix",
+      "domain": "wix.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Blueyonder",
+      "domain": "blueyonder.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Connectiverx",
+      "domain": "connectiverx.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Cloudflare",
+      "domain": "cloudflare.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Precisely",
+      "domain": "precisely.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Netwrix",
+      "domain": "netwrix.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Investcloud",
+      "domain": "investcloud.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Newfold",
+      "domain": "newfold.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Mediaocean",
+      "domain": "mediaocean.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Piano",
+      "domain": "piano.io",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Vimeo",
+      "domain": "vimeo.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Unit4",
+      "domain": "unit4.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Confluence",
+      "domain": "confluence.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Trellix",
+      "domain": "trellix.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Csiweb",
+      "domain": "csiweb.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Grammarly",
+      "domain": "grammarly.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Prometheanworld",
+      "domain": "prometheanworld.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Atlassian",
+      "domain": "atlassian.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Ifs",
+      "domain": "ifs.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Ifit",
+      "domain": "ifit.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Bandwidth",
+      "domain": "bandwidth.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "One10marketing",
+      "domain": "one10marketing.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Nerdy",
+      "domain": "nerdy.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Scansource",
+      "domain": "scansource.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Thryv",
+      "domain": "thryv.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Cyncly",
+      "domain": "cyncly.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Telestream",
+      "domain": "telestream.net",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Revalizesoftware",
+      "domain": "revalizesoftware.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Agora",
+      "domain": "agora.io",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Kaleyra",
+      "domain": "kaleyra.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Mimecast",
+      "domain": "mimecast.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Imimobile",
+      "domain": "imimobile.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Line",
+      "domain": "line.me",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Kuaishou",
+      "domain": "kuaishou.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Pditechnologies",
+      "domain": "pditechnologies.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Ministrybrands",
+      "domain": "ministrybrands.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Orion",
+      "domain": "orion.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Contentful",
+      "domain": "contentful.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Yubico",
+      "domain": "yubico.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Sproutsocial",
+      "domain": "sproutsocial.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Freewheel",
+      "domain": "freewheel.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Betterup",
+      "domain": "betterup.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Clickup",
+      "domain": "clickup.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Discord",
+      "domain": "discord.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Cypress",
+      "domain": "cypress.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Akamai",
+      "domain": "akamai.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Commvault",
+      "domain": "commvault.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Manh",
+      "domain": "manh.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Avaya",
+      "domain": "avaya.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Extremenetworks",
+      "domain": "extremenetworks.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Pgi",
+      "domain": "pgi.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Tanium",
+      "domain": "tanium.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Icims",
+      "domain": "icims.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Rubrik",
+      "domain": "rubrik.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Cengagegroup",
+      "domain": "cengagegroup.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Tenable",
+      "domain": "tenable.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Liferay",
+      "domain": "liferay.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Constantcontact",
+      "domain": "constantcontact.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Docusign",
+      "domain": "docusign.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Github",
+      "domain": "github.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Zoominfo",
+      "domain": "zoominfo.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Cornerstoneondemand",
+      "domain": "cornerstoneondemand.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Alteryx",
+      "domain": "alteryx.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Checkpoint",
+      "domain": "checkpoint.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Barracuda",
+      "domain": "barracuda.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Crowdstrike",
+      "domain": "crowdstrike.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Higherlogic",
+      "domain": "higherlogic.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Nintex",
+      "domain": "nintex.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Lucid",
+      "domain": "lucid.co",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Talkdesk",
+      "domain": "talkdesk.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Veracode",
+      "domain": "veracode.com",
+      "accountOwner": "Gregg Blatt\r"
+    },
+    {
+      "companyName": "Zendesk",
+      "domain": "zendesk.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Mindtickle",
+      "domain": "mindtickle.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Intercom",
+      "domain": "intercom.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Sugarcrm",
+      "domain": "sugarcrm.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Newrelic",
+      "domain": "newrelic.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Uplandsoftware",
+      "domain": "uplandsoftware.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Five9",
+      "domain": "five9.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Cardlytics",
+      "domain": "cardlytics.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Criteo",
+      "domain": "criteo.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Arkadin",
+      "domain": "arkadin.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Altisource",
+      "domain": "altisource.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Motus",
+      "domain": "motus.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Vts",
+      "domain": "vts.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Rapid7",
+      "domain": "rapid7.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Birdeye",
+      "domain": "birdeye.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Rubiconproject",
+      "domain": "rubiconproject.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Yardi",
+      "domain": "yardi.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Csgi",
+      "domain": "csgi.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Convergys",
+      "domain": "convergys.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Infobip",
+      "domain": "infobip.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Teads",
+      "domain": "teads.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Logmein",
+      "domain": "logmein.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Interactions",
+      "domain": "interactions.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Salsify",
+      "domain": "salsify.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Kyriba",
+      "domain": "kyriba.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Nextiva",
+      "domain": "nextiva.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Travelport",
+      "domain": "travelport.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Sandvine",
+      "domain": "sandvine.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Smartly",
+      "domain": "smartly.io",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Checkmarx",
+      "domain": "checkmarx.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Acoustic",
+      "domain": "acoustic.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Axiomlaw",
+      "domain": "axiomlaw.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Zoho",
+      "domain": "zoho.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Monday",
+      "domain": "monday.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Bullhorn",
+      "domain": "bullhorn.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Commercetools",
+      "domain": "commercetools.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Enverus",
+      "domain": "enverus.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Teamsystem",
+      "domain": "teamsystem.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Mrisoftware",
+      "domain": "mrisoftware.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Plusgrade",
+      "domain": "plusgrade.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "2checkout",
+      "domain": "2checkout.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Sonicwall",
+      "domain": "sonicwall.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Zocdoc",
+      "domain": "zocdoc.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Zillowgroup",
+      "domain": "zillowgroup.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Pipedrive",
+      "domain": "pipedrive.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Yotpo",
+      "domain": "yotpo.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Innovid",
+      "domain": "innovid.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Semrush",
+      "domain": "semrush.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Palantir",
+      "domain": "palantir.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "G2",
+      "domain": "g2.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Cccis",
+      "domain": "cccis.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Taboola",
+      "domain": "taboola.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Smartbear",
+      "domain": "smartbear.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Beeline",
+      "domain": "beeline.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Reeftechnology",
+      "domain": "reeftechnology.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Activecampaign",
+      "domain": "activecampaign.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Edifecs",
+      "domain": "edifecs.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Cheetahdigital",
+      "domain": "cheetahdigital.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Mondee",
+      "domain": "mondee.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Citiustech",
+      "domain": "citiustech.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Cxloyalty",
+      "domain": "cxloyalty.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Itransition",
+      "domain": "itransition.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Boomi",
+      "domain": "boomi.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Leadsquared",
+      "domain": "leadsquared.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Agiloft",
+      "domain": "agiloft.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Braze",
+      "domain": "braze.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Highspot",
+      "domain": "highspot.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Vensure",
+      "domain": "vensure.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Doubleverify",
+      "domain": "doubleverify.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Algolia",
+      "domain": "algolia.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Nice",
+      "domain": "nice.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Enlyte",
+      "domain": "enlyte.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Klaviyo",
+      "domain": "klaviyo.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Spectrio",
+      "domain": "spectrio.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Fullsteam",
+      "domain": "fullsteam.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Asana",
+      "domain": "asana.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Goto",
+      "domain": "goto.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Lastpass",
+      "domain": "lastpass.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Digitalocean",
+      "domain": "digitalocean.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "System1",
+      "domain": "system1.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Kaspien",
+      "domain": "kaspien.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Aterian",
+      "domain": "aterian.io",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Egain",
+      "domain": "egain.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Netcorecloud",
+      "domain": "netcorecloud.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Quadient",
+      "domain": "quadient.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Mastercontrol",
+      "domain": "mastercontrol.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Cm",
+      "domain": "cm.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Zenvia",
+      "domain": "zenvia.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Nice",
+      "domain": "nice.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Soci",
+      "domain": "soci.ai",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Rectanglehealth",
+      "domain": "rectanglehealth.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Sourcescrub",
+      "domain": "sourcescrub.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Thrivedx",
+      "domain": "thrivedx.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Attentive",
+      "domain": "attentive.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Ibotta",
+      "domain": "ibotta.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Ukg",
+      "domain": "ukg.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Coxautoinc",
+      "domain": "coxautoinc.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Nice",
+      "domain": "nice.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Appfolio",
+      "domain": "appfolio.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Tadigital",
+      "domain": "tadigital.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Acuitykp",
+      "domain": "acuitykp.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Genesys",
+      "domain": "genesys.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "HubSpot",
+      "domain": "hubspot.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Netscout",
+      "domain": "netscout.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Beyondtrust",
+      "domain": "beyondtrust.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Informatica",
+      "domain": "informatica.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Digitalriver",
+      "domain": "digitalriver.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Dealertrack",
+      "domain": "dealertrack.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Kronos",
+      "domain": "kronos.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Keap",
+      "domain": "keap.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Presidio",
+      "domain": "presidio.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Teamviewer",
+      "domain": "teamviewer.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Legalzoom",
+      "domain": "legalzoom.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Appliedsystems",
+      "domain": "appliedsystems.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Twilio",
+      "domain": "twilio.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Cdkglobal",
+      "domain": "cdkglobal.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Lytx",
+      "domain": "lytx.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Nice",
+      "domain": "nice.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Navex",
+      "domain": "navex.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Seismic",
+      "domain": "seismic.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Nutanix",
+      "domain": "nutanix.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Splunk",
+      "domain": "splunk.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Pointclickcare",
+      "domain": "pointclickcare.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Sprinklr",
+      "domain": "sprinklr.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Waystar",
+      "domain": "waystar.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Sumologic",
+      "domain": "sumologic.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Mitchell",
+      "domain": "mitchell.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "E2open",
+      "domain": "e2open.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Ptc",
+      "domain": "ptc.com/en/products/servicemax",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Veeva",
+      "domain": "veeva.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Qualtrics",
+      "domain": "qualtrics.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Greenhouse",
+      "domain": "greenhouse.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Vxi",
+      "domain": "vxi.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Accela",
+      "domain": "accela.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Liveperson",
+      "domain": "liveperson.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Benefitfocus",
+      "domain": "benefitfocus.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Forcepoint",
+      "domain": "forcepoint.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Outreach",
+      "domain": "outreach.io",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Datarobot",
+      "domain": "datarobot.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Ttecdigital",
+      "domain": "ttecdigital.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Dealersocket",
+      "domain": "dealersocket.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Corelogic",
+      "domain": "corelogic.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Aircall",
+      "domain": "aircall.io",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Theknotww",
+      "domain": "theknotww.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Resultscx",
+      "domain": "resultscx.com",
+      "accountOwner": "Jamie Halpin\r"
+    },
+    {
+      "companyName": "Finastra",
+      "domain": "finastra.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Dfinsolutions",
+      "domain": "dfinsolutions.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Iris",
+      "domain": "iris.co.uk",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Exelatech",
+      "domain": "exelatech.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Transunion",
+      "domain": "transunion.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Sitecore",
+      "domain": "sitecore.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Definitivehc",
+      "domain": "definitivehc.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Accruent",
+      "domain": "accruent.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Cotiviti",
+      "domain": "cotiviti.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Ebix",
+      "domain": "ebix.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Clearwateranalytics",
+      "domain": "clearwateranalytics.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Pushpay",
+      "domain": "pushpay.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Egencia",
+      "domain": "egencia.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Ssctech",
+      "domain": "ssctech.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Cgsinc",
+      "domain": "cgsinc.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Avetta",
+      "domain": "avetta.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Syneoshealth",
+      "domain": "syneoshealth.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Blend",
+      "domain": "blend.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Forescout",
+      "domain": "forescout.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Paysafe",
+      "domain": "paysafe.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Performantcorp",
+      "domain": "performantcorp.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Acumatica",
+      "domain": "acumatica.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Segra",
+      "domain": "segra.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Tradingview",
+      "domain": "tradingview.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Ninjarmm",
+      "domain": "ninjarmm.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Ncino",
+      "domain": "ncino.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Freshworks",
+      "domain": "freshworks.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Tipalti",
+      "domain": "tipalti.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Paymentus",
+      "domain": "paymentus.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Zenoti",
+      "domain": "zenoti.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Nielseniq",
+      "domain": "nielseniq.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Rizing",
+      "domain": "rizing.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Covetrus",
+      "domain": "covetrus.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Medusind",
+      "domain": "medusind.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Encora",
+      "domain": "encora.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Enfusion",
+      "domain": "enfusion.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Drakesoftware",
+      "domain": "drakesoftware.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Primefocustechnologies",
+      "domain": "primefocustechnologies.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Shift4",
+      "domain": "shift4.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Alkami",
+      "domain": "alkami.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Paya",
+      "domain": "paya.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Restaurant365",
+      "domain": "restaurant365.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Q2",
+      "domain": "q2.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Tufin",
+      "domain": "tufin.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Xplortechnologies",
+      "domain": "xplortechnologies.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Sapiens",
+      "domain": "sapiens.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Block",
+      "domain": "block.xyz",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Vertexinc",
+      "domain": "vertexinc.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Planet",
+      "domain": "planet.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Flywire",
+      "domain": "flywire.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Oppfi",
+      "domain": "oppfi.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Cleanspark",
+      "domain": "cleanspark.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Expensify",
+      "domain": "expensify.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Katapult",
+      "domain": "katapult.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Ciandt",
+      "domain": "ciandt.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Magnitglobal",
+      "domain": "magnitglobal.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Revspringinc",
+      "domain": "revspringinc.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Skyhighsecurity",
+      "domain": "skyhighsecurity.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Paypoint",
+      "domain": "paypoint.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Enghouse",
+      "domain": "enghouse.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Data3",
+      "domain": "data3.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Nuvei",
+      "domain": "nuvei.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Wiz",
+      "domain": "wiz.io",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Escalent",
+      "domain": "escalent.co",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Epssw",
+      "domain": "epssw.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Caisoft",
+      "domain": "caisoft.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Oneinc",
+      "domain": "oneinc.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Tekion",
+      "domain": "tekion.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Gympass",
+      "domain": "gympass.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Kerridgecs",
+      "domain": "kerridgecs.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Suse",
+      "domain": "suse.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Intuit",
+      "domain": "intuit.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Pega",
+      "domain": "pega.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Skillsoft",
+      "domain": "skillsoft.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Microstrategy",
+      "domain": "microstrategy.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Agilysys",
+      "domain": "agilysys.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Avid",
+      "domain": "avid.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Aspentech",
+      "domain": "aspentech.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Calliduscloud",
+      "domain": "calliduscloud.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Jackhenry",
+      "domain": "jackhenry.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Netsuite",
+      "domain": "netsuite.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Apptio",
+      "domain": "apptio.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Broadridge",
+      "domain": "broadridge.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Saiglobal",
+      "domain": "saiglobal.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Sap",
+      "domain": "sap.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Servicenow",
+      "domain": "servicenow.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Druva",
+      "domain": "druva.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Quickbase",
+      "domain": "quickbase.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Blackline",
+      "domain": "blackline.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Trintech",
+      "domain": "trintech.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Billtrust",
+      "domain": "billtrust.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Avidxchange",
+      "domain": "avidxchange.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Oati",
+      "domain": "oati.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Rsa",
+      "domain": "rsa.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Workiva",
+      "domain": "workiva.com",
+      "accountOwner": "Jeff Esposito\r"
+    },
+    {
+      "companyName": "Kldiscovery",
+      "domain": "kldiscovery.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Mathworks",
+      "domain": "mathworks.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Nethealth",
+      "domain": "nethealth.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Appian",
+      "domain": "appian.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Calabrio",
+      "domain": "calabrio.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Sorenson",
+      "domain": "sorenson.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Teradata",
+      "domain": "teradata.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Edgeverve",
+      "domain": "edgeverve.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Iongroup",
+      "domain": "iongroup.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Pagerduty",
+      "domain": "pagerduty.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Uipath",
+      "domain": "uipath.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Outsystems",
+      "domain": "outsystems.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Realpage",
+      "domain": "realpage.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Telvista",
+      "domain": "telvista.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "1e",
+      "domain": "1e.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Shopify",
+      "domain": "shopify.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Hexagon",
+      "domain": "hexagon.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Westerndigital",
+      "domain": "westerndigital.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Greyorange",
+      "domain": "greyorange.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Emarsys",
+      "domain": "emarsys.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Solarwinds",
+      "domain": "solarwinds.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Dataiku",
+      "domain": "dataiku.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Hilbgroup",
+      "domain": "hilbgroup.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Jfrog",
+      "domain": "jfrog.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Dlocal",
+      "domain": "dlocal.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Canva",
+      "domain": "canva.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Aleris",
+      "domain": "aleris.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Hyland",
+      "domain": "hyland.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Applovin",
+      "domain": "applovin.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Postman",
+      "domain": "postman.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "C3",
+      "domain": "c3.ai",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Tifluidsystems",
+      "domain": "tifluidsystems.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Antfin",
+      "domain": "antfin.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Hso",
+      "domain": "hso.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Stamps",
+      "domain": "stamps.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Msxi",
+      "domain": "msxi.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Composecure",
+      "domain": "composecure.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Corrohealth",
+      "domain": "corrohealth.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Quorumsoftware",
+      "domain": "quorumsoftware.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Apexon",
+      "domain": "apexon.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Cadence",
+      "domain": "cadence.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Abrigo",
+      "domain": "abrigo.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Smartrent",
+      "domain": "smartrent.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Altair",
+      "domain": "altair.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Autoform",
+      "domain": "autoform.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Kyndryl",
+      "domain": "kyndryl.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Hexaware",
+      "domain": "hexaware.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "About",
+      "domain": "about.gitlab.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Workato",
+      "domain": "workato.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Alkermes",
+      "domain": "alkermes.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Spglobal",
+      "domain": "spglobal.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Cyderes",
+      "domain": "cyderes.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Logitech",
+      "domain": "logitech.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Ltts",
+      "domain": "ltts.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Cerence",
+      "domain": "cerence.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Altium",
+      "domain": "altium.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Aurora",
+      "domain": "aurora.tech",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Bigbear",
+      "domain": "bigbear.ai",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Epson",
+      "domain": "epson.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Kore",
+      "domain": "kore.ai",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Mantech",
+      "domain": "mantech.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Fiducial",
+      "domain": "fiducial.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Bio Techne",
+      "domain": "bio-techne.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Biomarin",
+      "domain": "biomarin.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Cbiz",
+      "domain": "cbiz.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Medpace",
+      "domain": "medpace.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Tc",
+      "domain": "tc.tc",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Zuken",
+      "domain": "zuken.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Rolanddg",
+      "domain": "rolanddg.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Eptura",
+      "domain": "eptura.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "En",
+      "domain": "en.dmgmori-ag.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Jagex",
+      "domain": "jagex.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Indegene",
+      "domain": "indegene.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Typeform",
+      "domain": "typeform.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Placer",
+      "domain": "placer.ai",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Aurorasolar",
+      "domain": "aurorasolar.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Verbit",
+      "domain": "verbit.ai",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Saama",
+      "domain": "saama.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Copado",
+      "domain": "copado.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Qiagen",
+      "domain": "qiagen.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Hp",
+      "domain": "hp.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Autodesk",
+      "domain": "autodesk.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Opentext",
+      "domain": "opentext.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Ansys",
+      "domain": "ansys.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Flexential",
+      "domain": "flexential.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Sophos",
+      "domain": "sophos.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Heartland",
+      "domain": "heartland.us",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Opentext",
+      "domain": "opentext.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Kimberly Clark",
+      "domain": "kimberly-clark.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Samsung",
+      "domain": "samsung.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Rti Inc",
+      "domain": "rti-inc.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Spirent",
+      "domain": "spirent.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Veritas",
+      "domain": "veritas.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Ptc",
+      "domain": "ptc.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Riskonnect",
+      "domain": "riskonnect.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "247",
+      "domain": "247.ai",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Connectwise",
+      "domain": "connectwise.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Nokia",
+      "domain": "nokia.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Gedigital",
+      "domain": "gedigital.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Microfocus",
+      "domain": "microfocus.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Alixpartners",
+      "domain": "alixpartners.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Medallia",
+      "domain": "medallia.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Bentley",
+      "domain": "bentley.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Deluxe",
+      "domain": "deluxe.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "3ds",
+      "domain": "3ds.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Cloudera",
+      "domain": "cloudera.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Nvidia",
+      "domain": "nvidia.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Coupa",
+      "domain": "coupa.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Hirevue",
+      "domain": "hirevue.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Apple",
+      "domain": "apple.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Flexera",
+      "domain": "flexera.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Dieboldnixdorf",
+      "domain": "dieboldnixdorf.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Zayo",
+      "domain": "zayo.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Veritone",
+      "domain": "veritone.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Enterprisedb",
+      "domain": "enterprisedb.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Lenovo",
+      "domain": "lenovo.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Exlservice",
+      "domain": "exlservice.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Cendyn",
+      "domain": "cendyn.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Zwift",
+      "domain": "zwift.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Eng",
+      "domain": "eng.it",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Acentra",
+      "domain": "acentra.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Uzabase",
+      "domain": "uzabase.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Netceed",
+      "domain": "netceed.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Sergroup",
+      "domain": "sergroup.com",
+      "accountOwner": "John Staples\r"
+    },
+    {
+      "companyName": "Abm",
+      "domain": "abm.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Yipitdata",
+      "domain": "yipitdata.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Unilogcorp",
+      "domain": "unilogcorp.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Corp",
+      "domain": "corp.kaltura.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Constellis",
+      "domain": "constellis.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Darktrace",
+      "domain": "darktrace.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Omnitracs",
+      "domain": "omnitracs.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Resmed",
+      "domain": "resmed.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Cbrands",
+      "domain": "cbrands.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Proofpoint",
+      "domain": "proofpoint.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Helpsystems",
+      "domain": "helpsystems.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Commandalkon",
+      "domain": "commandalkon.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Hootsuite",
+      "domain": "hootsuite.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Symphonyretailai",
+      "domain": "symphonyretailai.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Salary",
+      "domain": "salary.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Leantaas",
+      "domain": "leantaas.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Servicetitan",
+      "domain": "servicetitan.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Ortec",
+      "domain": "ortec.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Centralsquare",
+      "domain": "centralsquare.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Tecsys",
+      "domain": "tecsys.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Majesco",
+      "domain": "majesco.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "360insights",
+      "domain": "360insights.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Bitsight",
+      "domain": "bitsight.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Elemica",
+      "domain": "elemica.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Extrahop",
+      "domain": "extrahop.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Meridianlink",
+      "domain": "meridianlink.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Samsara",
+      "domain": "samsara.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Cedargate",
+      "domain": "cedargate.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Zelis",
+      "domain": "zelis.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Symplr",
+      "domain": "symplr.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "League",
+      "domain": "league.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Logrhythm",
+      "domain": "logrhythm.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Veriforce",
+      "domain": "veriforce.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Syncron",
+      "domain": "syncron.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Ocadogroup",
+      "domain": "ocadogroup.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Nextgen",
+      "domain": "nextgen.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Fourkites",
+      "domain": "fourkites.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Roadsafetraffic",
+      "domain": "roadsafetraffic.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Fortna",
+      "domain": "fortna.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Gtl",
+      "domain": "gtl.net",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Truckstop",
+      "domain": "truckstop.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Reliaquest",
+      "domain": "reliaquest.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "O9solutions",
+      "domain": "o9solutions.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Dodgeprojects",
+      "domain": "dodgeprojects.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Shipmonk",
+      "domain": "shipmonk.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Imprivata",
+      "domain": "imprivata.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Navis",
+      "domain": "navis.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Claroty",
+      "domain": "claroty.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Guidepointsecurity",
+      "domain": "guidepointsecurity.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Soprabanking",
+      "domain": "soprabanking.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Cisive",
+      "domain": "cisive.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Quantexa",
+      "domain": "quantexa.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Tracelink",
+      "domain": "tracelink.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Delinea",
+      "domain": "delinea.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Centurysc",
+      "domain": "centurysc.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Bms",
+      "domain": "bms.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Teleflex",
+      "domain": "teleflex.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "6dg",
+      "domain": "6dg.co.uk",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Flockfreight",
+      "domain": "flockfreight.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Vanderlande",
+      "domain": "vanderlande.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Perspectatrust",
+      "domain": "perspectatrust.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Inseinc",
+      "domain": "inseinc.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Opsecsecurity",
+      "domain": "opsecsecurity.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Brown Forman",
+      "domain": "brown-forman.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Technology1",
+      "domain": "technology1.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Kpit",
+      "domain": "kpit.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Generixgroup",
+      "domain": "generixgroup.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Gamesysgroup",
+      "domain": "gamesysgroup.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Fireblocks",
+      "domain": "fireblocks.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Sciensbuildingsolutions",
+      "domain": "sciensbuildingsolutions.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Twosixtech",
+      "domain": "twosixtech.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Iarx",
+      "domain": "iarx.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Stord",
+      "domain": "stord.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Alcon",
+      "domain": "alcon.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Verizonconnect",
+      "domain": "verizonconnect.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Sbmmanagement",
+      "domain": "sbmmanagement.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Convoy",
+      "domain": "convoy.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Qlik",
+      "domain": "qlik.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Bottomline",
+      "domain": "bottomline.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Verint",
+      "domain": "verint.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Ups",
+      "domain": "ups.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Magento",
+      "domain": "magento.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Optum",
+      "domain": "optum.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Fleetmatics",
+      "domain": "fleetmatics.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Athenahealth",
+      "domain": "athenahealth.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Tangoe",
+      "domain": "tangoe.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Everbridge",
+      "domain": "everbridge.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Jitterbit",
+      "domain": "jitterbit.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Houseofhr",
+      "domain": "houseofhr.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Kaleris",
+      "domain": "kaleris.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Apm",
+      "domain": "apm.net.au",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Logility",
+      "domain": "logility.com",
+      "accountOwner": "Jonathan Holston\r"
+    },
+    {
+      "companyName": "Suvoda",
+      "domain": "suvoda.com",
+      "accountOwner": "Marketing Owner\r"
+    },
+    {
+      "companyName": "Hireright",
+      "domain": "hireright.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Bamboohr",
+      "domain": "bamboohr.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Vaco",
+      "domain": "vaco.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Advantageresourcing",
+      "domain": "advantageresourcing.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Paycom",
+      "domain": "paycom.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Tierpoint",
+      "domain": "tierpoint.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Catalina",
+      "domain": "catalina.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Healthstream",
+      "domain": "healthstream.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Frontlineeducation",
+      "domain": "frontlineeducation.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Ivalua",
+      "domain": "ivalua.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Rockwellautomation",
+      "domain": "rockwellautomation.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Workhuman",
+      "domain": "workhuman.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Octanner",
+      "domain": "octanner.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Instructure",
+      "domain": "instructure.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Care",
+      "domain": "care.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Modis",
+      "domain": "modis.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Basware",
+      "domain": "basware.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Trimble",
+      "domain": "trimble.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Andela",
+      "domain": "andela.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Ascendlearning",
+      "domain": "ascendlearning.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Procore",
+      "domain": "procore.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "D2l",
+      "domain": "d2l.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Workforcelogiq",
+      "domain": "workforcelogiq.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Harri",
+      "domain": "harri.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Checkr",
+      "domain": "checkr.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Kantar",
+      "domain": "kantar.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Sgsco",
+      "domain": "sgsco.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Revature",
+      "domain": "revature.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Thriveglobal",
+      "domain": "thriveglobal.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Addisongroup",
+      "domain": "addisongroup.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "N2y",
+      "domain": "n2y.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Cority",
+      "domain": "cority.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Truecommerce",
+      "domain": "truecommerce.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Fanduel",
+      "domain": "fanduel.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Myob",
+      "domain": "myob.com/au",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Onestream",
+      "domain": "onestream.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Voyagerinnovation",
+      "domain": "voyagerinnovation.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Workforcesoftware",
+      "domain": "workforcesoftware.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Box",
+      "domain": "box.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Jobvite",
+      "domain": "jobvite.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Zellis",
+      "domain": "zellis.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Fourth",
+      "domain": "fourth.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Dhigroupinc",
+      "domain": "dhigroupinc.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Wipfli",
+      "domain": "wipfli.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Prounlimited",
+      "domain": "prounlimited.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Cloudpay",
+      "domain": "cloudpay.net",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Isolvedbenefitservices",
+      "domain": "isolvedbenefitservices.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Pexco",
+      "domain": "pexco.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Employbridge",
+      "domain": "employbridge.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Jobvite",
+      "domain": "jobvite.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Globalization Partners",
+      "domain": "globalization-partners.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Lamar",
+      "domain": "lamar.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Powerschool",
+      "domain": "powerschool.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Bill",
+      "domain": "bill.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Rippling",
+      "domain": "rippling.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Loftware",
+      "domain": "loftware.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Skedulo",
+      "domain": "skedulo.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Nearmap",
+      "domain": "nearmap.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Articulate",
+      "domain": "articulate.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Theplanetgroup",
+      "domain": "theplanetgroup.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Shl",
+      "domain": "shl.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Skyline",
+      "domain": "skyline.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Kantata",
+      "domain": "kantata.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Trane",
+      "domain": "trane.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Hibob",
+      "domain": "hibob.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Justworks",
+      "domain": "justworks.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Upwork",
+      "domain": "upwork.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Moneylion",
+      "domain": "moneylion.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Livongo",
+      "domain": "livongo.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Alludo",
+      "domain": "alludo.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Employinc",
+      "domain": "employinc.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Alliancedata",
+      "domain": "alliancedata.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Stagwellglobal",
+      "domain": "stagwellglobal.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Umww",
+      "domain": "umww.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Pearson",
+      "domain": "pearson.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Lifeworks",
+      "domain": "lifeworks.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Talogy",
+      "domain": "talogy.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Neweracap",
+      "domain": "neweracap.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Phenom",
+      "domain": "phenom.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Watchtower Security",
+      "domain": "watchtower-security.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Mindshareworld",
+      "domain": "mindshareworld.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Dailypay",
+      "domain": "dailypay.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Rewardgateway",
+      "domain": "rewardgateway.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Deel",
+      "domain": "deel.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Isolvedhcm",
+      "domain": "isolvedhcm.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Joinhandshake",
+      "domain": "joinhandshake.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Gusto",
+      "domain": "gusto.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Monster",
+      "domain": "monster.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Netapp",
+      "domain": "netapp.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Saba",
+      "domain": "saba.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Sumtotalsystems",
+      "domain": "sumtotalsystems.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Ceridian",
+      "domain": "ceridian.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Quad",
+      "domain": "quad.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Wolterskluwer",
+      "domain": "wolterskluwer.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Clearchanneloutdoor",
+      "domain": "clearchanneloutdoor.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Businessolver",
+      "domain": "businessolver.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Alight",
+      "domain": "alight.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Ellucian",
+      "domain": "ellucian.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Illumio",
+      "domain": "illumio.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Wexinc",
+      "domain": "wexinc.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Hmhco",
+      "domain": "hmhco.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Rrd",
+      "domain": "rrd.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Asuresoftware",
+      "domain": "asuresoftware.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Paychex",
+      "domain": "paychex.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Attenda",
+      "domain": "attenda.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Ziprecruiter",
+      "domain": "ziprecruiter.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "6sense",
+      "domain": "6sense.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Workday",
+      "domain": "workday.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Cerner",
+      "domain": "cerner.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Ultimatesoftware",
+      "domain": "ultimatesoftware.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Paylocity",
+      "domain": "paylocity.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Trialcard",
+      "domain": "trialcard.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Emplifi",
+      "domain": "emplifi.io",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Meyerlab",
+      "domain": "meyerlab.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Relode",
+      "domain": "relode.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Tractorsupply",
+      "domain": "tractorsupply.com",
+      "accountOwner": "Tracy Hansen\r"
+    },
+    {
+      "companyName": "Corpay",
+      "domain": "corpay.com",
+      "accountOwner": "Tracy Hansen\r"
+    }
+  ]
+}

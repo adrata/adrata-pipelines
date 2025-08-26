@@ -1,0 +1,8 @@
+{
+  "pipeline": "core",
+  "companies": [
+    {"companyName": "Salesforce", "domain": "salesforce.com"},
+    {"companyName": "Microsoft", "domain": "microsoft.com"},
+    {"companyName": "Adobe", "domain": "adobe.com"}
+  ]
+}

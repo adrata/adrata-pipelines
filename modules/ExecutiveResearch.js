@@ -185,31 +185,41 @@ class ExecutiveResearch {
 
 Company website: ${companyInfo.website}
 
+CRITICAL REQUIREMENTS:
+1. CFO MUST have "Chief Financial Officer", "CFO", or "Finance" in their ACTUAL title
+2. CRO MUST have "Chief Revenue Officer", "CRO", "Chief Sales Officer", "CSO" in their ACTUAL title
+3. DO NOT return CEOs, COOs, or HR officers as CFOs
+4. DO NOT return executives from other companies or with wrong email domains
+5. ONLY return executives you can verify currently work at ${companyInfo.companyName}
+6. Confidence must be 90%+ or return null
+
 Please search for:
-1. Current CFO - full name and title
-2. Current CRO/CSO - full name and title  
-3. Any recent executive appointments in 2024-2025
-4. If no dedicated CFO/CRO, who handles finance and revenue responsibilities?
+1. Current CFO - MUST be actual finance leader, not CEO
+2. Current CRO/CSO - MUST be actual revenue/sales leader
+3. Verify they currently work at ${companyInfo.companyName}
+4. Cross-check against company leadership pages
 
 Provide ONLY a JSON response:
 {
     "cfo": {
-        "name": "Full Name",
-        "title": "Exact Title",
+        "name": "Full Name or null if not found",
+        "title": "Exact Title (must contain Finance/CFO)",
         "confidence": 0.95,
         "source": "where found",
-        "appointmentDate": "2025-01-01 or null"
+        "appointmentDate": "2025-01-01 or null",
+        "roleValidation": "confirmed CFO role"
     },
     "cro": {
-        "name": "Full Name", 
-        "title": "Exact Title",
+        "name": "Full Name or null if not found", 
+        "title": "Exact Title (must contain Revenue/Sales/CRO/CSO)",
         "confidence": 0.90,
         "source": "where found",
-        "appointmentDate": "2025-01-01 or null"
+        "appointmentDate": "2025-01-01 or null",
+        "roleValidation": "confirmed CRO/CSO role"
     },
-    "alternativeRoles": {
-        "financeOversight": "CEO/COO name if no CFO",
-        "revenueOversight": "CSO/VP Sales name if no CRO"
+    "validation": {
+        "companyMatch": "confirmed both work at ${companyInfo.companyName}",
+        "sourceReliability": "company_website/SEC_filing/press_release"
     }
 }`;
 
@@ -239,6 +249,19 @@ Provide ONLY a JSON response:
                         roleType: 'CRO',
                         appointmentDate: aiResult.cro.appointmentDate
                     };
+                }
+
+                // CRITICAL FIX: Prevent duplicate executives (same person as CFO and CRO)
+                if (result.cfo && result.cro && result.cfo.name === result.cro.name) {
+                    console.log(`   🚨 DUPLICATE EXECUTIVE DETECTED: ${result.cfo.name} listed as both CFO and CRO`);
+                    console.log(`   🔧 FIXING: Keeping CFO role, clearing CRO (CFO takes priority)`);
+                    
+                    // Keep the CFO role, clear the CRO (CFO is more critical for most use cases)
+                    result.cro = null;
+                    
+                    // Add validation note
+                    if (!result.cfo.validationNotes) result.cfo.validationNotes = [];
+                    result.cfo.validationNotes.push(`Duplicate role detected - same person was listed as both CFO and CRO, kept CFO role`);
                 }
 
                 // Handle alternative roles if no dedicated CFO/CRO
