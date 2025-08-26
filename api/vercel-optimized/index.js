@@ -15,14 +15,14 @@ const { PowerhousePipeline } = require('../../pipelines/powerhouse-pipeline.js')
 
 // VERCEL-OPTIMIZED CONFIGURATION
 const VERCEL_CONFIG = {
-    // Batch sizes optimized for Vercel memory/timeout limits
-    CORE_BATCH_SIZE: 25,           // Core pipeline: 25 companies per batch
-    ADVANCED_BATCH_SIZE: 20,       // Advanced pipeline: 20 companies per batch  
-    POWERHOUSE_BATCH_SIZE: 10,     // Powerhouse pipeline: 10 companies per batch
+    // Batch sizes optimized for executive search processing time
+    CORE_BATCH_SIZE: 15,           // Core pipeline: 15 companies per batch (2min each = 4.5min total)
+    ADVANCED_BATCH_SIZE: 12,       // Advanced pipeline: 12 companies per batch
+    POWERHOUSE_BATCH_SIZE: 8,      // Powerhouse pipeline: 8 companies per batch
     
-    // Timeouts optimized for Vercel limits
-    BATCH_TIMEOUT: 240000,         // 4 minutes per batch (under 5min Vercel limit)
-    COMPANY_TIMEOUT: 45000,        // 45 seconds per company
+    // Timeouts optimized for executive search reality
+    BATCH_TIMEOUT: 280000,         // 4.5 minutes per batch (under 5min Vercel limit)
+    COMPANY_TIMEOUT: 120000,       // 2 minutes per company (4-layer executive search needs time)
     
     // Rate limiting to prevent API quota exhaustion
     BATCH_DELAY: 5000,             // 5 seconds between batches
@@ -148,16 +148,23 @@ class APIHealthChecker {
         const startTime = Date.now();
         if (!this.config.CORESIGNAL_API_KEY) throw new Error('Missing CORESIGNAL_API_KEY');
         
-        // Minimal test call to CoreSignal
-        const response = await fetch('https://api.coresignal.com/cdapi/v1/linkedin/company/collect/', {
+        // Use v2 API endpoint that matches the pipeline modules
+        const response = await fetch('https://api.coresignal.com/cdapi/v2/employee_multi_source/search/es_dsl', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'apikey': this.config.CORESIGNAL_API_KEY
             },
             body: JSON.stringify({
-                url: 'https://www.linkedin.com/company/adobe/',
-                limit: 1
+                query: {
+                    bool: {
+                        must: [
+                            { term: { "company.name.keyword": "Adobe" } },
+                            { terms: { "title": ["CFO", "Chief Financial Officer"] } }
+                        ]
+                    }
+                },
+                size: 1
             })
         });
         
@@ -165,7 +172,7 @@ class APIHealthChecker {
         
         return {
             responseTime: Date.now() - startTime,
-            details: 'Company lookup successful'
+            details: 'Employee search API accessible'
         };
     }
     
@@ -211,19 +218,28 @@ class APIHealthChecker {
         const startTime = Date.now();
         if (!this.config.PROSPEO_API_KEY) throw new Error('Missing PROSPEO_API_KEY');
         
-        // Check account status
-        const response = await fetch('https://api.prospeo.io/account', {
+        // Test the email-finder endpoint that the pipeline actually uses
+        const response = await fetch('https://api.prospeo.io/email-finder', {
+            method: 'POST',
             headers: {
                 'X-KEY': this.config.PROSPEO_API_KEY,
                 'Content-Type': 'application/json'
-            }
+            },
+            body: JSON.stringify({
+                first_name: 'Test',
+                last_name: 'User',
+                company_domain: 'example.com'
+            })
         });
         
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        // Prospeo returns 400 for invalid requests, which is expected for test data
+        if (!response.ok && response.status !== 400) {
+            throw new Error(`HTTP ${response.status}`);
+        }
         
         return {
             responseTime: Date.now() - startTime,
-            details: 'Account status check successful'
+            details: 'Email finder API accessible'
         };
     }
     
