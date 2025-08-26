@@ -447,7 +447,22 @@ class CorePipeline {
                 console.log(`🔍 DEBUG: CRO ready for contact intelligence: ${result.cro.name}`);
             }
             
-            const contactIntelligence = await this.executiveContactIntelligence.enhanceExecutiveIntelligence(result);
+            // Check if ExecutiveContactIntelligence module is properly initialized
+            console.log(`🔍 DEBUG: ExecutiveContactIntelligence module initialized: ${!!this.executiveContactIntelligence}`);
+            console.log(`🔍 DEBUG: ExecutiveContactIntelligence methods: ${Object.keys(this.executiveContactIntelligence || {}).join(', ')}`);
+            
+            let contactIntelligence = null;
+            try {
+                contactIntelligence = await this.executiveContactIntelligence.enhanceExecutiveIntelligence(result);
+                console.log(`🔍 DEBUG: Contact intelligence result: ${!!contactIntelligence}`);
+                if (contactIntelligence) {
+                    console.log(`🔍 DEBUG: Contact intelligence keys: ${Object.keys(contactIntelligence).join(', ')}`);
+                }
+            } catch (error) {
+                console.log(`❌ Contact intelligence failed: ${error.message}`);
+                console.log(`❌ Error stack: ${error.stack}`);
+                contactIntelligence = null;
+            }
             
             // Merge contact data with enhanced logging
             console.log('   📧 Merging contact intelligence data...');
@@ -459,7 +474,7 @@ class CorePipeline {
                 console.log(`   CRO: ${result.cro.name} - Phone: ${result.cro.phone || 'MISSING'} - LinkedIn: ${result.cro.linkedIn || 'MISSING'}`);
                 
                 try {
-                    // Try direct CoreSignal search for CRO
+                    // Try direct Lusha search for CRO
                     const croContactData = await this.executiveContactIntelligence.searchLushaExecutive(
                         result.cro.name,
                         result.companyName,
