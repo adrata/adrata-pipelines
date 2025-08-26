@@ -505,15 +505,15 @@ function mapToCoreCSV(result) {
         "CFO Phone": result.cfo?.phone || 'Not available',
         "CFO LinkedIn": result.cfo?.linkedIn || result.cfo?.linkedin || 'Not available',
         "CFO Title": result.cfo?.title || 'Not available',
-        "CFO Time in Role": result.cfo?.timeInRole || result.cfo?.timeInRole || 'Not available',
-        "CFO Country": result.cfo?.country || result.cfo?.location || 'Not available',
+        "CFO Time in Role": 'Not available', // Simplified - focus on core contact data
+        "CFO Country": 'Not available', // Simplified - focus on core contact data
         "CRO Name": result.cro?.name || 'Not available',
         "CRO Email": result.cro?.email || 'Not available',
         "CRO Phone": result.cro?.phone || 'Not available',
         "CRO LinkedIn": result.cro?.linkedIn || result.cro?.linkedin || 'Not available',
         "CRO Title": result.cro?.title || 'Not available',
-        "CRO Time in Role": result.cro?.timeInRole || result.cro?.timeInRole || 'Not available',
-        "CRO Country": result.cro?.country || result.cro?.location || 'Not available',
+        "CRO Time in Role": 'Not available', // Simplified - focus on core contact data
+        "CRO Country": 'Not available', // Simplified - focus on core contact data
         "CFO Selection Reason": generateCFOSelectionReasoning(result),
         "CRO Selection Reason": generateCROSelectionReasoning(result),
         "Email Source": generateEmailSourceReasoning(result),
