@@ -641,6 +641,35 @@ class CorePipeline {
             }
         }
 
+        // Final step: Ensure all required fields are populated
+        if (result.cfo) {
+            // Calculate timeInRole if not available
+            if (!result.cfo.timeInRole) {
+                result.cfo.timeInRole = this.calculateTimeInRole(result.cfo);
+                console.log(`      📅 Calculated CFO time in role: ${result.cfo.timeInRole}`);
+            }
+            
+            // Set country if not available
+            if (!result.cfo.country) {
+                result.cfo.country = this.extractCountryFromDomain(result.website);
+                console.log(`      🌍 Set CFO country: ${result.cfo.country}`);
+            }
+        }
+        
+        if (result.cro) {
+            // Calculate timeInRole if not available
+            if (!result.cro.timeInRole) {
+                result.cro.timeInRole = this.calculateTimeInRole(result.cro);
+                console.log(`      📅 Calculated CRO time in role: ${result.cro.timeInRole}`);
+            }
+            
+            // Set country if not available
+            if (!result.cro.country) {
+                result.cro.country = this.extractCountryFromDomain(result.website);
+                console.log(`      🌍 Set CRO country: ${result.cro.country}`);
+            }
+        }
+
         console.log(`   ✅ Contact merge complete`);
     }
 
@@ -937,6 +966,53 @@ class CorePipeline {
         
         // Only return empty if we don't have real data
         return '';
+    }
+
+    extractCountryFromDomain(domain) {
+        if (!domain) return 'Unknown';
+        
+        // Common domain to country mappings
+        const domainCountryMap = {
+            '.com': 'United States',
+            '.us': 'United States',
+            '.uk': 'United Kingdom',
+            '.co.uk': 'United Kingdom',
+            '.ca': 'Canada',
+            '.au': 'Australia',
+            '.de': 'Germany',
+            '.fr': 'France',
+            '.it': 'Italy',
+            '.es': 'Spain',
+            '.nl': 'Netherlands',
+            '.se': 'Sweden',
+            '.no': 'Norway',
+            '.dk': 'Denmark',
+            '.fi': 'Finland',
+            '.ch': 'Switzerland',
+            '.at': 'Austria',
+            '.be': 'Belgium',
+            '.ie': 'Ireland',
+            '.nz': 'New Zealand',
+            '.jp': 'Japan',
+            '.cn': 'China',
+            '.in': 'India',
+            '.br': 'Brazil',
+            '.mx': 'Mexico',
+            '.ar': 'Argentina',
+            '.cl': 'Chile',
+            '.co': 'Colombia',
+            '.pe': 'Peru'
+        };
+        
+        // Check for country-specific TLDs
+        for (const [tld, country] of Object.entries(domainCountryMap)) {
+            if (domain.toLowerCase().endsWith(tld)) {
+                return country;
+            }
+        }
+        
+        // Default to United States for .com domains
+        return 'United States';
     }
 
     estimateAge(executive) {
