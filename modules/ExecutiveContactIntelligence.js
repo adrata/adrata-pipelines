@@ -230,24 +230,40 @@ class ExecutiveContactIntelligence {
 
             // Get CFO/Finance Leader contact
             if (companyResult.cfo?.name) {
+                console.log(`   🔍 DEBUG: Starting CFO search for: ${companyResult.cfo.name}`);
                 const cfoContact = await this.searchLushaExecutive(
                     companyResult.cfo.name,
                     companyResult.companyName,
                     domain,
                     'CFO'
                 );
-                if (cfoContact) executives.push(cfoContact);
+                if (cfoContact) {
+                    console.log(`   ✅ CFO contact found: ${cfoContact.name} - Phone: ${cfoContact.phone || 'MISSING'} - LinkedIn: ${cfoContact.linkedinUrl || 'MISSING'}`);
+                    executives.push(cfoContact);
+                } else {
+                    console.log(`   ❌ CFO contact NOT found for: ${companyResult.cfo.name}`);
+                }
+            } else {
+                console.log(`   ⚠️ CFO name not available for search`);
             }
             
             // Get CRO/Revenue Leader contact
             if (companyResult.cro?.name) {
+                console.log(`   🔍 DEBUG: Starting CRO search for: ${companyResult.cro.name}`);
                 const croContact = await this.searchLushaExecutive(
                     companyResult.cro.name,
                     companyResult.companyName,
                     domain,
                     'CRO'
                 );
-                if (croContact) executives.push(croContact);
+                if (croContact) {
+                    console.log(`   ✅ CRO contact found: ${croContact.name} - Phone: ${croContact.phone || 'MISSING'} - LinkedIn: ${croContact.linkedinUrl || 'MISSING'}`);
+                    executives.push(croContact);
+                } else {
+                    console.log(`   ❌ CRO contact NOT found for: ${companyResult.cro.name}`);
+                }
+            } else {
+                console.log(`   ⚠️ CRO name not available for search`);
             }
 
             console.log(`   ✅ Lusha contacts: ${executives.length} executives found`);
