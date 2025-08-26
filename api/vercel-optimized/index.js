@@ -497,28 +497,44 @@ class BatchProcessor {
  * CSV Field Mapping Functions (same as production-ready)
  */
 function mapToCoreCSV(result) {
-    return {
-        "Website": result.website || 'Not available',
-        "Company Name": result.companyName || 'Not available',
-        "CFO Name": result.cfo?.name || 'Not available',
-        "CFO Email": result.cfo?.email || 'Not available',
-        "CFO Phone": result.cfo?.phone || 'Not available',
-        "CFO LinkedIn": result.cfo?.linkedIn || result.cfo?.linkedin || 'Not available',
-        "CFO Title": result.cfo?.title || 'Not available',
-        "CFO Time in Role": 'Not available', // Simplified - focus on core contact data
-        "CFO Country": 'Not available', // Simplified - focus on core contact data
-        "CRO Name": result.cro?.name || 'Not available',
-        "CRO Email": result.cro?.email || 'Not available',
-        "CRO Phone": result.cro?.phone || 'Not available',
-        "CRO LinkedIn": result.cro?.linkedIn || result.cro?.linkedin || 'Not available',
-        "CRO Title": result.cro?.title || 'Not available',
-        "CRO Time in Role": 'Not available', // Simplified - focus on core contact data
-        "CRO Country": 'Not available', // Simplified - focus on core contact data
-        "CFO Selection Reason": generateCFOSelectionReasoning(result),
-        "CRO Selection Reason": generateCROSelectionReasoning(result),
-        "Email Source": generateEmailSourceReasoning(result),
-        "Account Owner": result.accountOwner || 'Not available'
-    };
+    // Create separate rows for CFO and CRO
+    const rows = [];
+    
+    // CFO Row
+    if (result.cfo?.name && result.cfo.name !== 'Not available') {
+        rows.push({
+            "Website": result.website || 'Not available',
+            "Company Name": result.companyName || 'Not available',
+            "Executive Name": result.cfo.name,
+            "Executive Title": result.cfo.title || 'Not available',
+            "Executive Role": 'CFO',
+            "Email": result.cfo.email || 'Not available',
+            "Phone": result.cfo.phone || 'Not available',
+            "LinkedIn": result.cfo.linkedIn || result.cfo.linkedin || 'Not available',
+            "Confidence": result.cfo.confidence || 'Not available',
+            "Selection Reason": generateCFOSelectionReasoning(result),
+            "Account Owner": result.accountOwner || 'Not available'
+        });
+    }
+    
+    // CRO Row
+    if (result.cro?.name && result.cro.name !== 'Not available') {
+        rows.push({
+            "Website": result.website || 'Not available',
+            "Company Name": result.companyName || 'Not available',
+            "Executive Name": result.cro.name,
+            "Executive Title": result.cro.title || 'Not available',
+            "Executive Role": 'CRO',
+            "Email": result.cro.email || 'Not available',
+            "Phone": result.cro.phone || 'Not available',
+            "LinkedIn": result.cro.linkedIn || result.cro.linkedin || 'Not available',
+            "Confidence": result.cro.confidence || 'Not available',
+            "Selection Reason": generateCROSelectionReasoning(result),
+            "Account Owner": result.accountOwner || 'Not available'
+        });
+    }
+    
+    return rows;
 }
 
 function mapToAdvancedCSV(result) {
@@ -743,16 +759,29 @@ module.exports = async (req, res) => {
             const pipelineResult = await batchProcessor.processAllBatches(companies);
             
             // Map results to CSV format
-            const csvResults = pipelineResult.results.map(result => {
+            const csvResults = [];
+            pipelineResult.results.forEach(result => {
+                let mappedResult;
                 switch (pipeline.toLowerCase()) {
                     case 'core':
-                        return mapToCoreCSV(result);
+                        mappedResult = mapToCoreCSV(result);
+                        break;
                     case 'advanced':
-                        return mapToAdvancedCSV(result);
+                        mappedResult = mapToAdvancedCSV(result);
+                        break;
                     case 'powerhouse':
-                        return mapToPowerhouseCSV(result);
+                        mappedResult = mapToPowerhouseCSV(result);
+                        break;
                     default:
-                        return result;
+                        mappedResult = [result];
+                        break;
+                }
+                
+                // Handle both single results and arrays of results
+                if (Array.isArray(mappedResult)) {
+                    csvResults.push(...mappedResult);
+                } else {
+                    csvResults.push(mappedResult);
                 }
             });
 
