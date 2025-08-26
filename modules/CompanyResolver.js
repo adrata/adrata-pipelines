@@ -345,6 +345,8 @@ class CompanyResolver {
                 confidence: 95,
                 originalCompany: 'GfK SE',
                 parentCompanyDetails: 'Nielsen Consumer LLC (Nielsen Holdings)',
+                // Prefer parent executives due to integration
+                targetingOverride: 'parent_primary',
                 executiveTracking: {
                     'needs_research': {
                         originalRole: 'Various Executives',
@@ -354,6 +356,22 @@ class CompanyResolver {
                         notes: 'Post-acquisition executive team needs research at Nielsen Consumer LLC'
                     }
                 }
+            },
+            // Investis Digital (London) → Investcorp ownership; avoid IDX (Identity Theft Guard Solutions, Inc.) confusion
+            'investisdigital.com': {
+                isAcquired: true,
+                parentCompany: {
+                    name: 'Investcorp',
+                    domain: 'investcorp.com',
+                    ticker: null
+                },
+                acquisitionDate: '2021-03-30',
+                type: 'full_acquisition',
+                confidence: 90,
+                originalCompany: 'Investis Digital Limited',
+                parentCompanyDetails: 'Investcorp (global alternative investment manager)',
+                notes: 'Redirect to idx.inc is unrelated (Identity Theft Guard Solutions, Inc.) – keep Investis Digital as entity',
+                targetingOverride: 'subsidiary_first'
             },
             // Note: investisdigital.com redirects to idx.inc but they are different companies
             // Investis Digital (London) was acquired by Investcorp, but domain redirects to IDX (Oregon)
@@ -540,6 +558,16 @@ Only return acquisitions from 2015-2025. If no acquisition, return isAcquired: f
      */
     async resolveCompanyName(finalUrl, canonicalUrl) {
         const domain = this.extractDomain(finalUrl);
+        const canonicalDomain = this.extractDomain(canonicalUrl);
+        // Special-case: investisdigital.com redirects to idx.inc but remains Investis Digital (owned by Investcorp)
+        if (canonicalDomain && canonicalDomain.endsWith('investisdigital.com')) {
+            return {
+                name: 'Investis Digital',
+                confidence: 95,
+                method: 'hardcoded_override',
+                metadata: { reason: 'Redirect to idx.inc is branding; company is Investis Digital' }
+            };
+        }
         
         // Try multiple methods to get the company name
         const methods = [

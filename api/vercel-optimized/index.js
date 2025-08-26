@@ -583,7 +583,9 @@ function mapToCoreCSV(result) {
             "Operational Status": result.operationalStatus || (result.companyStatus === 'acquired' ? 'acquired' : 'active'),
             "Target Entity": result.targetEntity || 'original_company',
             "Executive Source": result.researchMethod || 'standard_research',
-            "Parent Company": result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany || 'N/A',
+            "Parent Company": (typeof (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany) === 'object')
+                ? ((result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany)?.name || 'N/A')
+                : (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany || 'N/A'),
             "Acquisition Date": result.acquisitionIntelligence?.acquisitionDate || result.corporateStructure?.acquisitionDate || 'N/A',
             "Targeting Strategy": result.executiveTargeting?.strategy || 'direct_targeting'
         });
@@ -606,7 +608,9 @@ function mapToCoreCSV(result) {
             "Operational Status": result.operationalStatus || (result.companyStatus === 'acquired' ? 'acquired' : 'active'),
             "Target Entity": result.targetEntity || 'original_company',
             "Executive Source": result.researchMethod || 'standard_research',
-            "Parent Company": result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany || 'N/A',
+            "Parent Company": (typeof (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany) === 'object')
+                ? ((result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany)?.name || 'N/A')
+                : (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany || 'N/A'),
             "Acquisition Date": result.acquisitionIntelligence?.acquisitionDate || result.corporateStructure?.acquisitionDate || 'N/A',
             "Targeting Strategy": result.executiveTargeting?.strategy || 'direct_targeting'
         });

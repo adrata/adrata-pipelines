@@ -420,7 +420,16 @@ class CorePipeline {
                     operationalAssessment
                 );
                 
-                if (shouldUseParentExecutives && parentExecutives && (parentExecutives.cfo?.name || parentExecutives.cro?.name)) {
+                // GfK-specific guard: if subsidiary CFO/CRO equals a known former executive (e.g., Peter Feld), force parent pivot
+                const isKnownFormerExec = (name) => {
+                    if (!name) return false;
+                    const lower = name.toLowerCase();
+                    return lower.includes('peter feld');
+                };
+
+                const forceParentDueToFormer = isKnownFormerExec(result.cfo?.name) || isKnownFormerExec(result.cro?.name);
+
+                if ((shouldUseParentExecutives || forceParentDueToFormer) && parentExecutives && (parentExecutives.cfo?.name || parentExecutives.cro?.name)) {
                     // Store acquisition intelligence for CSV output
                     result.acquisitionIntelligence = {
                         originalCompany: result.companyName,
@@ -434,11 +443,11 @@ class CorePipeline {
                     // Use parent company executives based on operational assessment
                     if (parentExecutives.cfo) {
                         result.cfo = parentExecutives.cfo;
-                        console.log(`   ✅ Using parent company CFO: ${parentExecutives.cfo.name} (${operationalAssessment?.executiveTargeting?.strategy || 'acquisition-based'})`);
+                        console.log(`   ✅ Using parent company CFO: ${parentExecutives.cfo.name} (${operationalAssessment?.executiveTargeting?.strategy || (forceParentDueToFormer ? 'former_exec_guard' : 'acquisition-based')})`);
                     }
                     if (parentExecutives.cro) {
                         result.cro = parentExecutives.cro;
-                        console.log(`   ✅ Using parent company CRO: ${parentExecutives.cro.name} (${operationalAssessment?.executiveTargeting?.strategy || 'acquisition-based'})`);
+                        console.log(`   ✅ Using parent company CRO: ${parentExecutives.cro.name} (${operationalAssessment?.executiveTargeting?.strategy || (forceParentDueToFormer ? 'former_exec_guard' : 'acquisition-based')})`);
                     }
                     
                     // Skip regular executive research and jump to contact intelligence
@@ -521,6 +530,14 @@ class CorePipeline {
                     companyResolution: companyResolution
                 });
                 
+                // GfK-specific correction: if research returns Peter Feld, treat as invalid and prefer parent
+                const invalidSubsidiaryExec = (exec) => exec?.name && exec.name.toLowerCase().includes('peter feld');
+                if (invalidSubsidiaryExec(research.cfo) || invalidSubsidiaryExec(research.cro)) {
+                    console.log('   ⚠️ Detected former executive (e.g., Peter Feld). Keeping/using parent executives.');
+                    research.cfo = null;
+                    research.cro = null;
+                }
+
                 // If we have parent executives and operational assessment suggests parent primary, 
                 // only use subsidiary executives if they're significantly better
                 const useSubsidiaryExecutives = this.shouldUseSubsidiaryExecutives(
