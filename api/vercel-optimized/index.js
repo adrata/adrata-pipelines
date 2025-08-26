@@ -176,8 +176,7 @@ class APIHealthChecker {
                                 }
                             ]
                         }
-                    },
-                    size: 1
+                    }
                 })
             });
             
