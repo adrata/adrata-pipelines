@@ -422,8 +422,9 @@ class CorePipeline {
                 );
                 
                 // Determine executive targeting strategy based on operational assessment
-                const shouldUseParentExecutives = this.shouldUseParentExecutives(
-                    parentExecutives, 
+                const forcedSubsidiary = result.corporateStructure?.targetingOverride === 'subsidiary_first';
+                const shouldUseParentExecutives = !forcedSubsidiary && this.shouldUseParentExecutives(
+                    parentExecutives,
                     operationalAssessment
                 );
                 
@@ -749,6 +750,9 @@ class CorePipeline {
                 }
             }
 
+            // Email domain consistency: clear emails that don't match allowed domains
+            this.enforceEmailDomainConsistency(result, companyResolution);
+
             // Executive validation already completed in STEP 2.5 above
 
             // STEP 4: Essential Contact Validation
@@ -965,6 +969,37 @@ class CorePipeline {
         }
 
         console.log(`   ✅ Contact merge complete`);
+    }
+
+    /**
+     * Ensure executive emails match company or parent domains; clear if mismatched
+     */
+    enforceEmailDomainConsistency(result, companyResolution) {
+        const extractDomain = (email) => (email || '').split('@')[1]?.toLowerCase() || '';
+        const allowedDomains = new Set();
+        const finalDomain = (companyResolution.finalUrl || '').replace(/^https?:\/\/(www\.)?/, '').split('/')[0].toLowerCase();
+        if (finalDomain) allowedDomains.add(finalDomain);
+        const parentDomain = (typeof result.corporateStructure?.parentCompany === 'object') ? result.corporateStructure.parentCompany?.domain : '';
+        if (parentDomain) allowedDomains.add(parentDomain.toLowerCase());
+        // Common parent aliases
+        if (parentDomain === 'nielsen.com') {
+            allowedDomains.add('nielseniq.com');
+            allowedDomains.add('niq.com');
+        }
+
+        const clearIfMismatch = (exec) => {
+            if (!exec || !exec.email) return;
+            const domain = extractDomain(exec.email);
+            if (!domain) return;
+            const matches = Array.from(allowedDomains).some(d => domain.endsWith(d));
+            if (!matches) {
+                console.log(`      🧹 Clearing mismatched email for ${exec.name}: ${exec.email} not in ${Array.from(allowedDomains).join(', ')}`);
+                exec.email = '';
+            }
+        };
+
+        clearIfMismatch(result.cfo);
+        clearIfMismatch(result.cro);
     }
 
     /**
