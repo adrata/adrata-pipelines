@@ -338,6 +338,73 @@ class BatchProcessor {
         return chunks;
     }
     
+    async processCompanyWithTimeout(company, companyIndex, batchIndex) {
+        const companyStartTime = Date.now();
+        
+        try {
+            console.log(`  🔄 [${companyIndex + 1}] Processing: ${company.companyName}`);
+            
+            // Rate limiting before processing each company
+            await this.rateLimiter.checkLimit('batch_processing', 30); // 30 companies per minute max
+            
+            // Process single company
+            const companyData = {
+                website: company.domain || company.website,
+                companyName: company.companyName,
+                accountOwner: company.accountOwner || 'Dan Mirolli',
+                isTop1000: company.isTop1000 || false
+            };
+            
+            const result = await Promise.race([
+                this.pipeline.processCompany(companyData, companyIndex + 1),
+                new Promise((_, reject) => 
+                    setTimeout(() => reject(new Error('Company timeout')), VERCEL_CONFIG.COMPANY_TIMEOUT)
+                )
+            ]);
+            
+            const processingTime = Date.now() - companyStartTime;
+            
+            if (result) {
+                return {
+                    success: true,
+                    result: {
+                        ...result,
+                        processingTime,
+                        batchIndex,
+                        companyIndex
+                    },
+                    processingTime
+                };
+            } else {
+                return {
+                    success: false,
+                    error: {
+                        company,
+                        error: 'No result returned',
+                        processingTime,
+                        batchIndex,
+                        companyIndex
+                    },
+                    processingTime
+                };
+            }
+            
+        } catch (error) {
+            const processingTime = Date.now() - companyStartTime;
+            return {
+                success: false,
+                error: {
+                    company,
+                    error: error.message,
+                    processingTime,
+                    batchIndex,
+                    companyIndex
+                },
+                processingTime
+            };
+        }
+    }
+    
     async processBatch(companies, batchIndex, totalBatches) {
         const batchStartTime = Date.now();
         console.log(`\n🚀 Processing Batch ${batchIndex + 1}/${totalBatches} (${companies.length} companies)`);
@@ -345,73 +412,54 @@ class BatchProcessor {
         const results = [];
         const errors = [];
         
-        // Process companies in batch with rate limiting
+        // Process companies in parallel within the batch
+        const maxConcurrentCompanies = Math.min(3, companies.length); // 3 companies in parallel within batch
+        const companyPromises = [];
+        
         for (let i = 0; i < companies.length; i++) {
             const company = companies[i];
-            const companyStartTime = Date.now();
             
-            try {
-                console.log(`  🔄 [${i + 1}/${companies.length}] Processing: ${company.companyName}`);
+            const companyPromise = this.processCompanyWithTimeout(company, i, batchIndex);
+            companyPromises.push(companyPromise);
+            
+            // Process companies in chunks within the batch
+            if (companyPromises.length >= maxConcurrentCompanies || i === companies.length - 1) {
+                console.log(`  🚀 Processing ${companyPromises.length} companies in parallel within batch...`);
                 
-                // Rate limiting before processing each company
-                await this.rateLimiter.checkLimit('batch_processing', 30); // 30 companies per minute max
+                const companyResults = await Promise.allSettled(companyPromises);
                 
-                // Process single company
-                const companyData = {
-                    website: company.domain || company.website,
-                    companyName: company.companyName,
-                    accountOwner: company.accountOwner || 'Dan Mirolli',
-                    isTop1000: company.isTop1000 || false
-                };
+                companyResults.forEach((result, index) => {
+                    if (result.status === 'fulfilled') {
+                        if (result.value.success) {
+                            results.push(result.value.result);
+                            console.log(`    ✅ Success (${result.value.processingTime}ms): ${result.value.result.companyName}`);
+                        } else {
+                            errors.push(result.value.error);
+                            console.log(`    ❌ Error (${result.value.processingTime}ms): ${result.value.error.company.companyName} - ${result.value.error.error}`);
+                        }
+                    } else {
+                        const companyIndex = i - companyPromises.length + index;
+                        errors.push({
+                            company: companies[companyIndex],
+                            error: `Company processing failed: ${result.reason}`,
+                            processingTime: 0,
+                            batchIndex,
+                            companyIndex
+                        });
+                        console.log(`    💥 Failed: ${companies[companyIndex]?.companyName} - ${result.reason}`);
+                    }
+                });
                 
-                const result = await Promise.race([
-                    this.pipeline.processCompany(companyData, i + 1),
-                    new Promise((_, reject) => 
-                        setTimeout(() => reject(new Error('Company timeout')), VERCEL_CONFIG.COMPANY_TIMEOUT)
-                    )
-                ]);
-                
-                const processingTime = Date.now() - companyStartTime;
-                
-                if (result) {
-                    results.push({
-                        ...result,
-                        processingTime,
-                        batchIndex,
-                        companyIndex: i
-                    });
-                    console.log(`    ✅ Success (${processingTime}ms): ${company.companyName}`);
-                } else {
-                    errors.push({
-                        company,
-                        error: 'No result returned',
-                        processingTime,
-                        batchIndex,
-                        companyIndex: i
-                    });
-                    console.log(`    ⚠️ No result (${processingTime}ms): ${company.companyName}`);
-                }
+                // Clear promises for next chunk
+                companyPromises.length = 0;
                 
                 // Memory cleanup
-                if ((i + 1) % VERCEL_CONFIG.MEMORY_CLEANUP_INTERVAL === 0) {
-                    if (global.gc) global.gc();
-                }
+                if (global.gc) global.gc();
                 
-                // Small delay between companies to prevent overwhelming APIs
+                // Small delay between parallel chunks within batch
                 if (i < companies.length - 1) {
-                    await this.rateLimiter.delay(VERCEL_CONFIG.API_DELAY);
+                    await this.rateLimiter.delay(1000); // 1 second pause between chunks
                 }
-                
-            } catch (error) {
-                const processingTime = Date.now() - companyStartTime;
-                errors.push({
-                    company,
-                    error: error.message,
-                    processingTime,
-                    batchIndex,
-                    companyIndex: i
-                });
-                console.log(`    ❌ Error (${processingTime}ms): ${company.companyName} - ${error.message}`);
             }
         }
         

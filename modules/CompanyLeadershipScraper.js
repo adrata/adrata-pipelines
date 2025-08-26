@@ -819,6 +819,36 @@ EXTRACT ALL EXECUTIVES - DO NOT LIMIT BY CONFIDENCE. Include Mike Scarpelli if f
         const companyLower = companyName.toLowerCase();
         const knownExecutives = [];
 
+        // DATABRICKS - Current executives as of 2025
+        if (companyLower.includes('databricks')) {
+            knownExecutives.push(
+                {
+                    name: 'Dave Conte',
+                    title: 'Chief Financial Officer',
+                    department: 'Finance',
+                    appointmentDate: null,
+                    isRecent: false,
+                    confidence: 0.95,
+                    source: 'https://www.databricks.com/company/leadership-team',
+                    roleType: 'CFO',
+                    tier: 1,
+                    waterfallReason: 'Found on official Databricks leadership page'
+                },
+                {
+                    name: 'Ron Gabrisko',
+                    title: 'Chief Revenue Officer',
+                    department: 'Revenue',
+                    appointmentDate: null,
+                    isRecent: false,
+                    confidence: 0.95,
+                    source: 'https://www.databricks.com/company/leadership-team',
+                    roleType: 'CRO',
+                    tier: 1,
+                    waterfallReason: 'Found on official Databricks leadership page'
+                }
+            );
+        }
+
         // SNOWFLAKE - Current executives as of 2025
         if (companyLower.includes('snowflake')) {
             knownExecutives.push(
@@ -965,11 +995,72 @@ EXTRACT ALL EXECUTIVES - DO NOT LIMIT BY CONFIDENCE. Include Mike Scarpelli if f
             // TODO: Research and add CM.com executives
         }
 
+        // STRIPE - Current executives as of 2025
+        if (companyLower.includes('stripe')) {
+            knownExecutives.push(
+                {
+                    name: 'Steffan Tomlinson',
+                    title: 'Chief Financial Officer',
+                    department: 'Finance',
+                    appointmentDate: null,
+                    isRecent: false,
+                    confidence: 0.95,
+                    source: 'https://stripe.com/about/leadership',
+                    roleType: 'CFO',
+                    tier: 1,
+                    waterfallReason: 'Found on official Stripe leadership page'
+                },
+                {
+                    name: 'Eileen O\'Mara',
+                    title: 'Chief Revenue Officer',
+                    department: 'Revenue',
+                    appointmentDate: null,
+                    isRecent: false,
+                    confidence: 0.95,
+                    source: 'https://stripe.com/about/leadership',
+                    roleType: 'CRO',
+                    tier: 1,
+                    waterfallReason: 'Found on official Stripe leadership page'
+                }
+            );
+        }
+
+        // FIGMA - Current executives as of 2025
+        if (companyLower.includes('figma')) {
+            knownExecutives.push(
+                {
+                    name: 'Praveer Melwani',
+                    title: 'Chief Financial Officer & Treasurer',
+                    department: 'Finance',
+                    appointmentDate: null,
+                    isRecent: false,
+                    confidence: 0.95,
+                    source: 'https://www.figma.com/about/leadership/',
+                    roleType: 'CFO',
+                    tier: 1,
+                    waterfallReason: 'Found on official Figma leadership page'
+                },
+                {
+                    name: 'Shaunt Voskanian',
+                    title: 'Chief Revenue Officer',
+                    department: 'Revenue',
+                    appointmentDate: null,
+                    isRecent: false,
+                    confidence: 0.95,
+                    source: 'https://www.figma.com/about/leadership/',
+                    roleType: 'CRO',
+                    tier: 1,
+                    waterfallReason: 'Found on official Figma leadership page'
+                }
+            );
+        }
+
         // DISCOVERY EDUCATION - Add if we find their executives
         if (companyLower.includes('discovery education') || companyLower.includes('discoveryeducation')) {
             // TODO: Research and add Discovery Education executives
         }
 
+        console.log(`🗄️ Fallback database returned ${knownExecutives.length} executives for ${companyName}`);
         return knownExecutives;
     }
 
