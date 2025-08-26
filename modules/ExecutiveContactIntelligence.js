@@ -34,6 +34,10 @@ class ExecutiveContactIntelligence {
      */
     async enhanceExecutiveIntelligence(companyResult) {
         console.log(`💰 Cost-effective enhancement: ${companyResult.companyName}`);
+        console.log(`🔍 DEBUG: API Keys Status:`);
+        console.log(`   CoreSignal: ${this.config.CORESIGNAL_API_KEY?.trim() ? 'AVAILABLE' : 'MISSING'}`);
+        console.log(`   Lusha: ${this.config.LUSHA_API_KEY?.trim() ? 'AVAILABLE' : 'MISSING'}`);
+        console.log(`   Perplexity: ${this.config.PERPLEXITY_API_KEY?.trim() ? 'AVAILABLE' : 'MISSING'}`);
 
         const enhancement = {
             companyIntelligence: null,
@@ -61,7 +65,7 @@ class ExecutiveContactIntelligence {
             }
 
             // Step 2: Get executive contacts via Lusha (cost per successful find) - WITH TIMEOUT
-            if (this.config.LUSHA_API_KEY) {
+            if (this.config.LUSHA_API_KEY?.trim()) {
                 try {
                     enhancement.executiveContacts = await Promise.race([
                         this.getLushaExecutiveContacts(companyResult, companyResult.website),
