@@ -433,39 +433,57 @@ class BatchProcessor {
         const allErrors = [];
         let totalProcessingTime = 0;
         
+        // Process batches in parallel with controlled concurrency
+        const maxConcurrentBatches = Math.min(3, batches.length); // Process up to 3 batches simultaneously
+        const batchPromises = [];
+        
         for (let i = 0; i < batches.length; i++) {
-            try {
-                // Process batch with timeout protection
-                const batchResult = await Promise.race([
-                    this.processBatch(batches[i], i, batches.length),
-                    new Promise((_, reject) => 
-                        setTimeout(() => reject(new Error('Batch timeout')), VERCEL_CONFIG.BATCH_TIMEOUT)
-                    )
-                ]);
+            const batchPromise = Promise.race([
+                this.processBatch(batches[i], i, batches.length),
+                new Promise((_, reject) => 
+                    setTimeout(() => reject(new Error('Batch timeout')), VERCEL_CONFIG.BATCH_TIMEOUT)
+                )
+            ]);
+            batchPromises.push(batchPromise);
+            
+            // Process in chunks to avoid overwhelming APIs
+            if (batchPromises.length >= maxConcurrentBatches || i === batches.length - 1) {
+                console.log(`🚀 Processing ${batchPromises.length} batches in parallel...`);
                 
-                allResults.push(...batchResult.results);
-                allErrors.push(...batchResult.errors);
-                totalProcessingTime += batchResult.batchDuration;
+                const batchResults = await Promise.allSettled(batchPromises);
                 
-                // Delay between batches for rate limiting (except last batch)
-                if (i < batches.length - 1) {
-                    console.log(`⏳ Waiting ${VERCEL_CONFIG.BATCH_DELAY/1000}s before next batch...`);
-                    await this.rateLimiter.delay(VERCEL_CONFIG.BATCH_DELAY);
-                }
-                
-            } catch (error) {
-                console.error(`❌ Batch ${i + 1} failed: ${error.message}`);
-                
-                // Add all companies in failed batch to errors
-                batches[i].forEach((company, companyIndex) => {
-                    allErrors.push({
-                        company,
-                        error: `Batch failure: ${error.message}`,
-                        processingTime: 0,
-                        batchIndex: i,
-                        companyIndex
-                    });
+                batchResults.forEach((result, index) => {
+                    if (result.status === 'fulfilled') {
+                        allResults.push(...result.value.results);
+                        allErrors.push(...result.value.errors);
+                        totalProcessingTime += result.value.batchDuration;
+                    } else {
+                        console.error(`❌ Batch failed: ${result.reason}`);
+                        const batchIndex = i - batchPromises.length + index;
+                        
+                        // Add all companies in failed batch to errors
+                        if (batches[batchIndex]) {
+                            batches[batchIndex].forEach((company, companyIndex) => {
+                                allErrors.push({
+                                    company,
+                                    error: `Batch failure: ${result.reason}`,
+                                    processingTime: 0,
+                                    batchIndex,
+                                    companyIndex
+                                });
+                            });
+                        }
+                    }
                 });
+                
+                // Clear promises for next chunk
+                batchPromises.length = 0;
+                
+                // Small delay between parallel chunks to respect rate limits
+                if (i < batches.length - 1) {
+                    console.log(`⏳ Brief pause between parallel chunks...`);
+                    await this.rateLimiter.delay(2000); // 2 second pause
+                }
             }
         }
         

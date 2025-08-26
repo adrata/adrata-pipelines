@@ -394,13 +394,11 @@ For each executive found, extract:
 5. Contact information if available
 
 PRIORITY EXECUTIVES TO FIND:
-- Mike Scarpelli (Chief Financial Officer) at Snowflake
-- Mike Gannon (Chief Revenue Officer) at Snowflake
-- Ron Gabrisko (Chief Revenue Officer) at Databricks
-- Dave Conte (Chief Financial Officer) at Databricks
-- Any CFO, CRO, CSO, CAO roles
-- VP Finance, VP Sales, VP Revenue
-- All C-level executives
+- Chief Financial Officer (CFO) / Chief Accounting Officer (CAO)
+- Chief Revenue Officer (CRO) / Chief Sales Officer (CSO)
+- VP Finance, VP Sales, VP Revenue, VP Commercial
+- Finance Directors, Sales Directors, Revenue Directors
+- All C-level executives with finance or revenue responsibilities
 
 REQUIREMENTS:
 - Extract ALL executives shown on the page
