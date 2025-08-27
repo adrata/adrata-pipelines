@@ -571,6 +571,10 @@ function mapToCoreCSV(result) {
         rows.push({
             "Website": result.website || 'Not available',
             "Company Name": result.companyName || 'Not available',
+            "Status": result.operationalStatus || (result.companyStatus === 'acquired' ? 'acquired' : 'active'),
+            "Parent Company": (typeof (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany) === 'object')
+                ? ((result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany)?.name || 'N/A')
+                : (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany || 'N/A'),
             "Executive Name": result.cfo.name,
             "Title": result.cfo.title || 'Not available',
             "Role": 'CFO',
@@ -578,16 +582,9 @@ function mapToCoreCSV(result) {
             "Phone": result.cfo.phone || 'Not available',
             "LinkedIn": result.cfo.linkedIn || result.cfo.linkedin || 'Not available',
             "Confidence": result.cfo.confidence || 'Not available',
+            "Research Method": result.researchMethod || 'standard_research',
             "Selection Reason": generateCFOSelectionReasoning(result),
-            "Account Owner": result.accountOwner || 'Not available',
-            "Operational Status": result.operationalStatus || (result.companyStatus === 'acquired' ? 'acquired' : 'active'),
-            "Target Entity": result.targetEntity || 'original_company',
-            "Executive Source": result.researchMethod || 'standard_research',
-            "Parent Company": (typeof (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany) === 'object')
-                ? ((result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany)?.name || 'N/A')
-                : (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany || 'N/A'),
-            "Acquisition Date": result.acquisitionIntelligence?.acquisitionDate || result.corporateStructure?.acquisitionDate || 'N/A',
-            "Targeting Strategy": result.executiveTargeting?.strategy || 'direct_targeting'
+            "Account Owner": result.accountOwner || 'Not available'
         });
     }
     
@@ -596,6 +593,10 @@ function mapToCoreCSV(result) {
         rows.push({
             "Website": result.website || 'Not available',
             "Company Name": result.companyName || 'Not available',
+            "Status": result.operationalStatus || (result.companyStatus === 'acquired' ? 'acquired' : 'active'),
+            "Parent Company": (typeof (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany) === 'object')
+                ? ((result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany)?.name || 'N/A')
+                : (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany || 'N/A'),
             "Executive Name": result.cro.name,
             "Title": result.cro.title || 'Not available',
             "Role": 'CRO',
@@ -603,16 +604,9 @@ function mapToCoreCSV(result) {
             "Phone": result.cro.phone || 'Not available',
             "LinkedIn": result.cro.linkedIn || result.cro.linkedin || 'Not available',
             "Confidence": result.cro.confidence || 'Not available',
+            "Research Method": result.researchMethod || 'standard_research',
             "Selection Reason": generateCROSelectionReasoning(result),
-            "Account Owner": result.accountOwner || 'Not available',
-            "Operational Status": result.operationalStatus || (result.companyStatus === 'acquired' ? 'acquired' : 'active'),
-            "Target Entity": result.targetEntity || 'original_company',
-            "Executive Source": result.researchMethod || 'standard_research',
-            "Parent Company": (typeof (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany) === 'object')
-                ? ((result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany)?.name || 'N/A')
-                : (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany || 'N/A'),
-            "Acquisition Date": result.acquisitionIntelligence?.acquisitionDate || result.corporateStructure?.acquisitionDate || 'N/A',
-            "Targeting Strategy": result.executiveTargeting?.strategy || 'direct_targeting'
+            "Account Owner": result.accountOwner || 'Not available'
         });
     }
     
