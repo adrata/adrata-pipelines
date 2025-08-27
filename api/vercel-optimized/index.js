@@ -22,7 +22,7 @@ const VERCEL_CONFIG = {
     
     // Timeouts OPTIMIZED for 800s Vercel limit
     BATCH_TIMEOUT: 600000,         // 10 minutes per batch (3.3 minute safety buffer) - OPTIMIZED
-    COMPANY_TIMEOUT: 180000,       // 180 seconds per company (increased from 120s for complex acquisitions) - OPTIMIZED
+    COMPANY_TIMEOUT: 240000,       // 240 seconds per company (increased from 120s for complex acquisitions) - OPTIMIZED
     
     // Rate limiting based on working CloudCaddie implementation
     BATCH_DELAY: 5000,             // 5 seconds between batches
