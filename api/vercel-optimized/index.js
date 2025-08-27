@@ -15,8 +15,8 @@ const { PowerhousePipeline } = require('../../pipelines/powerhouse-pipeline.js')
 
 // VERCEL-OPTIMIZED CONFIGURATION (CONSERVATIVE - Fixed for Vercel Pro 5-minute limit)
 const VERCEL_CONFIG = {
-    // Batch sizes - CONSERVATIVE approach, only fix timeout issues
-    CORE_BATCH_SIZE: 5,            // Core pipeline: Keep 5 companies per batch (proven to work)
+    // Batch sizes - CONSERVATIVE approach, aligned with parallel processing
+    CORE_BATCH_SIZE: 3,            // Core pipeline: 3 companies per batch (matches 3 parallel processing)
     ADVANCED_BATCH_SIZE: 3,        // Advanced pipeline: Keep 3 companies per batch (more complex)
     POWERHOUSE_BATCH_SIZE: 1,      // Powerhouse pipeline: Keep 1 company per batch (most complex)
     
@@ -881,14 +881,16 @@ module.exports = async (req, res) => {
             console.log(`   • Real Emails: ${realEmailsFound}/${pipelineResult.results.length}`);
             console.log(`   • Real Phones: ${realPhonesFound}/${pipelineResult.results.length}`);
 
-            // Generate CSV data
+            // Generate CSV data (FIXED formatting)
             const csvHeaders = Object.keys(csvResults[0] || {});
             const csvRows = csvResults.map(row => 
-                csvHeaders.map(header => `"${(row[header] || '').toString().replace(/"/g, '""')}"`)
+                csvHeaders.map(header => {
+                    const value = (row[header] || '').toString().replace(/"/g, '""');
+                    return `"${value}"`;
+                })
             );
             
-            const csvContent = [csvHeaders, ...csvRows]
-                .map(row => row.join(','))
+            const csvContent = [csvHeaders.join(','), ...csvRows.map(row => row.join(','))]
                 .join('\n');
             
             const timestamp = new Date().toISOString().split('T')[0];
