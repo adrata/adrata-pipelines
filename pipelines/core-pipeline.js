@@ -548,6 +548,26 @@ class CorePipeline {
                     research.cro = null;
                 }
 
+                // Company-specific overrides from resolver
+                const domain = (companyResolution.finalUrl || company.website).replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
+                const executiveOverrides = companyResolution.acquisitionInfo?.executiveOverrides;
+                
+                if (executiveOverrides?.cfo) {
+                    console.log(`   🎯 Applying CFO override for ${domain}: ${executiveOverrides.cfo.name}`);
+                    research.cfo = {
+                        name: executiveOverrides.cfo.name,
+                        title: executiveOverrides.cfo.title,
+                        email: '',
+                        phone: '',
+                        linkedIn: '',
+                        confidence: executiveOverrides.cfo.confidence / 100,
+                        source: executiveOverrides.cfo.source,
+                        validated: true,
+                        role: 'CFO',
+                        tier: 1
+                    };
+                }
+                
                 // Company-specific override: Investis Digital CFO (authoritative LinkedIn provided)
                 const canonicalDomain = (companyResolution.canonicalUrl || '').toLowerCase();
                 if (canonicalDomain.includes('investisdigital.com')) {

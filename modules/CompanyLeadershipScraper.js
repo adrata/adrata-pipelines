@@ -566,6 +566,20 @@ EXTRACT ALL EXECUTIVES - DO NOT LIMIT BY CONFIDENCE.`;
                     console.log(`   🚫 NO FINANCE TERMS: ${name} (${title}) - Not a finance role`);
                     score = 0;
                 }
+                
+                // PRIORITY BOOST: Actual CFO titles get massive boost
+                if (title.includes('chief financial officer') || title === 'cfo') {
+                    score += 1000; // Massive boost for actual CFO
+                    console.log(`   🎯 ACTUAL CFO DETECTED: ${name} (${title}) - Priority boost +1000`);
+                }
+                
+                // VP/Director penalty: Lower priority than actual CFO
+                if (title.includes('vice president') || title.includes('director') || title.includes('vp ')) {
+                    if (!title.includes('chief financial officer') && !title.includes('cfo')) {
+                        score = Math.min(score, 300); // Cap VP/Director scores below CFO
+                        console.log(`   📉 VP/DIRECTOR CAP: ${name} (${title}) - Capped at 300`);
+                    }
+                }
             }
 
             if (roleType === 'cro') {
@@ -602,7 +616,9 @@ EXTRACT ALL EXECUTIVES - DO NOT LIMIT BY CONFIDENCE.`;
                     title.includes('product') || title.includes('engineering') ||
                     title.includes('legal') || title.includes('hr') || title.includes('people') ||
                     title.includes('human resources') || title.includes('chief people') ||
-                    title.includes('operations') && !title.includes('sales operations')) {
+                    title.includes('operations') && !title.includes('sales operations') ||
+                    title.includes('chairman') || title.includes('chair') || title.includes('president') ||
+                    title.includes('founder') || title.includes('board') || title.includes('director') && !title.includes('sales director') && !title.includes('revenue director')) {
                     console.log(`   🚫 EXCLUDED from CRO: ${name} (${title}) - Non-revenue role`);
                     score = 0; // Exclude these roles from CRO matching
                 }

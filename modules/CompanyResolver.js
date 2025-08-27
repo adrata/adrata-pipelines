@@ -357,6 +357,18 @@ class CompanyResolver {
                     }
                 }
             },
+            // Databricks - Public company with known CFO
+            'databricks.com': {
+                isAcquired: false,
+                executiveOverrides: {
+                    cfo: {
+                        name: 'Dave Conte',
+                        title: 'Chief Financial Officer',
+                        confidence: 99,
+                        source: 'verified_public_company_filing'
+                    }
+                }
+            },
             // Investis Digital (London) → Investcorp ownership; avoid IDX (Identity Theft Guard Solutions, Inc.) confusion
             'investisdigital.com': {
                 isAcquired: true,
