@@ -746,17 +746,12 @@ module.exports = async (req, res) => {
 
     if (req.method === 'POST') {
         try {
-            // Parse request body if it's a string
-            let body = req.body;
-            if (typeof body === 'string') {
-                body = JSON.parse(body);
-            }
-            
+            // Vercel automatically parses JSON bodies
             const { 
                 pipeline = 'core', 
                 companies = [],
                 mode = 'process' // 'process' or 'health-check'
-            } = body || {};
+            } = req.body || {};
 
             // API Health Check Mode
             if (mode === 'health-check' || pipeline === 'health-check') {
