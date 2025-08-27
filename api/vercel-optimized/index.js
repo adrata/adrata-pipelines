@@ -13,16 +13,16 @@ const { CorePipeline } = require('../../pipelines/core-pipeline.js');
 const { AdvancedPipeline } = require('../../pipelines/advanced-pipeline.js');
 const { PowerhousePipeline } = require('../../pipelines/powerhouse-pipeline.js');
 
-// VERCEL-OPTIMIZED CONFIGURATION
+// VERCEL-OPTIMIZED CONFIGURATION (CONSERVATIVE - Fixed for Vercel Pro 5-minute limit)
 const VERCEL_CONFIG = {
-    // Batch sizes optimized for complex pipelines
-    CORE_BATCH_SIZE: 5,            // Core pipeline: 5 companies per batch (proven to work)
-    ADVANCED_BATCH_SIZE: 3,        // Advanced pipeline: 3 companies per batch (more complex)
-    POWERHOUSE_BATCH_SIZE: 1,      // Powerhouse pipeline: 1 company per batch (most complex)
+    // Batch sizes - CONSERVATIVE approach, only fix timeout issues
+    CORE_BATCH_SIZE: 5,            // Core pipeline: Keep 5 companies per batch (proven to work)
+    ADVANCED_BATCH_SIZE: 3,        // Advanced pipeline: Keep 3 companies per batch (more complex)
+    POWERHOUSE_BATCH_SIZE: 1,      // Powerhouse pipeline: Keep 1 company per batch (most complex)
     
-    // Timeouts optimized for complex executive search
-    BATCH_TIMEOUT: 580000,         // 9.5 minutes per batch (under 10min Vercel limit)
-    COMPANY_TIMEOUT: 300000,       // 5 minutes per company (complex analysis needs time)
+    // Timeouts FIXED for Vercel Pro 5-minute (300 second) hard limit - CRITICAL FIX
+    BATCH_TIMEOUT: 240000,         // 4 minutes per batch (1 minute safety buffer) - FIXED
+    COMPANY_TIMEOUT: 60000,        // 60 seconds per company (conservative, safe timing) - FIXED
     
     // Rate limiting based on working CloudCaddie implementation
     BATCH_DELAY: 5000,             // 5 seconds between batches
@@ -412,8 +412,8 @@ class BatchProcessor {
         const results = [];
         const errors = [];
         
-        // Process companies in parallel within the batch
-        const maxConcurrentCompanies = Math.min(3, companies.length); // 3 companies in parallel within batch
+        // Process companies in parallel within the batch (CONSERVATIVE - keep proven settings)
+        const maxConcurrentCompanies = Math.min(3, companies.length); // 3 companies in parallel within batch (proven to work)
         const companyPromises = [];
         
         for (let i = 0; i < companies.length; i++) {
