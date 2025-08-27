@@ -16,7 +16,7 @@ const { PowerhousePipeline } = require('../../pipelines/powerhouse-pipeline.js')
 // VERCEL-OPTIMIZED CONFIGURATION (CONSERVATIVE - Fixed for Vercel Pro 5-minute limit)
 const VERCEL_CONFIG = {
     // Batch sizes - OPTIMIZED for 800s Vercel limit
-    CORE_BATCH_SIZE: 3,            // Core pipeline: 3 companies per batch (3×180s = 540s < 800s Vercel limit)
+    CORE_BATCH_SIZE: 2,            // Core pipeline: 2 companies per batch (2×180s = 360s < 800s Vercel limit)
     ADVANCED_BATCH_SIZE: 3,        // Advanced pipeline: Keep 3 companies per batch (more complex)
     POWERHOUSE_BATCH_SIZE: 1,      // Powerhouse pipeline: Keep 1 company per batch (most complex)
     
