@@ -239,6 +239,15 @@ class CompanyResolver {
             acquisitionInfo.acquisitionType = hardcodedMatch.type;
             acquisitionInfo.confidence = hardcodedMatch.confidence;
             acquisitionInfo.evidence.push('hardcoded_database');
+            // Include executive overrides if present
+            if (hardcodedMatch.executiveOverrides) {
+                acquisitionInfo.executiveOverrides = hardcodedMatch.executiveOverrides;
+                console.log(`   🎯 Executive overrides found: ${Object.keys(hardcodedMatch.executiveOverrides).join(', ')}`);
+            }
+            // Include targeting override if present
+            if (hardcodedMatch.targetingOverride) {
+                acquisitionInfo.targetingOverride = hardcodedMatch.targetingOverride;
+            }
             console.log(`   🎯 Hardcoded acquisition found: ${hardcodedMatch.parentCompany}`);
             return acquisitionInfo;
         }

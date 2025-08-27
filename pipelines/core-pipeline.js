@@ -2090,11 +2090,21 @@ class CorePipeline {
                 // Filter CRO - exclude Chairman and non-revenue roles  
                 if (filteredCRO?.title) {
                     const croTitle = filteredCRO.title.toLowerCase();
-                    if (croTitle.includes('chairman') || croTitle.includes('chair') || 
+                    // STRICT exclusion for non-operational roles
+                    const isNonOperationalRole = croTitle.includes('chairman') || croTitle.includes('chair') || 
                         croTitle.includes('president') || croTitle.includes('founder') ||
-                        croTitle.includes('board') || 
-                        (croTitle.includes('executive') && !croTitle.includes('revenue') && !croTitle.includes('sales') && !croTitle.includes('commercial'))) {
+                        croTitle.includes('board') || croTitle.includes('director') && !croTitle.includes('sales director') ||
+                        croTitle.includes('owner') || croTitle.includes('partner') ||
+                        (croTitle.includes('executive') && !croTitle.includes('revenue') && !croTitle.includes('sales') && !croTitle.includes('commercial'));
+                    
+                    // STRICT requirement for revenue-related terms
+                    const hasRevenueTerms = croTitle.includes('revenue') || croTitle.includes('sales') || 
+                        croTitle.includes('commercial') || croTitle.includes('business development') ||
+                        croTitle.includes('customer') || croTitle.includes('growth') || croTitle.includes('cro');
+                    
+                    if (isNonOperationalRole || !hasRevenueTerms) {
                         console.log(`      🚫 Excluding parent CRO - non-revenue role: ${filteredCRO.name} (${filteredCRO.title})`);
+                        console.log(`      🔍 Analysis: isNonOperational=${isNonOperationalRole}, hasRevenueTerms=${hasRevenueTerms}`);
                         filteredCRO = null;
                     }
                 }
@@ -2155,14 +2165,24 @@ class CorePipeline {
                                     }
                                 }
                                 
-                                // Filter alias CRO
+                                // Filter alias CRO - STRICT filtering
                                 if (filteredAliasCRO?.title) {
                                     const croTitle = filteredAliasCRO.title.toLowerCase();
-                                    if (croTitle.includes('chairman') || croTitle.includes('chair') || 
+                                    // STRICT exclusion for non-operational roles
+                                    const isNonOperationalRole = croTitle.includes('chairman') || croTitle.includes('chair') || 
                                         croTitle.includes('president') || croTitle.includes('founder') ||
-                                        croTitle.includes('board') || 
-                                        (croTitle.includes('executive') && !croTitle.includes('revenue') && !croTitle.includes('sales') && !croTitle.includes('commercial'))) {
+                                        croTitle.includes('board') || croTitle.includes('director') && !croTitle.includes('sales director') ||
+                                        croTitle.includes('owner') || croTitle.includes('partner') ||
+                                        (croTitle.includes('executive') && !croTitle.includes('revenue') && !croTitle.includes('sales') && !croTitle.includes('commercial'));
+                                    
+                                    // STRICT requirement for revenue-related terms
+                                    const hasRevenueTerms = croTitle.includes('revenue') || croTitle.includes('sales') || 
+                                        croTitle.includes('commercial') || croTitle.includes('business development') ||
+                                        croTitle.includes('customer') || croTitle.includes('growth') || croTitle.includes('cro');
+                                    
+                                    if (isNonOperationalRole || !hasRevenueTerms) {
                                         console.log(`      🚫 Excluding alias CRO - non-revenue role: ${filteredAliasCRO.name} (${filteredAliasCRO.title})`);
+                                        console.log(`      🔍 Analysis: isNonOperational=${isNonOperationalRole}, hasRevenueTerms=${hasRevenueTerms}`);
                                         filteredAliasCRO = null;
                                     }
                                 }
