@@ -15,13 +15,13 @@ const { PowerhousePipeline } = require('../../pipelines/powerhouse-pipeline.js')
 
 // VERCEL-OPTIMIZED CONFIGURATION (CONSERVATIVE - Fixed for Vercel Pro 5-minute limit)
 const VERCEL_CONFIG = {
-    // Batch sizes - CONSERVATIVE approach, aligned with timeout limits
-    CORE_BATCH_SIZE: 2,            // Core pipeline: 2 companies per batch (2×120s = 240s < 300s Vercel limit)
+    // Batch sizes - OPTIMIZED for 800s Vercel limit
+    CORE_BATCH_SIZE: 4,            // Core pipeline: 4 companies per batch (4×120s = 480s < 800s Vercel limit)
     ADVANCED_BATCH_SIZE: 3,        // Advanced pipeline: Keep 3 companies per batch (more complex)
     POWERHOUSE_BATCH_SIZE: 1,      // Powerhouse pipeline: Keep 1 company per batch (most complex)
     
-    // Timeouts FIXED for Vercel Pro 5-minute (300 second) hard limit - CRITICAL FIX
-    BATCH_TIMEOUT: 240000,         // 4 minutes per batch (1 minute safety buffer) - FIXED
+    // Timeouts OPTIMIZED for 800s Vercel limit
+    BATCH_TIMEOUT: 600000,         // 10 minutes per batch (3.3 minute safety buffer) - OPTIMIZED
     COMPANY_TIMEOUT: 120000,       // 120 seconds per company (increased from 60s to prevent premature timeouts) - FIXED
     
     // Rate limiting based on working CloudCaddie implementation
