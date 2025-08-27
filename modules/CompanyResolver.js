@@ -251,6 +251,15 @@ class CompanyResolver {
             console.log(`   🎯 Hardcoded acquisition found: ${hardcodedMatch.parentCompany}`);
             return acquisitionInfo;
         }
+        
+        // Handle executive overrides for non-acquired companies (e.g., Databricks)
+        if (hardcodedMatch.executiveOverrides) {
+            acquisitionInfo.executiveOverrides = hardcodedMatch.executiveOverrides;
+            console.log(`   🎯 Executive overrides found for non-acquired company: ${Object.keys(hardcodedMatch.executiveOverrides).join(', ')}`);
+        }
+        if (hardcodedMatch.targetingOverride) {
+            acquisitionInfo.targetingOverride = hardcodedMatch.targetingOverride;
+        }
 
         // STEP 2: Check for domain change (potential acquisition)
         if (canonicalDomain !== finalDomain) {
