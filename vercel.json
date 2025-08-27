@@ -1,32 +1,36 @@
 {
-  "version": 2,
-  "name": "adrata-pipeline-vercel-optimized",
+  "regions": ["iad1", "sfo1", "dub1"],
+  "buildCommand": "npm run build",
+  "framework": "nextjs",
+  "installCommand": "npm install",
   "functions": {
+    "src/app/api/**/*.ts": {
+      "maxDuration": 30
+    },
+    "src/app/api/top100/**/*.ts": {
+      "maxDuration": 300,
+      "memory": 3008
+    },
     "api/vercel-optimized/index.js": {
-              "maxDuration": 600,
-      "memory": 1024
+      "maxDuration": 800,
+      "memory": 3008
     }
   },
-  "buildCommand": "echo 'No build needed for API-only deployment'",
-  "outputDirectory": ".",
-  "installCommand": "npm install",
+  "crons": [
+    {
+      "path": "/api/top100/warmup",
+      "schedule": "*/5 * * * *"
+    }
+  ],
   "headers": [
     {
-      "source": "/api/(.*)",
+      "source": "/adrata_buyer_group_intelligence_annoucement_optimized.mp4",
       "headers": [
         {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET, POST, OPTIONS"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type, Authorization"
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
         }
       ]
     }
   ]
-}
+} 
