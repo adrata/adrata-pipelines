@@ -550,7 +550,7 @@ class CorePipeline {
 
                 // Company-specific overrides from resolver
                 const domain = (companyResolution.finalUrl || company.website).replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
-                const executiveOverrides = companyResolution.acquisitionInfo?.executiveOverrides;
+                const executiveOverrides = companyResolution.executiveOverrides || companyResolution.acquisitionInfo?.executiveOverrides;
                 
                 if (executiveOverrides?.cfo) {
                     console.log(`   🎯 Applying CFO override for ${domain}: ${executiveOverrides.cfo.name}`);

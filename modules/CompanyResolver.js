@@ -93,6 +93,15 @@ class CompanyResolver {
             } else {
                 console.log(`   🔍 Company research: Independent company`);
             }
+            
+            // Propagate executive overrides to top level (for both acquired and non-acquired companies)
+            if (acquisitionInfo.executiveOverrides) {
+                resolution.executiveOverrides = acquisitionInfo.executiveOverrides;
+                console.log(`   🎯 Executive overrides propagated: ${Object.keys(acquisitionInfo.executiveOverrides).join(', ')}`);
+            }
+            if (acquisitionInfo.targetingOverride) {
+                resolution.targetingOverride = acquisitionInfo.targetingOverride;
+            }
 
             // STEP 3: Company Name Resolution
             console.log('\n🏷️  STEP 3: Company Name Resolution');
