@@ -2071,11 +2071,45 @@ class CorePipeline {
                 console.log(`      ✅ Found executives at parent company ${parentCompanyName}`);
                 console.log(`         CFO: ${research.cfo?.name || 'Not found'}`);
                 console.log(`         CRO: ${research.cro?.name || 'Not found'}`);
-                return {
-                    cfo: research.cfo,
-                    cro: research.cro,
-                    companyResolution: parentCompanyResolution
-                };
+                
+                // Apply Chairman/non-operational role exclusion to parent company executives
+                let filteredCFO = research.cfo;
+                let filteredCRO = research.cro;
+                
+                // Filter CFO - exclude Chairman and non-finance roles
+                if (filteredCFO?.title) {
+                    const cfoTitle = filteredCFO.title.toLowerCase();
+                    if (cfoTitle.includes('chairman') || cfoTitle.includes('chair') || 
+                        cfoTitle.includes('president') || cfoTitle.includes('founder') ||
+                        (cfoTitle.includes('executive') && !cfoTitle.includes('financial'))) {
+                        console.log(`      🚫 Excluding parent CFO - non-finance role: ${filteredCFO.name} (${filteredCFO.title})`);
+                        filteredCFO = null;
+                    }
+                }
+                
+                // Filter CRO - exclude Chairman and non-revenue roles  
+                if (filteredCRO?.title) {
+                    const croTitle = filteredCRO.title.toLowerCase();
+                    if (croTitle.includes('chairman') || croTitle.includes('chair') || 
+                        croTitle.includes('president') || croTitle.includes('founder') ||
+                        croTitle.includes('board') || 
+                        (croTitle.includes('executive') && !croTitle.includes('revenue') && !croTitle.includes('sales') && !croTitle.includes('commercial'))) {
+                        console.log(`      🚫 Excluding parent CRO - non-revenue role: ${filteredCRO.name} (${filteredCRO.title})`);
+                        filteredCRO = null;
+                    }
+                }
+                
+                // Only return if we have valid executives after filtering
+                if (filteredCFO || filteredCRO) {
+                    console.log(`      ✅ After filtering - CFO: ${filteredCFO?.name || 'None'}, CRO: ${filteredCRO?.name || 'None'}`);
+                    return {
+                        cfo: filteredCFO,
+                        cro: filteredCRO,
+                        companyResolution: parentCompanyResolution
+                    };
+                } else {
+                    console.log(`      ⚠️ All parent executives filtered out - continuing to aliases`);
+                }
             } else {
                 console.log(`      ⚠️ No executives found at parent company ${parentCompanyName} - retrying with aliases/domains`);
                 // Retry with common aliases for Nielsen
@@ -2105,11 +2139,41 @@ class CorePipeline {
                             });
                             if (aliasResearch && (aliasResearch.cfo || aliasResearch.cro)) {
                                 console.log(`      ✅ Found executives via alias: ${aliasName}`);
-                                return {
-                                    cfo: aliasResearch.cfo,
-                                    cro: aliasResearch.cro,
-                                    companyResolution: aliasResolution
-                                };
+                                
+                                // Apply same filtering to alias results
+                                let filteredAliasCFO = aliasResearch.cfo;
+                                let filteredAliasCRO = aliasResearch.cro;
+                                
+                                // Filter alias CFO
+                                if (filteredAliasCFO?.title) {
+                                    const cfoTitle = filteredAliasCFO.title.toLowerCase();
+                                    if (cfoTitle.includes('chairman') || cfoTitle.includes('chair') || 
+                                        cfoTitle.includes('president') || cfoTitle.includes('founder') ||
+                                        (cfoTitle.includes('executive') && !cfoTitle.includes('financial'))) {
+                                        console.log(`      🚫 Excluding alias CFO - non-finance role: ${filteredAliasCFO.name} (${filteredAliasCFO.title})`);
+                                        filteredAliasCFO = null;
+                                    }
+                                }
+                                
+                                // Filter alias CRO
+                                if (filteredAliasCRO?.title) {
+                                    const croTitle = filteredAliasCRO.title.toLowerCase();
+                                    if (croTitle.includes('chairman') || croTitle.includes('chair') || 
+                                        croTitle.includes('president') || croTitle.includes('founder') ||
+                                        croTitle.includes('board') || 
+                                        (croTitle.includes('executive') && !croTitle.includes('revenue') && !croTitle.includes('sales') && !croTitle.includes('commercial'))) {
+                                        console.log(`      🚫 Excluding alias CRO - non-revenue role: ${filteredAliasCRO.name} (${filteredAliasCRO.title})`);
+                                        filteredAliasCRO = null;
+                                    }
+                                }
+                                
+                                if (filteredAliasCFO || filteredAliasCRO) {
+                                    return {
+                                        cfo: filteredAliasCFO,
+                                        cro: filteredAliasCRO,
+                                        companyResolution: aliasResolution
+                                    };
+                                }
                             }
                         } catch (e) {
                             console.log(`      ⚠️ Alias attempt failed: ${e.message}`);
