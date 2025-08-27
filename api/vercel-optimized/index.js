@@ -22,7 +22,7 @@ const VERCEL_CONFIG = {
     
     // Timeouts FIXED for Vercel Pro 5-minute (300 second) hard limit - CRITICAL FIX
     BATCH_TIMEOUT: 240000,         // 4 minutes per batch (1 minute safety buffer) - FIXED
-    COMPANY_TIMEOUT: 60000,        // 60 seconds per company (conservative, safe timing) - FIXED
+    COMPANY_TIMEOUT: 120000,       // 120 seconds per company (increased from 60s to prevent premature timeouts) - FIXED
     
     // Rate limiting based on working CloudCaddie implementation
     BATCH_DELAY: 5000,             // 5 seconds between batches
