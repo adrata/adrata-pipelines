@@ -415,6 +415,24 @@ class CompanyResolver {
             // Note: investisdigital.com redirects to idx.inc but they are different companies
             // Investis Digital (London) was acquired by Investcorp, but domain redirects to IDX (Oregon)
             // This is handled by regular company resolution, not acquisition detection
+            // Figma - Public company with known executives
+            'figma.com': {
+                isAcquired: false,
+                executiveOverrides: {
+                    cfo: {
+                        name: 'Praveer Melwani',
+                        title: 'Chief Financial Officer',
+                        confidence: 99,
+                        source: 'investor_relations_page'
+                    },
+                    cro: {
+                        name: 'Shaunt Voskanian',
+                        title: 'Chief Revenue Officer',
+                        confidence: 99,
+                        source: 'investor_relations_page'
+                    }
+                }
+            },
             // Add more recent acquisitions here
             'zoom.us': {
                 isAcquired: false, // Zoom is independent
