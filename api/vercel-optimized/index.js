@@ -914,12 +914,18 @@ module.exports = async (req, res) => {
             // Test module loading
             console.log('🔧 Testing module loading...');
             try {
-                const { ExecutiveContactIntelligence } = require("../modules/ExecutiveContactIntelligence");
+                const { ExecutiveContactIntelligence } = require("../../modules/ExecutiveContactIntelligence");
                 const testModule = new ExecutiveContactIntelligence(config);
                 console.log('✅ ExecutiveContactIntelligence module loaded successfully');
                 console.log(`   Methods available: ${Object.keys(Object.getPrototypeOf(testModule)).join(', ')}`);
+                
+                // Test FinanceLeaderDetection module
+                const FinanceLeaderDetection = require('../../modules/FinanceLeaderDetection.js');
+                const financeModule = new FinanceLeaderDetection();
+                console.log('✅ FinanceLeaderDetection module loaded successfully');
             } catch (error) {
-                console.log(`❌ ExecutiveContactIntelligence module failed to load: ${error.message}`);
+                console.log(`❌ Module loading failed: ${error.message}`);
+                console.log(`❌ Stack: ${error.stack}`);
             }
             
             // Initialize batch processor
