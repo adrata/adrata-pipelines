@@ -19,6 +19,9 @@
 require('dotenv').config();
 
 const { CompanyLeadershipScraper } = require('./CompanyLeadershipScraper.js');
+const RevenueLeaderDetection = require('./RevenueLeaderDetection.js');
+const FinanceLeaderDetection = require('./FinanceLeaderDetection.js');
+
 class ExecutiveResearch {
     constructor(config = {}) {
         this.config = {
@@ -33,6 +36,8 @@ class ExecutiveResearch {
 
         // Initialize modules
         this.leadershipScraper = new CompanyLeadershipScraper(this.config);
+        this.revenueLeaderDetection = new RevenueLeaderDetection();
+        this.financeLeaderDetection = new FinanceLeaderDetection();
         
         console.log('🚀 Enhanced Executive Research initialized');
         console.log(`   Leadership Scraping: ${this.config.LEADERSHIP_SCRAPING_ENABLED ? 'Enabled' : 'Disabled'}`);
@@ -107,9 +112,29 @@ class ExecutiveResearch {
                 }
             }
 
-            // LAYER 3: Intelligent Fallback (Tertiary)
+            // LAYER 3: Waterfall Detection (NEW - Proper 5-tier system)
             if (!result.cfo || !result.cro) {
-                console.log('\n🧠 LAYER 3: Intelligent Executive Fallback');
+                console.log('\n🌊 LAYER 3: Waterfall Detection System');
+                const waterfallResult = await this.applyWaterfallDetection(leadershipResult.allExecutives || []);
+                
+                if (!result.cfo && waterfallResult.cfo) {
+                    result.cfo = waterfallResult.cfo;
+                    console.log(`   ✅ CFO found via waterfall: ${result.cfo.name} (Tier ${result.cfo.tier})`);
+                }
+                
+                if (!result.cro && waterfallResult.cro) {
+                    result.cro = waterfallResult.cro;
+                    console.log(`   ✅ CRO found via waterfall: ${result.cro.name} (Tier ${result.cro.tier})`);
+                }
+
+                if (waterfallResult.cfo || waterfallResult.cro) {
+                    result.researchMethods.push('waterfall_detection');
+                }
+            }
+
+            // LAYER 4: Intelligent Fallback (Tertiary)
+            if (!result.cfo || !result.cro) {
+                console.log('\n🧠 LAYER 4: Intelligent Executive Fallback');
                 const fallbackExecutives = await this.intelligentExecutiveFallback(companyInfo);
                 
                 if (!result.cfo && fallbackExecutives.cfo) {
@@ -127,9 +152,9 @@ class ExecutiveResearch {
                 }
             }
 
-            // LAYER 4: CEO/Leadership Mapping (Last Resort)
+            // LAYER 5: CEO/Leadership Mapping (Last Resort)
             if (!result.cfo || !result.cro) {
-                console.log('\n👑 LAYER 4: CEO/Leadership Role Mapping');
+                console.log('\n👑 LAYER 5: CEO/Leadership Role Mapping');
                 const leadershipMapping = await this.mapLeadershipRoles(companyInfo, result);
                 
                 if (!result.cfo && leadershipMapping.cfo) {
@@ -294,6 +319,79 @@ Provide ONLY a JSON response:
             console.log(`   ⚠️ Intelligent fallback error: ${error.message}`);
         }
 
+        return result;
+    }
+
+    /**
+     * 🌊 APPLY WATERFALL DETECTION SYSTEM
+     * 
+     * Uses proper 5-tier waterfall logic for both CFO and CRO detection
+     */
+    async applyWaterfallDetection(executives) {
+        const result = { cfo: null, cro: null };
+        
+        if (!executives || executives.length === 0) {
+            console.log('   ⚠️ No executives provided for waterfall detection');
+            return result;
+        }
+        
+        console.log(`   📊 Analyzing ${executives.length} executives with waterfall system`);
+        
+        // CFO Waterfall Detection
+        if (this.financeLeaderDetection) {
+            const cfoCandidate = this.financeLeaderDetection.identifyFinanceLeader(executives);
+            if (cfoCandidate) {
+                result.cfo = {
+                    ...cfoCandidate,
+                    source: 'waterfall_detection',
+                    confidence: cfoCandidate.financeScore || cfoCandidate.confidence || 0,
+                    roleType: 'CFO'
+                };
+            }
+        }
+        
+        // CRO Waterfall Detection
+        if (this.revenueLeaderDetection) {
+            const croCandidate = this.revenueLeaderDetection.identifyRevenueLeader(executives);
+            if (croCandidate) {
+                result.cro = {
+                    ...croCandidate,
+                    source: 'waterfall_detection',
+                    confidence: croCandidate.revenueScore || croCandidate.confidence || 0,
+                    roleType: 'CRO'
+                };
+            }
+        }
+        
+        // CRITICAL: Prevent same person assignment
+        if (result.cfo && result.cro) {
+            const cfoName = (result.cfo.name || '').trim().toLowerCase();
+            const croName = (result.cro.name || '').trim().toLowerCase();
+            
+            if (cfoName === croName && cfoName !== '') {
+                console.log(`   🚨 WATERFALL DEDUPLICATION: Same person detected (${result.cfo.name})`);
+                
+                // Priority: Keep the role that matches the title better
+                const cfoTitle = (result.cfo.title || '').toLowerCase();
+                const croTitle = (result.cro.title || '').toLowerCase();
+                
+                const isActualCFO = cfoTitle.includes('cfo') || cfoTitle.includes('chief financial');
+                const isActualCRO = croTitle.includes('cro') || croTitle.includes('chief revenue') || 
+                                   croTitle.includes('cso') || croTitle.includes('chief sales');
+                
+                if (isActualCFO && !isActualCRO) {
+                    console.log(`   🔧 Keeping CFO (has finance title), removing CRO`);
+                    result.cro = null;
+                } else if (isActualCRO && !isActualCFO) {
+                    console.log(`   🔧 Keeping CRO (has revenue title), removing CFO`);
+                    result.cfo = null;
+                } else {
+                    console.log(`   🔧 Ambiguous titles - keeping CFO (finance priority)`);
+                    result.cro = null;
+                }
+            }
+        }
+        
         return result;
     }
 

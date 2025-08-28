@@ -760,13 +760,38 @@ class CorePipeline {
                 result.companyInfo.headquarters = result.companyInfo.headquarters || research.companyDetails.headquarters || '';
             }
 
-            // Universal de-duplication: prevent same person filling CFO and CRO
+            // ENHANCED Universal de-duplication: prevent same person filling CFO and CRO
             const samePerson = (a, b) => !!a?.name && !!b?.name && a.name.trim().toLowerCase() === b.name.trim().toLowerCase();
             const croLooksFinance = (exec) => !!exec?.title && exec.title.toLowerCase().includes('chief financial officer');
+            const cfoLooksRevenue = (exec) => !!exec?.title && exec.title.toLowerCase().includes('chief revenue officer');
+            
             if (result.cfo && result.cro) {
-                if (samePerson(result.cfo, result.cro) || croLooksFinance(result.cro)) {
-                    console.log('   🧹 De-duplication: Clearing CRO due to duplicate/finance title');
+                if (samePerson(result.cfo, result.cro)) {
+                    console.log(`   🚨 DUPLICATE EXECUTIVE DETECTED: ${result.cfo.name} assigned to both CFO and CRO`);
+                    
+                    // Priority logic: CFO title > CRO title > CEO/President (dual role) > Remove CRO
+                    const cfoTitle = (result.cfo.title || '').toLowerCase();
+                    const croTitle = (result.cro.title || '').toLowerCase();
+                    
+                    if (cfoTitle.includes('chief financial officer') || cfoTitle.includes('cfo')) {
+                        console.log('   🔧 Keeping CFO (has finance title), clearing CRO');
+                        result.cro = { name: '', title: '', email: '', phone: '', linkedIn: '', confidence: 0, tier: null, role: 'N/A' };
+                    } else if (croTitle.includes('chief revenue officer') || croTitle.includes('cro')) {
+                        console.log('   🔧 Keeping CRO (has revenue title), clearing CFO');
+                        result.cfo = { name: '', title: '', email: '', phone: '', linkedIn: '', confidence: 0, tier: null, role: 'N/A' };
+                    } else if (cfoTitle.includes('ceo') || cfoTitle.includes('president') || cfoTitle.includes('founder')) {
+                        console.log(`   ✅ Allowing dual role for CEO/President/Founder: ${result.cfo.title}`);
+                        // Keep both - legitimate dual role for small companies
+                    } else {
+                        console.log('   🔧 Ambiguous titles - keeping CFO, clearing CRO (CFO priority)');
+                        result.cro = { name: '', title: '', email: '', phone: '', linkedIn: '', confidence: 0, tier: null, role: 'N/A' };
+                    }
+                } else if (croLooksFinance(result.cro)) {
+                    console.log('   🧹 De-duplication: Clearing CRO due to finance title');
                     result.cro = { name: '', title: '', email: '', phone: '', linkedIn: '', confidence: 0, tier: null, role: 'N/A' };
+                } else if (cfoLooksRevenue(result.cfo)) {
+                    console.log('   🧹 De-duplication: Clearing CFO due to revenue title');
+                    result.cfo = { name: '', title: '', email: '', phone: '', linkedIn: '', confidence: 0, tier: null, role: 'N/A' };
                 }
             }
 

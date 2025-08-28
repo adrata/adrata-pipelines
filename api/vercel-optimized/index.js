@@ -566,8 +566,53 @@ function mapToCoreCSV(result) {
     // Create separate rows for CFO and CRO
     const rows = [];
     
+    // CRITICAL FIX: Prevent same person being assigned to both CFO and CRO roles
+    const samePerson = (cfo, cro) => {
+        if (!cfo?.name || !cro?.name || cfo.name === 'Not available' || cro.name === 'Not available') {
+            return false;
+        }
+        return cfo.name.trim().toLowerCase() === cro.name.trim().toLowerCase();
+    };
+    
+    const isFinanceTitle = (title) => {
+        const t = (title || '').toLowerCase();
+        return t.includes('chief financial officer') || t.includes('cfo') || 
+               t.includes('finance') && !t.includes('ceo') && !t.includes('president');
+    };
+    
+    const isRevenueTitle = (title) => {
+        const t = (title || '').toLowerCase();
+        return t.includes('chief revenue officer') || t.includes('cro') || 
+               t.includes('chief sales officer') || t.includes('sales') && !t.includes('ceo');
+    };
+    
+    // Check for duplicate assignment and resolve
+    let finalCFO = result.cfo;
+    let finalCRO = result.cro;
+    
+    if (samePerson(result.cfo, result.cro)) {
+        console.log(`   🚨 CSV MAPPING: Same person detected for CFO/CRO: ${result.cfo?.name}`);
+        
+        // Priority logic: CFO title > CRO title > CEO/President (dual role) > Remove one
+        if (isFinanceTitle(result.cfo?.title)) {
+            console.log(`   🔧 Keeping CFO (has finance title), removing CRO assignment`);
+            finalCRO = null;
+        } else if (isRevenueTitle(result.cro?.title)) {
+            console.log(`   🔧 Keeping CRO (has revenue title), removing CFO assignment`);
+            finalCFO = null;
+        } else if (result.cfo?.title?.toLowerCase().includes('ceo') || 
+                   result.cfo?.title?.toLowerCase().includes('president') ||
+                   result.cfo?.title?.toLowerCase().includes('founder')) {
+            console.log(`   ✅ Allowing dual role for CEO/President/Founder: ${result.cfo?.title}`);
+            // Keep both - legitimate dual role for small companies
+        } else {
+            console.log(`   🔧 Ambiguous titles - keeping CFO, removing CRO (CFO priority)`);
+            finalCRO = null;
+        }
+    }
+    
     // CFO Row
-    if (result.cfo?.name && result.cfo.name !== 'Not available') {
+    if (finalCFO?.name && finalCFO.name !== 'Not available') {
         rows.push({
             "Website": result.website || 'Not available',
             "Company Name": result.companyName || 'Not available',
@@ -575,21 +620,21 @@ function mapToCoreCSV(result) {
             "Parent Company": (typeof (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany) === 'object')
                 ? ((result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany)?.name || 'N/A')
                 : (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany || 'N/A'),
-            "Executive Name": result.cfo.name,
-            "Title": result.cfo.title || 'Not available',
+            "Executive Name": finalCFO.name,
+            "Title": finalCFO.title || 'Not available',
             "Role": 'CFO',
-            "Email": result.cfo.email || 'Not available',
-            "Phone": result.cfo.phone || 'Not available',
-            "LinkedIn": result.cfo.linkedIn || result.cfo.linkedin || 'Not available',
-            "Confidence": result.cfo.confidence || 'Not available',
+            "Email": finalCFO.email || 'Not available',
+            "Phone": finalCFO.phone || 'Not available',
+            "LinkedIn": finalCFO.linkedIn || finalCFO.linkedin || 'Not available',
+            "Confidence": finalCFO.confidence || 'Not available',
             "Research Method": result.researchMethod || 'standard_research',
-            "Selection Reason": generateCFOSelectionReasoning(result),
+            "Selection Reason": generateCFOSelectionReasoning(result, finalCFO),
             "Account Owner": result.accountOwner || 'Not available'
         });
     }
     
     // CRO Row
-    if (result.cro?.name && result.cro.name !== 'Not available') {
+    if (finalCRO?.name && finalCRO.name !== 'Not available') {
         rows.push({
             "Website": result.website || 'Not available',
             "Company Name": result.companyName || 'Not available',
@@ -597,15 +642,15 @@ function mapToCoreCSV(result) {
             "Parent Company": (typeof (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany) === 'object')
                 ? ((result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany)?.name || 'N/A')
                 : (result.acquisitionIntelligence?.parentCompany || result.corporateStructure?.parentCompany || 'N/A'),
-            "Executive Name": result.cro.name,
-            "Title": result.cro.title || 'Not available',
+            "Executive Name": finalCRO.name,
+            "Title": finalCRO.title || 'Not available',
             "Role": 'CRO',
-            "Email": result.cro.email || 'Not available',
-            "Phone": result.cro.phone || 'Not available',
-            "LinkedIn": result.cro.linkedIn || result.cro.linkedin || 'Not available',
-            "Confidence": result.cro.confidence || 'Not available',
+            "Email": finalCRO.email || 'Not available',
+            "Phone": finalCRO.phone || 'Not available',
+            "LinkedIn": finalCRO.linkedIn || finalCRO.linkedin || 'Not available',
+            "Confidence": finalCRO.confidence || 'Not available',
             "Research Method": result.researchMethod || 'standard_research',
-            "Selection Reason": generateCROSelectionReasoning(result),
+            "Selection Reason": generateCROSelectionReasoning(result, finalCRO),
             "Account Owner": result.accountOwner || 'Not available'
         });
     }
@@ -656,31 +701,79 @@ function mapToPowerhouseCSV(result) {
 }
 
 // Helper functions for reasoning (simplified versions)
-function generateCFOSelectionReasoning(result) {
-    const cfoName = result.cfo?.name || '';
-    const cfoTitle = result.cfo?.title || '';
+function generateCFOSelectionReasoning(result, executive = null) {
+    const cfo = executive || result.cfo;
+    const cfoName = cfo?.name || '';
+    const cfoTitle = cfo?.title || '';
     
     if (!cfoName || cfoName === 'Not available') {
         return 'No senior finance executive identified - requires additional research';
     }
     
-    if (cfoTitle.toLowerCase().includes('cfo') || cfoTitle.toLowerCase().includes('chief financial officer')) {
+    const titleLower = cfoTitle.toLowerCase();
+    
+    if (titleLower.includes('cfo') || titleLower.includes('chief financial officer')) {
         return `CFO confirmed - ${cfoName} serves as Chief Financial Officer with budget authority`;
+    }
+    
+    // CRITICAL FIX: Prevent revenue executives from being assigned as CFO
+    const isRevenueRole = titleLower.includes('cro') || titleLower.includes('chief revenue') ||
+                         titleLower.includes('cso') || titleLower.includes('chief sales') ||
+                         titleLower.includes('sales') || titleLower.includes('revenue') ||
+                         titleLower.includes('commercial') || titleLower.includes('business development');
+    
+    if (isRevenueRole) {
+        console.log(`🚫 BLOCKED CFO ASSIGNMENT: ${cfoName} (${cfoTitle}) is a revenue role, not finance`);
+        return 'Revenue executive incorrectly identified - not a finance role';
+    }
+    
+    // Check if it's actually a finance role
+    const isFinanceRole = titleLower.includes('finance') || titleLower.includes('financial') ||
+                         titleLower.includes('controller') || titleLower.includes('accounting') ||
+                         titleLower.includes('treasurer');
+    
+    if (!isFinanceRole) {
+        console.log(`⚠️ NON-FINANCE CFO: ${cfoName} (${cfoTitle}) - not a typical finance role`);
+        return `Non-finance executive - ${cfoName} (${cfoTitle}) may handle finance in smaller company structure`;
     }
     
     return `Finance Leader - ${cfoName} (${cfoTitle}) identified as senior finance authority`;
 }
 
-function generateCROSelectionReasoning(result) {
-    const croName = result.cro?.name || '';
-    const croTitle = result.cro?.title || '';
+function generateCROSelectionReasoning(result, executive = null) {
+    const cro = executive || result.cro;
+    const croName = cro?.name || '';
+    const croTitle = cro?.title || '';
     
     if (!croName || croName === 'Not available') {
         return 'No dedicated revenue leader identified - requires additional research';
     }
     
-    if (croTitle.toLowerCase().includes('cro') || croTitle.toLowerCase().includes('chief revenue officer')) {
+    const titleLower = croTitle.toLowerCase();
+    
+    if (titleLower.includes('cro') || titleLower.includes('chief revenue officer')) {
         return `CRO confirmed - ${croName} serves as Chief Revenue Officer with revenue responsibility`;
+    }
+    
+    // CRITICAL FIX: Prevent finance executives from being assigned as CRO
+    const isFinanceRole = titleLower.includes('cfo') || titleLower.includes('chief financial') ||
+                         titleLower.includes('finance') || titleLower.includes('financial') ||
+                         titleLower.includes('controller') || titleLower.includes('accounting') ||
+                         titleLower.includes('treasurer');
+    
+    if (isFinanceRole) {
+        console.log(`🚫 BLOCKED CRO ASSIGNMENT: ${croName} (${croTitle}) is a finance role, not revenue`);
+        return 'Finance executive incorrectly identified - not a revenue role';
+    }
+    
+    // Check if it's actually a revenue role
+    const isRevenueRole = titleLower.includes('sales') || titleLower.includes('revenue') ||
+                         titleLower.includes('commercial') || titleLower.includes('business development') ||
+                         titleLower.includes('cso') || titleLower.includes('chief sales');
+    
+    if (!isRevenueRole) {
+        console.log(`⚠️ NON-REVENUE CRO: ${croName} (${croTitle}) - not a typical revenue role`);
+        return `Non-revenue executive - ${croName} (${croTitle}) may handle revenue in smaller company structure`;
     }
     
     return `Revenue Leader - ${croName} (${croTitle}) identified as senior revenue authority`;
